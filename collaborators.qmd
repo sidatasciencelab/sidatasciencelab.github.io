@@ -1,0 +1,12 @@
+---
+pagetitle: Collaborators | Smithsonian Data Science Lab
+title: Expectations for Collaboration
+search: false 
+--- 
+The Data Science Lab is collaborative: we work with Smithsonian partners (staff, fellows, interns) at many different Smithsonian units, as well as with partners at other academic institutions, government agencies, and industry. We strive to make these collaborations productive, positive, and inclusive. 
+
+When we are approached about a potential collaboration or for technical help, we feel that it is important to manage expectations including the amount of time we can spend on a particular project and whether co-authorship is warranted. Communicating clearly about these issues is important to ensure a productive collaboration.
+
+Our members are expected to communicate professionally with past, present, and future collaborators and we expect the same in return.
+
+Workshop attendees are expected to adhere to the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
