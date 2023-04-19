@@ -25,7 +25,7 @@ website:
       - text: "About SI-DSL"
         menu: 
         - text: "Who we are"
-          href: about-rwds.qmd
+          href: about-dsl.qmd
         - text: "Publications"
           href: publications.qmd
         - text: "Collaborators"
@@ -89,8 +89,8 @@ website:
 
 format:
   html:
-    theme: [lux, rwds.scss]
-    css: rwds.css
+    theme: [lux, dsl.scss]
+    css: dsl.css
     toc: true
     grid:
       sidebar-width: 0px
