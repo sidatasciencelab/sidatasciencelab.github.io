@@ -1,0 +1,44 @@
+[
+  {
+    "listing": "/research/projects/index.html",
+    "items": [
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/latest-content.html",
+    "items": [
+      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/news/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/04/19/open.html"
+    ]
+  },
+  {
+    "listing": "/news/news-blog/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/04/19/open.html"
+    ]
+  }
+]
