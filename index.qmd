@@ -115,11 +115,11 @@ toc: false
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
-## A demonstration of the law of the flowering plants
-The day a flower blooms is one of the earliest phenomena studied with systematic data collection and analysis. In this tutorial, Jonathan Auerbach introduces Adolphe Quetelet's “law of the flowering plants” and demonstrates how it can be applied to modern datasets.
+## Federal agencies declare 2023 the Year of Open Science
+The Smithsonian Data Science Lab is proud to support the Smithsonian's effort celebrate the benefits of open science and expand the adoption of open science practices accross the institution.   
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](ideas/tutorials/posts/2023/04/13/images/quetelet-flowers.png)
+![](images/YOS_image.jpeg)
 :::
 :::
 
@@ -135,7 +135,7 @@ The day a flower blooms is one of the earliest phenomena studied with systematic
 ::: {.header-text} 
 ::: {.content-container}
 ::: {.header-block}
-Welcome to the home of **Real World Data Science**, a new project from the [Royal Statistical Society](https://rss.org.uk/). This site and its content are being created and curated by data science practitioners and leaders with a single goal in mind: to help you deliver high quality, ethical, impactful data science in your workplace.
+We are living in an age of "big data". Insights from big data touch almost every part of our lives—from the way we navigate in our cars to the way we shop. Big data has also arrived in biodiversity research due to rapid change in the types and volume of data that researchers can use to ask and answer their scientific questions. The Data Science Lab works with Smithsonian researchers to use big data techniques, such as deep machine learning, to generate insights from their data, whether they are derived from genome sequencing, ecological sensors, or mass digitization of museum objects. These techniques require computational expertise in hardware and software to both build new algorithms and to implement the emerging tools that are developed outside the Smithsonian.
 :::
 :::
 :::
