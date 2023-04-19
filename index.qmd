@@ -89,9 +89,6 @@ The Smithsonian Data Science Lab is proud to support the Smithsonian's effort ce
 :::
 :::
 
-<!-- ::: {.header-banner .header-image}
-![](images/nasa-Q1p7bh3SHj8-unsplash-crop.png)
-::: -->
 
 ::: {.header-text} 
 ::: {.content-container}
@@ -118,8 +115,8 @@ We are living in an age of "big data". Insights from big data touch almost every
 ::: {.pullout-container}
 ::: {.pullout-block .black-background}
 
-## Here is a space for a block quote
-This is the person who said the block quote
+## Our research puts data science to work in the museum
+Keep up with our research projects and our fruitful collaborations
 
 ::: {.button .button1}
 [Explore our research blog](research/projects/index.qmd)
@@ -146,8 +143,8 @@ This is the person who said the block quote
 ::: {.pullout-container}
 ::: {.pullout-block .black-background}
 
-## Here is another block quote.
-The person who said it.
+## We want to connect with the Smithsonian community and beyond.
+Keep up with Smithsonian Data Science Lab news
 
 ::: {.button .button1}
 [Explore our news blog](news/news-blog/index.qmd)
