@@ -1017,7 +1017,7 @@
   {
     "objectID": "about-dsl.html",
     "href": "about-dsl.html",
-    "title": "Welcome to Real World Data Science",
+    "title": "The Smithsonian Data Science Lab",
     "section": "",
     "text": "Welcome to the home of the Smithsonian Data Science Lab, a research computing labratory operating within the Smithsonian Office of the Chief Information Officer."
   },
@@ -1131,7 +1131,7 @@
     "href": "index.html#here-is-a-space-for-a-block-quote",
     "title": "Smithsonian Data Science Lab",
     "section": "Here is a space for a block quote",
-    "text": "Here is a space for a block quote\nThis is the person who said the block quote\n\nWatch the interview"
+    "text": "Here is a space for a block quote\nThis is the person who said the block quote\n\nExplore our research blog"
   },
   {
     "objectID": "index.html#interviews",
@@ -1286,5 +1286,33 @@
     "title": "News",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "index.html#data-science-bites",
+    "href": "index.html#data-science-bites",
+    "title": "Smithsonian Data Science Lab",
+    "section": "Data Science Bites",
+    "text": "Data Science Bites"
+  },
+  {
+    "objectID": "index.html#research-blog",
+    "href": "index.html#research-blog",
+    "title": "Smithsonian Data Science Lab",
+    "section": "Research Blog",
+    "text": "Research Blog"
+  },
+  {
+    "objectID": "index.html#news",
+    "href": "index.html#news",
+    "title": "Smithsonian Data Science Lab",
+    "section": "News",
+    "text": "News"
+  },
+  {
+    "objectID": "index.html#here-is-another-block-quote.",
+    "href": "index.html#here-is-another-block-quote.",
+    "title": "Smithsonian Data Science Lab",
+    "section": "Here is another block quote.",
+    "text": "Here is another block quote.\nThe person who said it.\n\nExplore our news blog"
   }
 ]

@@ -14,7 +14,6 @@ listing:
     - /research
     - /news
     - "!index.qmd"
-    - "!flowers.qmd"
     sort: "date desc"
     type: grid
     categories: false
@@ -22,22 +21,10 @@ listing:
     filter-ui: false
     max-items: 3
     feed: false
-
-  # - id: case-studies
-  #   contents: 
-  #   - /case-studies
-  #   - "!index.qmd"
-  #   sort: "date desc"
-  #   type: grid
-  #   categories: false
-  #   sort-ui: false
-  #   filter-ui: false
-  #   max-items: 3
-  #   feed: false
 
   # - id: research
   #   contents: 
-  #   - /reasearch
+  #   - /research
   #   - "!index.qmd"
   #   sort: "date desc"
   #   type: grid
@@ -47,10 +34,10 @@ listing:
   #   max-items: 3
   #   feed: false
 
-  # - id: careers
+
+  # - id: news
   #   contents: 
-  #   - /careers
-  #   - "!index.qmd"
+  #   - /news
   #   sort: "date desc"
   #   type: grid
   #   categories: false
@@ -59,20 +46,9 @@ listing:
   #   max-items: 3
   #   feed: false
 
-  # - id: viewpoints
-  #   contents: 
-  #   - /viewpoints
-  #   sort: "date desc"
-  #   type: grid
-  #   categories: false
-  #   sort-ui: false
-  #   filter-ui: false
-  #   max-items: 3
-  #   feed: false
-
-  - id: editors-blog
+  - id: news-blog
     contents: 
-    - /viewpoints/editors-blog
+    - /news/news-blog
     - "!index.qmd"
     sort: "date desc"
     type: grid
@@ -82,9 +58,9 @@ listing:
     max-items: 3
     feed: false
 
-  - id: datasciencebites
+  - id: projects
     contents: 
-    - /ideas/datasciencebites
+    - /research/projects
     - "!index.qmd"
     sort: "date desc"
     type: grid
@@ -94,22 +70,11 @@ listing:
     max-items: 3
     feed: false
 
-  - id: interviews
-    contents: 
-    - /viewpoints/interviews
-    - "!index.qmd"
-    sort: "date desc"
-    type: grid
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    max-items: 3
-    feed: false
 toc: false
 ---
 ::: {.content-container}
 ::: {.top-story .purple-background}
-<a href="/ideas/tutorials/posts/2023/04/13/flowers.qmd">
+<a href="/news/index.qmd">
 
 ::: grid
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
@@ -160,7 +125,7 @@ We are living in an age of "big data". Insights from big data touch almost every
 This is the person who said the block quote
 
 ::: {.button .button1}
-[Watch the interview](viewpoints/editors-blog/posts/2023/01/27/talking-chatgpt.qmd)
+[Explore our research blog](research/projects/index.qmd)
 :::
 
 :::
@@ -169,12 +134,12 @@ This is the person who said the block quote
 
 ::: {.content-container}
 ::: {.listing-block}
-<a href="ideas/datasciencebites/index.qmd">
+<a href="research/projects/index.qmd">
 
-## Data Science Bites 
+## Research Blog 
 </a>
 
-::: {#datasciencebites}
+::: {#projects}
 :::
 
 :::
@@ -182,12 +147,12 @@ This is the person who said the block quote
 
 ::: {.content-container}
 ::: {.listing-block}
-<a href="viewpoints/interviews/index.qmd">
+<a href="news/news-blog/index.qmd">
 
-## Interviews
+## News
 </a> 
 
-::: {#interviews}
+::: {#news}
 :::
 
 :::
@@ -198,11 +163,11 @@ This is the person who said the block quote
 ::: {.pullout-block .black-background}
 ![](images/quote-purple.png){width="100px"}
 
-## It is arbitrary how we choose to model a situation. There are infinitely many different ways that you could choose to simplify reality -- this huge, messy, complex thing in front of us.
-Erica Thompson on the ethics of modelling
+## Here is another block quote.
+The person who said it.
 
 ::: {.button .button1}
-[Watch the interview](viewpoints/interviews/posts/01/25/erica-thompson.qmd)
+[Explore our news blog](news/news-blog/index.qmd)
 :::
 
 :::

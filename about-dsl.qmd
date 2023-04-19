@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Real World Data Science"
-subtitle: A showcase for data science in action
+title: "The Smithsonian Data Science Lab"
+subtitle: We are working to make data science open, accessible, functional, and valuable to the Smithsonian research community
 sidebar: false
 page-layout: article
 toc: false
