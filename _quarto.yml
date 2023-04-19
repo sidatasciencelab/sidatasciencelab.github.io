@@ -28,7 +28,7 @@ website:
           href: about-dsl.qmd
         - text: "Publications"
           href: publications.qmd
-        - text: "Collaborators"
+        - text: "Collaboration"
           href: collaborators.qmd
         - text: "Contact us"
           href: contact.qmd

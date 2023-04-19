@@ -237,7 +237,7 @@ Erica Thompson on the ethics of modelling
 ### About us
 [Our aims](about-dsl.qmd)\
 [Our team](people.qmd)\
-[Collaborations and funding](partners.qmd)\
+[Collaborations](collaborators.qmd)\
 [Contact us](contact.qmd)
 :::
 ::: {.g-col-12 .g-col-md-2}
