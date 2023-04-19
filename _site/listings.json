@@ -16,7 +16,9 @@
       "/viewpoints/editors-blog/posts/2022/12/09/LLM-news.html",
       "/viewpoints/editors-blog/posts/2022/12/01/themes.html",
       "/viewpoints/editors-blog/posts/2022/11/23/LLM-content-warning.html",
-      "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html"
+      "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html",
+      "/ideas/tutorials/posts/2020/10/22/impact.html",
+      "/ideas/tutorials/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -49,7 +51,9 @@
       "/viewpoints/editors-blog/posts/2022/12/09/LLM-news.html",
       "/viewpoints/editors-blog/posts/2022/12/01/themes.html",
       "/viewpoints/editors-blog/posts/2022/11/23/LLM-content-warning.html",
-      "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html"
+      "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html",
+      "/ideas/tutorials/posts/2020/10/22/impact.html",
+      "/ideas/tutorials/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -112,13 +116,17 @@
   {
     "listing": "/ideas/index.html",
     "items": [
-      "/ideas/tutorials/posts/2023/04/13/flowers.html"
+      "/ideas/tutorials/posts/2023/04/13/flowers.html",
+      "/ideas/tutorials/posts/2020/10/22/impact.html",
+      "/ideas/tutorials/posts/2020/04/14/names.html"
     ]
   },
   {
     "listing": "/ideas/tutorials/index.html",
     "items": [
-      "/ideas/tutorials/posts/2023/04/13/flowers.html"
+      "/ideas/tutorials/posts/2023/04/13/flowers.html",
+      "/ideas/tutorials/posts/2020/10/22/impact.html",
+      "/ideas/tutorials/posts/2020/04/14/names.html"
     ]
   },
   {

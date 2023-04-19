@@ -84,17 +84,6 @@ listing:
     max-items: 3
     feed: false
 
-  - id: datasciencebites
-    contents: 
-    - /ideas/datasciencebites
-    - "!index.qmd"
-    sort: "date desc"
-    type: grid
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    max-items: 3
-    feed: false
 
   - id: interviews
     contents: 
@@ -158,8 +147,8 @@ We are living in an age of "big data". Insights from big data touch almost every
 ::: {.pullout-block .black-background}
 ![](images/quote-purple.png){width="100px"}
 
-## We are seeing communities who don't necessarily have the technical background to judge the capabilities of these models, but see the opportunities for their own domain and might be acting too fast in adopting them. The producer of these models has a certain responsibility to make sure that this doesn't happen.
-Detlef Nauck on the risks of large language models
+## Here is a space for a block quote
+This is the person who said the block quote
 
 ::: {.button .button1}
 [Watch the interview](viewpoints/editors-blog/posts/2023/01/27/talking-chatgpt.qmd)
@@ -169,18 +158,6 @@ Detlef Nauck on the risks of large language models
 :::
 :::
 
-::: {.content-container}
-::: {.listing-block}
-<a href="ideas/datasciencebites/index.qmd">
-
-## Data Science Bites 
-</a>
-
-::: {#datasciencebites}
-:::
-
-:::
-:::
 
 ::: {.content-container}
 ::: {.listing-block}

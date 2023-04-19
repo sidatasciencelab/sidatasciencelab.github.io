@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../ideas/datasciencebites/index.html" rel="next">
-<link href="../../ideas/index.html" rel="prev">
 <link href="../../images/SI_DSL_logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -73,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -96,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../rwds.css">
+<link rel="stylesheet" href="../../dsl.css">
 <meta property="og:title" content="Tutorials | Ideas | Real World Data Science">
 <meta property="og:description" content="Hands-on explorations of data science concepts, tools and methods">
 <meta property="og:image" content="https://sidatasciencelab.github.io/ideas/tutorials/posts/2023/04/13/images/quetelet-flowers.png">
@@ -130,10 +128,6 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../aivalues/index.html" rel="" target="">
- <span class="menu-text">AI Values Statement</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../../ideas/index.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
@@ -145,14 +139,22 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../viewpoints/index.html" rel="" target="">
  <span class="menu-text">Viewpoints</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../aivalues/index.html" rel="" target="">
+ <span class="menu-text">AI Values Statement</span></a>
+  </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-si-dsl" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">About SI-DSL</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about-si-dsl">    
         <li>
-    <a class="dropdown-item" href="../../about-rwds.html" rel="" target="">
+    <a class="dropdown-item" href="../../about-dsl.html" rel="" target="">
  <span class="dropdown-text">Who we are</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../publications.html" rel="" target="">
+ <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../collaborators.html" rel="" target="">
@@ -194,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="History of data science">History of data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Prediction">Prediction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="History of data science">History of data science <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Prediction">Prediction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -244,6 +246,62 @@ Apr 13, 2023
 </div>
 <div class="listing-author">
 Jonathan Auerbach
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-listing-date-sort="1603342800000" data-listing-file-modified-sort="1681930414309" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="thumbnail">
+<p><a href="../../ideas/tutorials/posts/2020/10/22/impact.html"> <img src="../../ideas/tutorials/posts/2020/10/22/images/presentation2.png" class="thumbnail-image" alt="Frances Theresa Densmore, Betty Jane Meggers, and Matilda Stevenson, each woman a member of the Anthropology Department at the National Museum of Natural History."> </a></p>
+</div>
+<div class="body">
+<a href="../../ideas/tutorials/posts/2020/10/22/impact.html">
+<h3 class="no-anchor listing-title">
+Uncovering the scientific impact of women at the Smithsonian
+</h3>
+<div class="listing-subtitle">
+
+</div>
+<div class="listing-description">
+<p>The day a flower blooms is one of the earliest phenomena studied with systematic data collection and analysis. The prediction rule developed nearly three centuries ago is still used by scientists – with relatively few changes – to plan harvests, manage pests, and study ecosystems stressed by climate change. In this tutorial, Jonathan Auerbach introduces the “law of the flowering plants” and demonstrates how it can be applied to modern datasets.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../ideas/tutorials/posts/2020/10/22/impact.html">
+<div class="listing-date">
+Oct 22, 2020
+</div>
+<div class="listing-author">
+Rebecca Dikow and Mirian Tsuchiya
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-listing-date-sort="1586840400000" data-listing-file-modified-sort="1681928330353" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="thumbnail">
+<p><a href="../../ideas/tutorials/posts/2020/04/14/names.html"> <img src="../../ideas/tutorials/posts/2020/04/14/images/walcott_specimen2.png" class="thumbnail-image" alt="Thistle specimen and illustration by MV Walcott"> </a></p>
+</div>
+<div class="body">
+<a href="../../ideas/tutorials/posts/2020/04/14/names.html">
+<h3 class="no-anchor listing-title">
+What’s in a name?
+</h3>
+<div class="listing-subtitle">
+Uncovering stories of women in science
+</div>
+<div class="listing-description">
+<p>An investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana Curry set out to understand how botanist and artist Mary Vaux Walcott contributed to Smithsonian botanical collections and how women’s names become obscured by history.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="../../ideas/tutorials/posts/2020/04/14/names.html">
+<div class="listing-date">
+Apr 14, 2020
+</div>
+<div class="listing-author">
+Rebecca Dikow and Megan Glenn
 </div>
 </a>
 </div>
@@ -486,18 +544,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../../ideas/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Research</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../../ideas/datasciencebites/index.html" class="pagination-link">
-        <span class="nav-page-text">Data Science Bites</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -517,7 +563,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/ideas/tutorials/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    </div>
     <div class="nav-footer-right"><a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
   </div>
 </footer>
