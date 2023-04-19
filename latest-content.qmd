@@ -9,7 +9,7 @@ listing:
   contents: 
   - /training
   - /research
-  - /viewpoints
+  - /news
   - "!index.qmd"
   sort: "date desc"
   type: grid

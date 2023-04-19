@@ -1,7 +1,7 @@
 ---
 title: "Uncovering the scientific impact of women at the Smithsonian"
 description: |
-  The day a flower blooms is one of the earliest phenomena studied with systematic data collection and analysis. The prediction rule developed nearly three centuries ago is still used by scientists -- with relatively few changes -- to plan harvests, manage pests, and study ecosystems stressed by climate change. In this tutorial, Jonathan Auerbach introduces the “law of the flowering plants” and demonstrates how it can be applied to modern datasets.
+  Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of the Smithsonian annual reports to assess the role of women in scientific history of the institution.  
 author: Rebecca Dikow and Mirian Tsuchiya
 date: 10/22/2020
 image: images/presentation2.png

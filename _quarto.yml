@@ -4,7 +4,7 @@ project:
 website:
   title: "Smithsonian Data Science Lab"
   image: images/dsl_logo.png
-  favicon: images/SI_DSL_logo.png
+  favicon: images/si_favicon.ico
   twitter-card:
     site: "@SIDataScience"
   open-graph: true
@@ -20,7 +20,7 @@ website:
     right:
       - research/index.qmd
       - training/index.qmd
-      - viewpoints/index.qmd
+      - news/index.qmd
       - aivalues/index.qmd
       - text: "About SI-DSL"
         menu: 

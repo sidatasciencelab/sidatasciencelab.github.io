@@ -12,7 +12,7 @@ listing:
   - id: latest-content
     contents: 
     - /research
-    - /viewpoints
+    - /news
     - "!index.qmd"
     - "!flowers.qmd"
     sort: "date desc"
