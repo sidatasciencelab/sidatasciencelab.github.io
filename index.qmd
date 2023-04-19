@@ -77,7 +77,7 @@ toc: false
 ::: grid
 ::: {.g-col-12 .g-col-lg-4 .top-story-text}
 ## Federal agencies declare 2023 the Year of Open Science
-The Smithsonian Data Science Lab is proud to support the Smithsonian's effort to celebrate the benefits of open science and expand the adoption of open science practices accross the institution.   
+The Smithsonian Data Science Lab is proud to support the Smithsonian's effort to celebrate the benefits of open science and expand the adoption of open science practices across the institution.   
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
 ![](images/YOS_image.jpeg)
