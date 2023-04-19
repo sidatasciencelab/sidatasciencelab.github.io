@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.323">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rebecca Dikow and Mirian Tsuchiya">
+<meta name="dcterms.date" content="2020-10-22">
+<meta name="description" content="Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of the Smithsonian annual reports to assess the role of women in scientific history of the institution.">
+
+<title>Smithsonian Data Science Lab - Uncovering the scientific impact of women at the Smithsonian</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../../../">
+<link href="../../../../../../images/si_favicon.ico" rel="icon">
+<script src="../../../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../../../../dsl.css">
+<meta property="og:title" content="Smithsonian Data Science Lab - Uncovering the scientific impact of women at the Smithsonian">
+<meta property="og:description" content="Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of the Smithsonian annual reports to assess the role of women in scientific history of the institution.">
+<meta property="og:image" content="https://sidatasciencelab.github.io/research/projects/posts/2020/10/22/images/presentation2.png">
+<meta property="og:site-name" content="Smithsonian Data Science Lab">
+<meta property="og:image:height" content="594">
+<meta property="og:image:width" content="1563">
+<meta property="og:image:alt" content="Frances Theresa Densmore, Betty Jane Meggers, and Matilda Stevenson, each woman a member of the Anthropology Department at the National Museum of Natural History.">
+<meta name="twitter:title" content="Smithsonian Data Science Lab - Uncovering the scientific impact of women at the Smithsonian">
+<meta name="twitter:description" content="Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of the Smithsonian annual reports to assess the role of women in scientific history of the institution.">
+<meta name="twitter:image" content="https://sidatasciencelab.github.io/research/projects/posts/2020/10/22/images/presentation2.png">
+<meta name="twitter:site" content="@SIDataScience">
+<meta name="twitter:image-height" content="594">
+<meta name="twitter:image-width" content="1563">
+<meta name="twitter:image:alt" content="Frances Theresa Densmore, Betty Jane Meggers, and Matilda Stevenson, each woman a member of the Anthropology Department at the National Museum of Natural History.">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../../../images/dsl_logo.png" alt="Smithsonian Data Science Lab logo" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../../research/index.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../../training/index.html" rel="" target="">
+ <span class="menu-text">Training</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../../news/index.html" rel="" target="">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../../../aivalues/index.html" rel="" target="">
+ <span class="menu-text">AI Values Statement</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-si-dsl" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">About SI-DSL</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about-si-dsl">    
+        <li>
+    <a class="dropdown-item" href="../../../../../../about-dsl.html" rel="" target="">
+ <span class="dropdown-text">Who we are</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../../publications.html" rel="" target="">
+ <span class="dropdown-text">Publications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../../collaborators.html" rel="" target="">
+ <span class="dropdown-text">Collaboration</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../../../../contact.html" rel="" target="">
+ <span class="dropdown-text">Contact us</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Uncovering the scientific impact of women at the Smithsonian</h1>
+                  <div>
+        <div class="description">
+          <p>Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of the Smithsonian annual reports to assess the role of women in scientific history of the institution.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Rebecca Dikow and Mirian Tsuchiya </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 22, 2020</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#measuring-scientific-impact" id="toc-measuring-scientific-impact" class="nav-link active" data-scroll-target="#measuring-scientific-impact">Measuring Scientific Impact</a></li>
+  <li><a href="#methods-results" id="toc-methods-results" class="nav-link" data-scroll-target="#methods-results">Methods &amp; Results</a></li>
+  <li><a href="#who-are-the-most-prominent-si-women-in-science" id="toc-who-are-the-most-prominent-si-women-in-science" class="nav-link" data-scroll-target="#who-are-the-most-prominent-si-women-in-science">Who are the most prominent SI women in science?</a></li>
+  <li><a href="#who-are-the-most-prominent-si-women-in-science-by-decade" id="toc-who-are-the-most-prominent-si-women-in-science-by-decade" class="nav-link" data-scroll-target="#who-are-the-most-prominent-si-women-in-science-by-decade">Who are the most prominent SI women in science by decade?</a></li>
+  <li><a href="#a-look-at-broad-patterns-in-the-annual-reports" id="toc-a-look-at-broad-patterns-in-the-annual-reports" class="nav-link" data-scroll-target="#a-look-at-broad-patterns-in-the-annual-reports">A look at broad patterns in the Annual Reports</a></li>
+  <li><a href="#conclusion-acknowledgments" id="toc-conclusion-acknowledgments" class="nav-link" data-scroll-target="#conclusion-acknowledgments">Conclusion &amp; Acknowledgments</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/research/projects/posts/2020/10/22/impact.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>We were thrilled to be able to talk about our work at the <a href="https://womenshistory.si.edu/events/american-women-science">American Women of Science Symposium</a> #BecauseOfHerStory on October 22, 2020. We’d like to tell you a little more about the work we presented and some of what we are planning next. Our slides and data are on <a href="https://dx.doi.org/10.25573/data.c.5182646">Figshare</a>, but we also wanted to give some more context for the work we did.</p>
+<p>This project is inspired by the Funk List. The Funk List is a crowd-sourced list of Smithsonian women in science that was started in part by Vicki Funk, a senior scientist and curator of botany at the National Museum of Natural History. The purpose of this list is to start the process of improving the presence of Smithsonian women online and make them more well-known. Vicki circulated this list to Smithsonian science units and departments and asked them to add the women that have been part of their branches of the Smithsonian since its beginning in 1846. Vicki unfortunately passed away a year ago, and after her death, the list was named in her <a href="https://womenshistory.si.edu/news/2019/11/because-her-story-funk-list">honor</a>. Since that time, Liz Harmon, American Women’s History Initiative Digital Curator has been continuing to add new women in science and the list is now at more than 400 women! Vicki was a collaborator and mentor of Rebecca’s and this photo by Mauricio Diazgranados captures her spirit so well. She inspired so many women to continue on in science and to keep pushing for change.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/funk.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/funk.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 1.</strong> Photo of Vicki Funk by Mauricio Diazgranados.</p>
+</div>
+<section id="measuring-scientific-impact" class="level2">
+<h2 class="anchored" data-anchor-id="measuring-scientific-impact">Measuring Scientific Impact</h2>
+<p>When we set out to work on this project, we started thinking about how we measure scientific impact. While there are obvious metrics like the number of peer-reviewed scientific papers, or discipline-specific awards, there is also service, public outreach, mentorship, and in particular for the Smithsonian, impact on the collections. Women in science often bear a larger burden of service and mentorship, which doesn’t often result in career advancement, even though they are essential for scientific progress and growth.</p>
+<p>We will show initial results from two different data sources. First, the Smithsonian Annual Reports are just that, documents published annually, which give highlights of the Smithsonian year. Transcriptions of these going back to 1846 are available through the <a href="https://www.biodiversitylibrary.org/">Biodiversity Heritage Library</a>. We are using mentions in these reports as one measure of scientific impact. If someone is mentioned in an annual report, then something they did that year was notable to Smithsonian leadership.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/1972_annualreport.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/1972_annualreport.jpeg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 2.</strong> Title pages of the 1972 Smithsonian Annual Report.</p>
+</div>
+</section>
+<section id="methods-results" class="level2">
+<h2 class="anchored" data-anchor-id="methods-results">Methods &amp; Results</h2>
+<p>We are also using Smithsonian Research Online or SRO, maintained by Smithsonian Libraries, which has all the citations for publications by Smithsonian authors. We were able to pull the data for each of the women on the Funk List via the SRO API.</p>
+<p>We used a combination of natural language processing in spaCy and shell scripting to:</p>
+<ul>
+<li>Extract and count mentions of women on the Funk List in Annual Reports</li>
+<li>Count publications for women on the Funk List from Smithsonian Research Online</li>
+<li>Extract and count occurrences first names and words related to science in the Annual Reports</li>
+</ul>
+<p>We decided to include all women from the Funk List that are no longer working at the Smithsonian and Annual Reports from 1846 up to and including 1999. Of the 127 women that remained, 12 are women of color, and one is a trans woman. We recognize that this list of 127 is already biased toward those most well-known around the Institution. It is our hope that by beginning to understand the level of visibility of these most prominent women in science, we will be able to start learning more about those never mentioned in the reports.</p>
+<p>The first mention of a woman on our list was in the 1880 Annual Report. The number of total mentions increases steadily until 1984. Early in Smithsonian history, for example in the 1880s or 1890s, only one or two women from our list are mentioned per Annual Report. That number increases over time and it peaks in 1984, with 40 women being mentioned. There’s a sudden drop in the number of mentions in 1985, after which time the Annual Reports sharply decreased in length, from 694 pages in 1984 to 192 pages in 1985. Starting in 1991, the number of pages dropped again to around 100, and the reports also became much more visual. In the plots below, you can see the number of Annual Report mentions for all 127 women plotted over time, the number of Annual Reported mentions with the most-often mentioned women in each decade highlighted, and the publication counts plotted against the count of Annual Report mentions. &nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/mentions_pages_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/mentions_pages_legend.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 3.</strong> Mentions in Annual Reports with overall page count.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/decade_0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/decade_0.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 4.</strong> Mentions over time with top women per decade.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/pubsvsmentions.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/pubsvsmentions.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 5.</strong> Publication count plotted against mention count.</p>
+</div>
+</section>
+<section id="who-are-the-most-prominent-si-women-in-science" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-the-most-prominent-si-women-in-science">Who are the most prominent SI women in science?</h2>
+<p>As you can see, the women with the most Annual Reports mentions are not necessarily those with the most publications. The three most mentioned women are <strong>Frances Theresa Densmore</strong>, <strong>Betty Jane Meggers</strong>, and <strong>Matilda Stevenson</strong>. All three were members of the Anthropology Department at the National Museum of Natural History. The most published woman from our list is <strong>Vicki Funk</strong>. Vicki published 133 papers up to 1999, which is the end of the time span for our analysis, but if we account for all her publications until her death in 2019, that number jumps to 368. Other highly-published women are JoGayle Howard from the Smithsonian Conservation Biology Institute and <strong>Pamela Vandiver</strong>, from the Museum Conservation Institute. Pamela Vandiver had 128 publications but only one Annual Report mention.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/published.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/published.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 6.</strong> Photos from SIA of Funk, Howard, and Vandiver.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/presentation2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/presentation2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 7.</strong> Photos from SIA of Densmore, Meggers, and Stevenson.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+</section>
+<section id="who-are-the-most-prominent-si-women-in-science-by-decade" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-the-most-prominent-si-women-in-science-by-decade">Who are the most prominent SI women in science by decade?</h2>
+<p>We started with 127 women and looked across 150 years of Annual Reports. If we look decade by decade, there are nine women in science who appear as the most prominent throughout Smithsonian history in terms of their presence in the Annual Reports.</p>
+<ul>
+<li><p><strong>Matilda Stevenson</strong> was the most mentioned woman in the 1890s and early 1900s. She was from the Anthropology department at the National Museum of Natural History, and was the first woman employed by Bureau of American Ethnology of the Smithsonian Institution, and the first president of the Women’s Anthropological Society of America. The National Anthropological Archives has more than 3300 photographs collected by Matilda.</p></li>
+<li><p><strong>Frances Densmore</strong> is the most mentioned woman in four different decades (1910s, 1920s, 1940s, and 1950s)! She devoted over fifty years of her life to the study and preservation of Native American music. She collected thousands of song recordings, including twenty-four hundred transcribed songs.</p></li>
+</ul>
+<p>*In the 1930s, we have <strong>Mary Vaux Walcott</strong>. She was a botanical illustrator and a volunteer at Smithsonian. She was the wife of Charles D. Walcott, who was the fourth Secretary of the Smithsonian. Many times, Mary Walcott is simply referred to as Mrs.&nbsp;Charles Walcott, which complicates the task of giving proper attribution.</p>
+<p>*In the 1960s, we have <strong>Betty Jane Meggers</strong>. She was a research associate in the Anthropology Department at NMNH, and her studies focused on South American cultures.</p>
+<p>*In the 1970s, we have three women who were equally mentioned in the reports. <strong>Audrey Davis</strong>, from the National Museum of American History, <strong>Ursula Marvin</strong>, from the Smithsonian Astrophysical Observatory, and <strong>Marie-Hélène Sachet</strong>, from the National Museum of Natural History. It’s also the first time we have women with the title of Curator as a top-mentioned woman.</p>
+<p>*In the 1980s, Devra Kleiman from the National Zoo, is the most mentioned woman in the Annual Reports. She helped create the field of Conservation Biology and her research helped save the Golden Lion Tamarin from extinction. She also helped change the way pandas were housed at the zoo, and thanks to her, Tai Shan, the first panda born at the National Zoo to survive longer than a few days was born in 2005.</p>
+<p>*Finally, in 1990s, we have <strong>Jessie Cohen</strong>, a photographer at the National Zoo. She is represented in the reports by the images she captured of the animals and exhibits at the National Zoo. This also coincides with the reports becoming more visual, with images becoming more important to represent the most significant events of the year.</p>
+<p>It is important to note that all of the women mentioned so far are white. There are also women who were firsts in their fields such as <strong>Sophie Lutterlough</strong> and <strong>Margaret Collins</strong>, both African American women, who have very few or no mentions in the data sources we considered. We have a lot of work to do in order to make their stories more central to Smithsonian science. The take-home message of our work is that we are just starting to scratch the surface of the women’s contributions at the Smithsonian Institution. We are beginning to understand the patterns and trends based on the notable women we know more about. We have not yet fully explored the context of the Annual Report mentions and how these may have changed over time. We also hope that by including more data sources in future work, we will be able to unveil new stories and give credit to those women that helped shape the Smithsonian history but are not as of yet well known.</p>
+</section>
+<section id="a-look-at-broad-patterns-in-the-annual-reports" class="level2">
+<h2 class="anchored" data-anchor-id="a-look-at-broad-patterns-in-the-annual-reports">A look at broad patterns in the Annual Reports</h2>
+<p>While our main question in this project was about women from the Funk List, we are also interested to learn more about how the Annual Reports have changed over time. Here, we present some very early work to that end. First, we were interested in knowing what were the most common first names mentioned in annual reports through time. These data are only instances where first names are spelled out, not just as initials, so it’s not complete first name data, but provides an interesting snapshot. Here are the top 10 names for each of 4 timepoints: 1920, 1950, 1970, and 1990. It is interesting, but perhaps not surprising, that these are all traditionally men’s names, and that out of 40 possible top names (10 in each year), there are only 16 total names. Men’s first names that were common in the 1990 annual report were largely the same names common in 1920.</p>
+<p>Since there were no traditionally women’s names in the top 10, we thought we would explicitly look for the top 10 traditionally women’s names in the same 4 reports. We then counted the total number of mentions of these top 10 first names, and this is what you see plotted here. You can see that in 1920, about 10% of these total mentions are traditionally women’s names and by 1990, this percentage is slightly better, but nowhere near equal.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/first_names_both.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/first_names_both.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 8.</strong> Plots of common first names in four different Annual Reports.</p>
+</div>
+<p>We can also look at word counts for particular words of interest across the reports. Here, we extracted the top 100 nouns for all the reports (stop words were removed). We plotted occurrences of different sets of words from this set of top 100 for each report.</p>
+<ul>
+<li>First, the words <strong>research</strong> and <strong>collections</strong>. As you might imagine, these are two of the most common words in the reports.</li>
+<li>We also looked at the words <strong>man</strong>, <strong>woman</strong>, <strong>male</strong>, and <strong>female</strong>. This was quite striking to, that <strong>woman</strong> occurs so rarely in the top 100 nouns across the Annual Reports. We have to do more work to understand the context of these mentions, but we do know that often the word man has been historically used in ways like: mankind, manned spacecraft, seemingly to represent all humans, in ways that are now considered exclusionary of women.</li>
+<li>Finally, we chose a set common science words and looked at their usage over time. Again, it will be interesting to look at the contexts for these mentions and how those have changed over time as science itself evolved and changed.</li>
+</ul>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/research_collections.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/research_collections.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 9.</strong> Word count of the words research and collection over time</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/man_woman.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/man_woman.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 10.</strong> Word count of the words man, woman, male, female over time</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/science_words.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/science_words.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 11.</strong> Word count of common science words over time</p>
+</div>
+</section>
+<section id="conclusion-acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-acknowledgments">Conclusion &amp; Acknowledgments</h2>
+<p>We hope that these initial peeks inside the Annual Reports at scale jumpstart more detailed study of women in science at the Smithsonian. We are excited to integrate these data with other collections and archives data to provide a fuller picture of Smithsonian science.</p>
+<p>Data science is very collaborative work and we would like to acknowledge Effie Kapsalis, Liz Harmon, Mike Trizna, Tiana Curry, Megan Glenn, Grace May, Richard Naples, and Keri Thompson for their help with this project. We would also like to thank the Smithsonian Women’s Committee for funding.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://giscus.app/client.js" data-repo="sidatasciencelab/sidatasciencelab.github.io" data-repo-id="" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright © 2023 <a href="https://www.si.edu/">Smithsonian</a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sidatasciencelab">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SIDataScience">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right"><a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});</script>
+
+
+
+</body></html>
