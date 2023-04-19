@@ -6,7 +6,7 @@ editor: source
 sidebar: false
 search: false
 description: | 
-  A data science laboratory to advance computational research and education across the Smithsonian. 
+  A data science laboratory to advance computational research and education across the Smithsonian 
 image: images/dsl_logo.png
 listing:
   - id: latest-content
@@ -232,7 +232,7 @@ Erica Thompson on the ethics of modelling
 
 ::: {.g-col-12 .g-col-md-6}
 ### Published by
-[![](images/rss-logo-footer.png)](https://rss.org.uk/)
+[![](images/logo-white.png)](https://www.si.edu/)
 :::
 ::: {.g-col-12 .g-col-md-2}
 ### About us
