@@ -6011,12 +6011,18 @@ Tarran, Brian. 2022. “Why large language models should come with a content war
 <div class="figure-caption">
 <p><strong>Figure 2.</strong> Title pages of the 1972 Smithsonian Annual Report.</p>
 </div>
+</section>
+<section id="methods-results" class="level2">
+<h2 class="anchored" data-anchor-id="methods-results">Methods &amp; Results</h2>
 <p>We are also using Smithsonian Research Online or SRO, maintained by Smithsonian Libraries, which has all the citations for publications by Smithsonian authors. We were able to pull the data for each of the women on the Funk List via the SRO API.</p>
 <p>We used a combination of natural language processing in spaCy and shell scripting to:</p>
-<p><em>Extract and count mentions of women on the Funk List in Annual Reports </em>Count publications for women on the Funk List from Smithsonian Research Online *Extract and count occurrences first names and words related to science in the Annual Reports</p>
+<ul>
+<li>Extract and count mentions of women on the Funk List in Annual Reports</li>
+<li>Count publications for women on the Funk List from Smithsonian Research Online</li>
+<li>Extract and count occurrences first names and words related to science in the Annual Reports</li>
+</ul>
 <p>We decided to include all women from the Funk List that are no longer working at the Smithsonian and Annual Reports from 1846 up to and including 1999. Of the 127 women that remained, 12 are women of color, and one is a trans woman. We recognize that this list of 127 is already biased toward those most well-known around the Institution. It is our hope that by beginning to understand the level of visibility of these most prominent women in science, we will be able to start learning more about those never mentioned in the reports.</p>
-<p>The first mention of a woman on our list was in the 1880 Annual Report. The number of total mentions increases steadily until 1984. Early in Smithsonian history, for example in the 1880s or 1890s, only one or two women from our list are mentioned per Annual Report. That number increases over time and it peaks in 1984, with 40 women being mentioned. There’s a sudden drop in the number of mentions in 1985, after which time the Annual Reports sharply decreased in length, from 694 pages in 1984 to 192 pages in 1985. Starting in 1991, the number of pages dropped again to around 100, and the reports also became much more visual. In the plots below, you can see the number of Annual Report mentions for all 127 women plotted over time, the number of Annual Reported mentions with the most-often mentioned women in each decade highlighted, and the publication counts plotted against the count of Annual Report mentions.<br>
-</p>
+<p>The first mention of a woman on our list was in the 1880 Annual Report. The number of total mentions increases steadily until 1984. Early in Smithsonian history, for example in the 1880s or 1890s, only one or two women from our list are mentioned per Annual Report. That number increases over time and it peaks in 1984, with 40 women being mentioned. There’s a sudden drop in the number of mentions in 1985, after which time the Annual Reports sharply decreased in length, from 694 pages in 1984 to 192 pages in 1985. Starting in 1991, the number of pages dropped again to around 100, and the reports also became much more visual. In the plots below, you can see the number of Annual Report mentions for all 127 women plotted over time, the number of Annual Reported mentions with the most-often mentioned women in each decade highlighted, and the publication counts plotted against the count of Annual Report mentions. &nbsp; &nbsp;</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
@@ -6029,6 +6035,7 @@ Tarran, Brian. 2022. “Why large language models should come with a content war
 <div class="figure-caption">
 <p><strong>Figure 3.</strong> Mentions in Annual Reports with overall page count.</p>
 </div>
+<p>&nbsp; &nbsp;</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
@@ -6041,6 +6048,7 @@ Tarran, Brian. 2022. “Why large language models should come with a content war
 <div class="figure-caption">
 <p><strong>Figure 4.</strong> Mentions over time with top women per decade.</p>
 </div>
+<p>&nbsp; &nbsp;</p>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
@@ -6053,6 +6061,117 @@ Tarran, Brian. 2022. “Why large language models should come with a content war
 <div class="figure-caption">
 <p><strong>Figure 5.</strong> Publication count plotted against mention count.</p>
 </div>
+</section>
+<section id="who-are-the-most-prominent-si-women-in-science" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-the-most-prominent-si-women-in-science">Who are the most prominent SI women in science?</h2>
+<p>As you can see, the women with the most Annual Reports mentions are not necessarily those with the most publications. The three most mentioned women are <strong>Frances Theresa Densmore</strong>, <strong>Betty Jane Meggers</strong>, and <strong>Matilda Stevenson</strong>. All three were members of the Anthropology Department at the National Museum of Natural History. The most published woman from our list is <strong>Vicki Funk</strong>. Vicki published 133 papers up to 1999, which is the end of the time span for our analysis, but if we account for all her publications until her death in 2019, that number jumps to 368. Other highly-published women are JoGayle Howard from the Smithsonian Conservation Biology Institute and <strong>Pamela Vandiver</strong>, from the Museum Conservation Institute. Pamela Vandiver had 128 publications but only one Annual Report mention.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/published.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/published.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 6.</strong> Photos from SIA of Funk, Howard, and Vandiver.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/presentation2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/presentation2.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 7.</strong> Photos from SIA of Densmore, Meggers, and Stevenson.</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+</section>
+<section id="who-are-the-most-prominent-si-women-in-science-by-decade" class="level2">
+<h2 class="anchored" data-anchor-id="who-are-the-most-prominent-si-women-in-science-by-decade">Who are the most prominent SI women in science by decade?</h2>
+<p>We started with 127 women and looked across 150 years of Annual Reports. If we look decade by decade, there are nine women in science who appear as the most prominent throughout Smithsonian history in terms of their presence in the Annual Reports.</p>
+<ul>
+<li><p><strong>Matilda Stevenson</strong> was the most mentioned woman in the 1890s and early 1900s. She was from the Anthropology department at the National Museum of Natural History, and was the first woman employed by Bureau of American Ethnology of the Smithsonian Institution, and the first president of the Women’s Anthropological Society of America. The National Anthropological Archives has more than 3300 photographs collected by Matilda.</p></li>
+<li><p><strong>Frances Densmore</strong> is the most mentioned woman in four different decades (1910s, 1920s, 1940s, and 1950s)! She devoted over fifty years of her life to the study and preservation of Native American music. She collected thousands of song recordings, including twenty-four hundred transcribed songs.</p></li>
+</ul>
+<p>*In the 1930s, we have <strong>Mary Vaux Walcott</strong>. She was a botanical illustrator and a volunteer at Smithsonian. She was the wife of Charles D. Walcott, who was the fourth Secretary of the Smithsonian. Many times, Mary Walcott is simply referred to as Mrs.&nbsp;Charles Walcott, which complicates the task of giving proper attribution.</p>
+<p>*In the 1960s, we have <strong>Betty Jane Meggers</strong>. She was a research associate in the Anthropology Department at NMNH, and her studies focused on South American cultures.</p>
+<p>*In the 1970s, we have three women who were equally mentioned in the reports. <strong>Audrey Davis</strong>, from the National Museum of American History, <strong>Ursula Marvin</strong>, from the Smithsonian Astrophysical Observatory, and <strong>Marie-Hélène Sachet</strong>, from the National Museum of Natural History. It’s also the first time we have women with the title of Curator as a top-mentioned woman.</p>
+<p>*In the 1980s, Devra Kleiman from the National Zoo, is the most mentioned woman in the Annual Reports. She helped create the field of Conservation Biology and her research helped save the Golden Lion Tamarin from extinction. She also helped change the way pandas were housed at the zoo, and thanks to her, Tai Shan, the first panda born at the National Zoo to survive longer than a few days was born in 2005.</p>
+<p>*Finally, in 1990s, we have <strong>Jessie Cohen</strong>, a photographer at the National Zoo. She is represented in the reports by the images she captured of the animals and exhibits at the National Zoo. This also coincides with the reports becoming more visual, with images becoming more important to represent the most significant events of the year.</p>
+<p>It is important to note that all of the women mentioned so far are white. There are also women who were firsts in their fields such as <strong>Sophie Lutterlough</strong> and <strong>Margaret Collins</strong>, both African American women, who have very few or no mentions in the data sources we considered. We have a lot of work to do in order to make their stories more central to Smithsonian science. The take-home message of our work is that we are just starting to scratch the surface of the women’s contributions at the Smithsonian Institution. We are beginning to understand the patterns and trends based on the notable women we know more about. We have not yet fully explored the context of the Annual Report mentions and how these may have changed over time. We also hope that by including more data sources in future work, we will be able to unveil new stories and give credit to those women that helped shape the Smithsonian history but are not as of yet well known.</p>
+</section>
+<section id="a-look-at-broad-patterns-in-the-annual-reports" class="level2">
+<h2 class="anchored" data-anchor-id="a-look-at-broad-patterns-in-the-annual-reports">A look at broad patterns in the Annual Reports</h2>
+<p>While our main question in this project was about women from the Funk List, we are also interested to learn more about how the Annual Reports have changed over time. Here, we present some very early work to that end. First, we were interested in knowing what were the most common first names mentioned in annual reports through time. These data are only instances where first names are spelled out, not just as initials, so it’s not complete first name data, but provides an interesting snapshot. Here are the top 10 names for each of 4 timepoints: 1920, 1950, 1970, and 1990. It is interesting, but perhaps not surprising, that these are all traditionally men’s names, and that out of 40 possible top names (10 in each year), there are only 16 total names. Men’s first names that were common in the 1990 annual report were largely the same names common in 1920.</p>
+<p>Since there were no traditionally women’s names in the top 10, we thought we would explicitly look for the top 10 traditionally women’s names in the same 4 reports. We then counted the total number of mentions of these top 10 first names, and this is what you see plotted here. You can see that in 1920, about 10% of these total mentions are traditionally women’s names and by 1990, this percentage is slightly better, but nowhere near equal.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/first_names_both.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/first_names_both.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 8.</strong> Plots of common first names in four different Annual Reports.</p>
+</div>
+<p>We can also look at word counts for particular words of interest across the reports. Here, we extracted the top 100 nouns for all the reports (stop words were removed). We plotted occurrences of different sets of words from this set of top 100 for each report.</p>
+<ul>
+<li>First, the words <strong>research</strong> and <strong>collections</strong>. As you might imagine, these are two of the most common words in the reports.</li>
+<li>We also looked at the words <strong>man</strong>, <strong>woman</strong>, <strong>male</strong>, and <strong>female</strong>. This was quite striking to, that <strong>woman</strong> occurs so rarely in the top 100 nouns across the Annual Reports. We have to do more work to understand the context of these mentions, but we do know that often the word man has been historically used in ways like: mankind, manned spacecraft, seemingly to represent all humans, in ways that are now considered exclusionary of women.</li>
+<li>Finally, we chose a set common science words and looked at their usage over time. Again, it will be interesting to look at the contexts for these mentions and how those have changed over time as science itself evolved and changed.</li>
+</ul>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/research_collections.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/research_collections.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 9.</strong> Word count of the words research and collection over time</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/man_woman.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/man_woman.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 10.</strong> Word count of the words man, woman, male, female over time</p>
+</div>
+<p>&nbsp; &nbsp;</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-center" style="flex-basis: 100.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="images/science_words.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="https://sidatasciencelab.github.io/ideas/tutorials/posts/2020/10/22/images/science_words.png" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="figure-caption">
+<p><strong>Figure 11.</strong> Word count of common science words over time</p>
+</div>
+</section>
+<section id="conclusion-acknowledgments" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-acknowledgments">Conclusion &amp; Acknowledgments</h2>
+<p>We hope that these initial peeks inside the Annual Reports at scale jumpstart more detailed study of women in science at the Smithsonian. We are excited to integrate these data with other collections and archives data to provide a fuller picture of Smithsonian science.</p>
+<p>Data science is very collaborative work and we would like to acknowledge Effie Kapsalis, Liz Harmon, Mike Trizna, Tiana Curry, Megan Glenn, Grace May, Richard Naples, and Keri Thompson for their help with this project. We would also like to thank the Smithsonian Women’s Committee for funding.</p>
 
 
 </section>

@@ -17,8 +17,8 @@
       "/viewpoints/editors-blog/posts/2022/12/01/themes.html",
       "/viewpoints/editors-blog/posts/2022/11/23/LLM-content-warning.html",
       "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html",
-      "/ideas/tutorials/posts/2020/10/22/impact.html",
-      "/ideas/tutorials/posts/2020/04/14/names.html"
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -36,7 +36,7 @@
   {
     "listing": "/latest-content.html",
     "items": [
-      "/ideas/tutorials/posts/2023/04/13/flowers.html",
+      "/research/projects/posts/2023/04/13/flowers.html",
       "/viewpoints/editors-blog/posts/2023/03/29/defining-DS.html",
       "/viewpoints/editors-blog/posts/2023/03/15/AI-screening.html",
       "/viewpoints/interviews/posts/03/06/data-science-act.html",
@@ -52,8 +52,8 @@
       "/viewpoints/editors-blog/posts/2022/12/01/themes.html",
       "/viewpoints/editors-blog/posts/2022/11/23/LLM-content-warning.html",
       "/viewpoints/editors-blog/posts/2022/10/18/meet-the-team.html",
-      "/ideas/tutorials/posts/2020/10/22/impact.html",
-      "/ideas/tutorials/posts/2020/04/14/names.html"
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -133,6 +133,20 @@
     "listing": "/training/career-profiles/index.html",
     "items": [
       "/training/career-profiles/posts/2023/03/28/tamanna-haque.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/research/projects/index.html",
+    "items": [
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   }
 ]

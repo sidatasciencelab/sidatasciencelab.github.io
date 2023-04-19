@@ -1,16 +1,14 @@
 ---
-pagetitle: Latest content | Real World Data Science
+pagetitle: Latest content | Smithsonian Data Science Lab
 title: Latest content
-subtitle: A panoramic view of Real World Data Science 
 title-block-banner: true
 sidebar: false
 search: false
 page-layout: article  
 listing:
   contents: 
-  - /case-studies
-  - /ideas
-  - /careers
+  - /training
+  - /research
   - /viewpoints
   - "!index.qmd"
   sort: "date desc"

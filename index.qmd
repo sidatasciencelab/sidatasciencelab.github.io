@@ -11,9 +11,7 @@ image: images/dsl_logo.png
 listing:
   - id: latest-content
     contents: 
-    - /case-studies
-    - /ideas
-    - /careers
+    - /research
     - /viewpoints
     - "!index.qmd"
     - "!flowers.qmd"
@@ -37,9 +35,9 @@ listing:
   #   max-items: 3
   #   feed: false
 
-  # - id: ideas
+  # - id: research
   #   contents: 
-  #   - /ideas
+  #   - /reasearch
   #   - "!index.qmd"
   #   sort: "date desc"
   #   type: grid
@@ -84,6 +82,17 @@ listing:
     max-items: 3
     feed: false
 
+  - id: datasciencebites
+    contents: 
+    - /ideas/datasciencebites
+    - "!index.qmd"
+    sort: "date desc"
+    type: grid
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    max-items: 3
+    feed: false
 
   - id: interviews
     contents: 
@@ -158,6 +167,18 @@ This is the person who said the block quote
 :::
 :::
 
+::: {.content-container}
+::: {.listing-block}
+<a href="ideas/datasciencebites/index.qmd">
+
+## Data Science Bites 
+</a>
+
+::: {#datasciencebites}
+:::
+
+:::
+:::
 
 ::: {.content-container}
 ::: {.listing-block}

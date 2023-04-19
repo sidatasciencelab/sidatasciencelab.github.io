@@ -1,0 +1,60 @@
+---
+title: "What’s in a name?"
+subtitle: "Uncovering stories of women in science"
+description: |
+  An investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana Curry set out to understand how botanist and artist Mary Vaux Walcott contributed to Smithsonian botanical collections and how women's names become obscured by history.  
+author: Rebecca Dikow and Megan Glenn
+date: 04/14/2020
+#bibliography: references.bib
+#citation-location: margin
+image: images/walcott_specimen2.png
+image-alt: Thistle specimen and illustration by MV Walcott
+toc: true
+filters:
+  - lightbox
+lightbox: auto
+---
+
+As the Smithsonian makes substantial progress digitizing collections across its museums, research centers, archives, and libraries, we have the opportunity to apply computational tools to elevate research and enable discovery and the potential to surface stories of those previously unrecognized for their contributions to the Smithsonian. For the American Women’s History Initiative, this work is integral to the task of quantifying the contribution of women over the Smithsonian’s history and is a step toward making the necessary changes to ensure fuller participation of all communities to the future of the Smithsonian.
+
+In the summer of 2019, the Data Science Lab hosted Tiana Curry, a senior at UCSB studying Mathematics and Statistics. Tiana’s project focused on examining Smithsonian women in science on the Funk List. She used this list to hone her data science skills - producing maps of specimens and collections attributed to different Smithsonian women in science and plotting start dates and job titles for these women in science over time. One particular find that Tiana made about natural historian, botanist, and artist Mary Vaux Walcott, highlights some of the challenges that are particular to surfacing women’s stories.
+
+<center>
+![Tiana Curry](images/Tiana.jpeg)
+</center>
+
+Mary Vaux Walcott (born Mary Morris Vaux; July 31, 1860 - August 22, 1940) was an avid outdoors person and artist with particular interests in geology and botany. She married paleontologist and 4th Secretary to the Smithsonian Charles D. Walcott in 1914. Mary spent years traveling throughout the United States, Canada, and Mexico, collecting plants and painting them.
+
+<center>
+![Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives](images/walcott_portrait.jpeg)
+</center>
+
+There are hundreds of specimens collected by Mary Vaux Walcott in the US National Herbarium from 1915 until her death and many illustrations and paintings in the Smithsonian American Art Museum. In 1925, the Smithsonian published several hundred of her plant illustrations in *North American Wild Flowers*, available digitally via the [Biodiversity Heritage Library](https://www.biodiversitylibrary.org/item/139212#page/7/mode/1up).
+
+<center>
+![Thistle specimen and illustration by MV Walcott](images/walcott_specimen2.png)
+</center>
+
+The thistle (genus Cirsium: Asteraceae) shown above left was collected by Mary Vaux Walcott in the Grand Canyon that was the basis for the illustration on the right. Specimen from the US National Herbarium, illustration from the Smithsonian American Art Museum, both available Open Access, license CC0. High resolution image at the bottom of the post.
+
+During the late 1800 and early 1900s, it was common for women to serve in a volunteer capacity to their husbands and brothers at the Smithsonian. With that knowledge, when researching the contributions of early women in science, we routinely search collections databases not only for the woman’s name, but also her husband’s or brother’s name to capture in full her contribution. Perhaps she would be listed as a co-collector rather than primary, or in the notes field rather in the collector field.
+
+When Tiana queried the NMNH Botany collections database for all specimens collected by a “Walcott,” she noticed that there were dozens of collections attributed to Charles Walcott (mostly as C. D. Walcott) that had occurred after his death (1927). In order to find out what was going on, we downloaded the digital images of the specimens. As we examined the images, we had a big aha moment: the cursive on the labels showed the collector was written as “**Mrs.** C. D. Walcott.” These are specimens collected by Mary Vaux Walcott but attributed to her husband. During the transcription process, titles (Mr., Mrs., Dr.) are often removed because they are generally unimportant - we are interested in the collector’s name, not their title. In this case, it is also challenging to distinguish Mr. and Mrs. written in cursive on the original labels.
+
+<center>
+![Walcott specimen labels](images/walcott_labels_0.png)
+</center>
+
+The above labels, which are present in the lower right corner of herbarium sheets, are representative of the different ways Mary Vaux Walcott’s name is written on specimen labels as well as some that are collected by C. D. Walcott himself. Mary Vaux Walcott is referred to as Mrs. Walcott, Mrs. C. D. Walcott, Mrs. Chas. D. Walcott, Mrs. Charles D.  Walcott, and Mary Vaux Walcott. There is also at least one Mrs. Walcott collection from 1893, which is likely C. D. Walcott’s 2nd wife, Helena. Another notable specimen lists both Mrs. C. D. Walcott and Mrs. Herbert Hoover as collectors, from 1934. High resolution image at the bottom of the post.
+
+Further exploration of those botany specimens revealed dozens of additional instances where specimens labeled in cursive with Mrs. C. D. Walcott were present in the database as C. D. Walcott, as well as the many different ways Mary Vaux Walcott’s name was written on her specimen labels. We were very fortunate to have access to not only the digital metadata records for these specimens, but also the images that capture even more of their history. The National Museum of Natural History, in collaboration with the Smithsonian Digitization Program Office, has digitized more than half of the 5 million specimens in the herbarium. Without these digital images, we would have had to spend hours in the herbarium to find these specimens to take a closer look.
+
+Collections digitization presents museum professionals with the unprecedented ability to make collections accessible to the public, as well as open new lines of research. But without Tiana’s careful eye looking at every entry in a spreadsheet (and the fact that she had spent many hours reading about both Mary Vaux Walcott’s and Charles D. Walcott’s lives), we would not have noticed the discrepancy of collections dates and we would not have found these additional collections to attribute to Mary Vaux Walcott. 
+
+We are left both encouraged that digitized collections can provide us new opportunities to dive into our data, but also keenly aware that surfacing women’s stories will remain complicated. Mary Vaux Walcott was a well-known woman around the Smithsonian, who lived a privileged life. What about those women whose names we don’t yet know? We look forward to uncovering many more women’s stories as we dive even deeper.
+
+Rebecca leads the Data Science Lab and Megan is a student in the Digital Public Humanities program at George Mason University.
+
+**Contact us on Twitter: @SIDataScience**
+
+We would like to acknowledge Effie Kapsalis, Liz Harmon, Heidi Stover, Mirian Tsuchiya, Mike Trizna, Smithsonian Digitization Program Office, Smithsonian Women’s Committee, and the National Museum of Natural History.

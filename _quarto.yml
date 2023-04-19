@@ -18,7 +18,7 @@ website:
     title: false
     collapse-below: lg
     right:
-      - ideas/index.qmd
+      - research/index.qmd
       - training/index.qmd
       - viewpoints/index.qmd
       - aivalues/index.qmd

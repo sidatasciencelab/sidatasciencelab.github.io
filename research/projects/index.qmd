@@ -1,0 +1,15 @@
+---
+pagetitle: Research Blog | Research | Data Science Lab
+title: Research Blog
+subtitle: In-depth exploration and anaysis of research projects in the SI Data Science Lab
+search: false
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  page-size: 12
+comments: false
+---
