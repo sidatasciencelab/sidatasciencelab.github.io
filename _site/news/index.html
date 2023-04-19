@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,11 +97,13 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../dsl.css">
 <link rel="alternate" type="application/rss+xml" title="Smithsonian Data Science Lab" href="index.xml"><meta property="og:title" content="News | Smithsonian Data Science Lab">
 <meta property="og:description" content="Updates from our lab | News Blog">
+<meta property="og:image" content="https://sidatasciencelab.github.io/news/news-blog/posts/2023/04/19/images/YOS_image.jpeg">
 <meta property="og:site-name" content="Smithsonian Data Science Lab">
 <meta name="twitter:title" content="News | Smithsonian Data Science Lab">
 <meta name="twitter:description" content="Updates from our lab | News Blog">
+<meta name="twitter:image" content="https://sidatasciencelab.github.io/news/news-blog/posts/2023/04/19/images/YOS_image.jpeg">
 <meta name="twitter:site" content="@SIDataScience">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -190,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -203,7 +205,31 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-
+<div class="g-col-1" data-index="0" data-listing-date-sort="1681880400000" data-listing-file-modified-sort="1681941585489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../news/news-blog/posts/2023/04/19/open.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../news/news-blog/posts/2023/04/19/images/YOS_image.jpeg" class="thumbnail-image card-img" style="height: 150px;" alt="Year of Open Science graphic">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Year of Open Science
+</h5>
+<div class="card-text listing-description">
+The Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Alex White
+</div>
+<div class="listing-date">
+Apr 19, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -461,7 +487,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/news/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right"><a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
   </div>
 </footer>

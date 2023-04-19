@@ -34,7 +34,6 @@ listing:
   #   max-items: 3
   #   feed: false
 
-
   # - id: news
   #   contents: 
   #   - /news
@@ -69,7 +68,6 @@ listing:
     filter-ui: false
     max-items: 3
     feed: false
-
 toc: false
 ---
 ::: {.content-container}
@@ -107,7 +105,7 @@ We are living in an age of "big data". Insights from big data touch almost every
 ::: {.listing-block}
 <a href="latest-content.qmd">
 
-## Latest content 
+
 </a>
 
 ::: {#latest-content}
@@ -119,7 +117,6 @@ We are living in an age of "big data". Insights from big data touch almost every
 ::: {.pullout-text}
 ::: {.pullout-container}
 ::: {.pullout-block .black-background}
-![](images/quote-purple.png){width="100px"}
 
 ## Here is a space for a block quote
 This is the person who said the block quote
@@ -145,23 +142,9 @@ This is the person who said the block quote
 :::
 :::
 
-::: {.content-container}
-::: {.listing-block}
-<a href="news/news-blog/index.qmd">
-
-## News
-</a> 
-
-::: {#news}
-:::
-
-:::
-:::
-
 ::: {.pullout-text}
 ::: {.pullout-container}
 ::: {.pullout-block .black-background}
-![](images/quote-purple.png){width="100px"}
 
 ## Here is another block quote.
 The person who said it.
@@ -176,12 +159,12 @@ The person who said it.
 
 ::: {.content-container}
 ::: {.listing-block}
-<a href="viewpoints/editors-blog/index.qmd">
+<a href="news/news-blog/index.qmd">
 
-## Editors' Blog
+## News
 </a> 
 
-::: {#editors-blog}
+::: {#news-blog}
 :::
 
 :::
@@ -194,16 +177,23 @@ The person who said it.
 
 
 ::: {.g-col-12 .g-col-md-4}
-
+###  
 [![](images/logo-white.png)](https://www.si.edu/)
 :::
-
+::: {.g-col-12 .g-col-md-2}
+:::
 ::: {.g-col-12 .g-col-md-2}
 ### About us
 [Our aims](about-dsl.qmd)\
 [Our team](people.qmd)\
 [Collaborations](collaborators.qmd)\
 [Contact us](contact.qmd)
+:::
+::: {.g-col-12 .g-col-md-2}
+### Our partners
+UCSB-SI Scholars\
+OCIO\
+Carpentries
 :::
 ::: {.g-col-12 .g-col-md-2}
 ### Follow us

@@ -17,9 +17,9 @@ The Smithsonian Institution has been a [member organization](https://carpentries
 We offer peer-led workshops for Smithsonian staff, academic appointees, contractors, volunteers, and other SI-affiliated individuals on a fairly regular basis. To be informed of these workshops and other SI Carpentries events, you can sign up for our announcement mailing list. To sign up for notifications, click the button below and enter your email address:
 
 <center>
-
+::: {.button .button1}
 [Sign up for the Carpentries-annouce mailing list](https://si-listserv.si.edu/cgi-bin/wa?SUBED1=CARPENTRIES-ANNOUNCE&A=1)
-
+:::
 </center>
 
 # Trained Carpentries Instructors
@@ -29,8 +29,10 @@ We will be accepting applications on a rolling basis.
 
 <center>
 
-
+::: {.button .button1}
 [Apply to join the SI Carpentries Instructor Team](https://forms.office.com/r/Qi9xEmhGpY)
+:::
+
 
 </center>
 

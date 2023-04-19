@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="A data science laboratory to advance computational research and education across the Smithsonian">
 
 <title>Smithsonian Data Science Lab</title>
 <style>
@@ -31,6 +32,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./images/si_favicon.ico" rel="icon">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -59,19 +62,112 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-latest-content .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-latest-content'] = new List('listing-latest-content', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-news-blog .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-news-blog'] = new List('listing-news-blog', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="dsl.css">
-<meta property="og:title" content="">
-<meta property="og:image" content="https://sidatasciencelab.github.io/images/YOS_image.jpeg">
+<meta property="og:title" content="Smithsonian Data Science Lab">
+<meta property="og:description" content="A data science laboratory to advance computational research and education across the Smithsonian">
+<meta property="og:image" content="https://sidatasciencelab.github.io/images/dsl_logo.png">
 <meta property="og:site-name" content="Smithsonian Data Science Lab">
-<meta name="twitter:title" content="">
-<meta name="twitter:image" content="https://sidatasciencelab.github.io/images/YOS_image.jpeg">
+<meta property="og:image:height" content="345">
+<meta property="og:image:width" content="345">
+<meta name="twitter:title" content="Smithsonian Data Science Lab">
+<meta name="twitter:description" content="A data science laboratory to advance computational research and education across the Smithsonian">
+<meta name="twitter:image" content="https://sidatasciencelab.github.io/images/dsl_logo.png">
 <meta name="twitter:site" content="@SIDataScience">
+<meta name="twitter:image-height" content="345">
+<meta name="twitter:image-width" content="345">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -82,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./images/dsl_logo.png" alt="Smithsonian Data Science Lab logo" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
+            <div id="quarto-search" class="" title="false"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -135,14 +231,10 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
 
 
 
@@ -150,8 +242,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="top-story purple-background">
 <p><a href="./news/index.html"></a></p><a href="./news/index.html">
 <div class="grid">
-<section id="federal-agencies-declare-2023-the-year-of-open-science" class="level2 g-col-12 g-col-lg-4 top-story-text">
-<h2 class="anchored" data-anchor-id="federal-agencies-declare-2023-the-year-of-open-science">Federal agencies declare 2023 the Year of Open Science</h2>
+<section id="federal-agencies-declare-2023-the-year-of-open-science" class="g-col-12 g-col-lg-4 top-story-text">
+<h2>Federal agencies declare 2023 the Year of Open Science</h2>
 <p>The Smithsonian Data Science Lab is proud to support the Smithsonian’s effort celebrate the benefits of open science and expand the adoption of open science practices accross the institution.</p>
 </section>
 <div class="g-col-12 g-col-lg-8 top-story-img">
@@ -174,21 +266,95 @@ ul.task-list li input[type="checkbox"] {
 <div class="content-container">
 <div class="listing-block">
 <p><a href="./latest-content.html"></a></p><a href="./latest-content.html">
-</a><section id="latest-content" class="level2"><a href="./latest-content.html">
-<h2 class="anchored" data-anchor-id="latest-content">Latest content</h2>
 </a><p><a href="./latest-content.html"></a></p>
-<div id="latest-content">
-
+<div id="listing-latest-content" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1681880400000" data-listing-file-modified-sort="1681941585489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./news/news-blog/posts/2023/04/19/open.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./news/news-blog/posts/2023/04/19/images/YOS_image.jpeg" class="thumbnail-image card-img" style="height: 150px;" alt="Year of Open Science graphic">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Year of Open Science
+</h5>
+<div class="card-text listing-description">
+The Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…
 </div>
-</section>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Alex White
+</div>
+<div class="listing-date">
+Apr 19, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1603342800000" data-listing-file-modified-sort="1681936286924" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<a href="./research/projects/posts/2020/10/22/impact.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./research/projects/posts/2020/10/22/images/presentation2.png" class="thumbnail-image card-img" style="height: 150px;" alt="Frances Theresa Densmore, Betty Jane Meggers, and Matilda Stevenson, each woman a member of the Anthropology Department at the National Museum of Natural History.">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Uncovering the scientific impact of women at the Smithsonian
+</h5>
+<div class="card-text listing-description">
+Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Rebecca Dikow and Mirian Tsuchiya
+</div>
+<div class="listing-date">
+Oct 22, 2020
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-listing-date-sort="1586840400000" data-listing-file-modified-sort="1681928330353" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<a href="./research/projects/posts/2020/04/14/names.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="thumbnail-image card-img" style="height: 150px;" alt="Thistle specimen and illustration by MV Walcott">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+What’s in a name?
+</h5>
+<div class="card-text listing-description">
+An investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Rebecca Dikow and Megan Glenn
+</div>
+<div class="listing-date">
+Apr 14, 2020
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </div>
 </div>
 <div class="pullout-text">
 <div class="pullout-container">
-<div class="pullout-block black-background">
-<p><img src="images/quote-purple.png" class="img-fluid" width="100"></p>
-<section id="here-is-a-space-for-a-block-quote" class="level2">
-<h2 class="anchored" data-anchor-id="here-is-a-space-for-a-block-quote">Here is a space for a block quote</h2>
+<section id="here-is-a-space-for-a-block-quote" class="pullout-block black-background">
+<h2>Here is a space for a block quote</h2>
 <p>This is the person who said the block quote</p>
 <div class="button button1">
 <p><a href="./research/projects/index.html">Explore our research blog</a></p>
@@ -196,37 +362,74 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
-</div>
 <div class="content-container">
 <div class="listing-block">
 <p><a href="./research/projects/index.html"></a></p><a href="./research/projects/index.html">
-</a><section id="research-blog" class="level2"><a href="./research/projects/index.html">
-<h2 class="anchored" data-anchor-id="research-blog">Research Blog</h2>
+<h2 id="research-blog">Research Blog</h2>
 </a><p><a href="./research/projects/index.html"></a></p>
-<div id="projects">
-
+<div id="listing-projects" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1603342800000" data-listing-file-modified-sort="1681936286924" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11">
+<a href="./research/projects/posts/2020/10/22/impact.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./research/projects/posts/2020/10/22/images/presentation2.png" class="thumbnail-image card-img" style="height: 150px;" alt="Frances Theresa Densmore, Betty Jane Meggers, and Matilda Stevenson, each woman a member of the Anthropology Department at the National Museum of Natural History.">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Uncovering the scientific impact of women at the Smithsonian
+</h5>
+<div class="card-text listing-description">
+Inspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of…
 </div>
-</section>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Rebecca Dikow and Mirian Tsuchiya
+</div>
+<div class="listing-date">
+Oct 22, 2020
 </div>
 </div>
-<div class="content-container">
-<div class="listing-block">
-<p><a href="./news/news-blog/index.html"></a></p><a href="./news/news-blog/index.html">
-</a><section id="news" class="level2"><a href="./news/news-blog/index.html">
-<h2 class="anchored" data-anchor-id="news">News</h2>
-</a><p><a href="./news/news-blog/index.html"></a></p>
-<div id="news">
-
 </div>
-</section>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-listing-date-sort="1586840400000" data-listing-file-modified-sort="1681928330353" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<a href="./research/projects/posts/2020/04/14/names.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="thumbnail-image card-img" style="height: 150px;" alt="Thistle specimen and illustration by MV Walcott">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+What’s in a name?
+</h5>
+<div class="card-text listing-description">
+An investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana…
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Rebecca Dikow and Megan Glenn
+</div>
+<div class="listing-date">
+Apr 14, 2020
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </div>
 </div>
 <div class="pullout-text">
 <div class="pullout-container">
-<div class="pullout-block black-background">
-<p><img src="images/quote-purple.png" class="img-fluid" width="100"></p>
-<section id="here-is-another-block-quote." class="level2">
-<h2 class="anchored" data-anchor-id="here-is-another-block-quote.">Here is another block quote.</h2>
+<section id="here-is-another-block-quote." class="pullout-block black-background">
+<h2>Here is another block quote.</h2>
 <p>The person who said it.</p>
 <div class="button button1">
 <p><a href="./news/news-blog/index.html">Explore our news blog</a></p>
@@ -234,39 +437,75 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </div>
 </div>
-</div>
 <div class="content-container">
 <div class="listing-block">
-<p><a href="viewpoints/editors-blog/index.qmd"></a></p><a href="viewpoints/editors-blog/index.qmd">
-</a><section id="editors-blog" class="level2"><a href="viewpoints/editors-blog/index.qmd">
-<h2 class="anchored" data-anchor-id="editors-blog">Editors’ Blog</h2>
-</a><p><a href="viewpoints/editors-blog/index.qmd"></a></p>
-<div id="editors-blog">
-
+<p><a href="./news/news-blog/index.html"></a></p><a href="./news/news-blog/index.html">
+<h2 id="news">News</h2>
+</a><p><a href="./news/news-blog/index.html"></a></p>
+<div id="listing-news-blog" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-date-sort="1681880400000" data-listing-file-modified-sort="1681941585489" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./news/news-blog/posts/2023/04/19/open.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./news/news-blog/posts/2023/04/19/images/YOS_image.jpeg" class="thumbnail-image card-img" style="height: 150px;" alt="Year of Open Science graphic">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+The Year of Open Science
+</h5>
+<div class="card-text listing-description">
+The Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…
 </div>
-</section>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Alex White
+</div>
+<div class="listing-date">
+Apr 19, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </div>
 </div>
 <div class="footer-text">
 <div class="footer-container black-background">
 <div class="footer-block">
 <div class="grid">
-<div class="g-col-12 g-col-md-4">
+<section id="section" class="g-col-12 g-col-md-4">
+<h3></h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="https://www.si.edu/"><img src="images/logo-white.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
+</section>
+<div class="g-col-12 g-col-md-2">
+
 </div>
-<section id="about-us" class="level3 g-col-12 g-col-md-2">
-<h3 class="anchored" data-anchor-id="about-us">About us</h3>
+<section id="about-us" class="g-col-12 g-col-md-2">
+<h3>About us</h3>
 <p><a href="./about-dsl.html">Our aims</a><br>
 <a href="./people.html">Our team</a><br>
 <a href="./collaborators.html">Collaborations</a><br>
 <a href="./contact.html">Contact us</a></p>
 </section>
-<section id="follow-us" class="level3 g-col-12 g-col-md-2">
-<h3 class="anchored" data-anchor-id="follow-us">Follow us</h3>
+<section id="our-partners" class="g-col-12 g-col-md-2">
+<h3>Our partners</h3>
+<p>UCSB-SI Scholars<br>
+OCIO<br>
+Carpentries</p>
+</section>
+<section id="follow-us" class="g-col-12 g-col-md-2">
+<h3>Follow us</h3>
 <p><a href="https://github.com/sidatasciencelab">GitHub</a><br>
 <a href="https://twitter.com/SIDataScience">Twitter</a><br>
 </p>
@@ -282,7 +521,8 @@ logos to go here
 
 
 
-</main> <!-- /main -->
+
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -535,7 +775,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </a>
   </li>  
 </ul>
-    </div>
+    <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
     <div class="nav-footer-right"><a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
   </div>
 </footer>

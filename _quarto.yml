@@ -10,7 +10,7 @@ website:
   open-graph: true
   site-url: https://sidatasciencelab.github.io
   repo-url: https://github.com/sidatasciencelab/sidatasciencelab.github.io
-  #repo-actions: [edit, issue]
+  repo-actions: [edit, issue]
   navbar:
     background: "#FFCD00"
     logo: images/dsl_logo.png

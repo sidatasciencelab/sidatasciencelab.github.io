@@ -1,0 +1,17 @@
+---
+title: "The Year of Open Science"
+subtitle: Federal agencies join together to advocate for open science practices
+description: |
+  The Smithsonian Data Science Lab is proud to support the Smithsonian's effort to celebrate the benefits of open science and expand the adoption of open science practices accross the institution.  
+author: Alex White
+date: 04/19/2023
+image: images/YOS_image.jpeg
+image-alt: Year of Open Science graphic
+toc: true
+filters:
+  - lightbox
+lightbox: auto
+---
+## Coming soon
+
+A more comprehensive post about the Smithsonian and the Year of Open Science coming soon.
