@@ -1,5 +1,5 @@
 ---
-title: "Our partners and funders"
+title: "Our collaborations and funders"
 sidebar: false
 page-layout: article
 toc: false
