@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.333">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Training | Smithsonian Data Science Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/si_favicon.ico" rel="icon">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../dsl.css">
+<meta property="og:title" content="Training | Smithsonian Data Science Lab">
+<meta property="og:description" content="Carpentries, Genomics, and Data Science training at the Smithsonian">
+<meta property="og:image" content="https://carpentries.org/assets/img/TheCarpentries.svg">
+<meta property="og:site-name" content="Smithsonian Data Science Lab">
+<meta name="twitter:title" content="Training | Smithsonian Data Science Lab">
+<meta name="twitter:description" content="Carpentries, Genomics, and Data Science training at the Smithsonian">
+<meta name="twitter:image" content="https://carpentries.org/assets/img/TheCarpentries.svg">
+<meta name="twitter:site" content="@SIDataScience">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/dsl_logo.png" alt="Smithsonian Data Science Lab logo" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="false"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../research/index.html" rel="" target="">
+ <span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../training/index.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Training</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../news/index.html" rel="" target="">
+ <span class="menu-text">News</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../aivalues/index.html" rel="" target="">
+ <span class="menu-text">AI Values Statement</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-si-dsl" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">About SI-DSL</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-about-si-dsl">    
+        <li>
+    <a class="dropdown-item" href="../about-dsl.html" rel="" target="">
+ <span class="dropdown-text">Who we are</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../publications.html" rel="" target="">
+ <span class="dropdown-text">Publications</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../collaborators.html" rel="" target="">
+ <span class="dropdown-text">Collaboration</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../contact.html" rel="" target="">
+ <span class="dropdown-text">Contact us</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Training</h1>
+            <p class="subtitle lead">Carpentries, Genomics, and Data Science training at the Smithsonian</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#our-committment-to-education" id="toc-our-committment-to-education" class="nav-link active" data-scroll-target="#our-committment-to-education">Our Committment to Education</a></li>
+  <li><a href="#trained-carpentries-instructors" id="toc-trained-carpentries-instructors" class="nav-link" data-scroll-target="#trained-carpentries-instructors">Trained Carpentries Instructors</a>
+  <ul class="collapse">
+  <li><a href="#active-instructors" id="toc-active-instructors" class="nav-link" data-scroll-target="#active-instructors">Active Instructors</a></li>
+  <li><a href="#alumni-instructors" id="toc-alumni-instructors" class="nav-link" data-scroll-target="#alumni-instructors">Alumni Instructors</a></li>
+  </ul></li>
+  <li><a href="#requesting-a-workshop" id="toc-requesting-a-workshop" class="nav-link" data-scroll-target="#requesting-a-workshop">Requesting a Workshop</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/training/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="our-committment-to-education" class="level1">
+<h1>Our Committment to Education</h1>
+<p>The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.</p>
+<p><img src="https://carpentries.org/assets/img/TheCarpentries.svg" class="img-fluid"></p>
+<p><a href="https://carpentries.org/">The Carpentries</a> (comprised of Data Carpentry, Library Carpentry, and Software Carpentry) is a project whose mission is to teach foundational computational and data science skills to researchers and others who create, manage, and use data.</p>
+<p>The Smithsonian Institution has been a <a href="https://carpentries.org/members/">member organization</a> since 2017, and a Platinum Member since 2021. More than 500 Smithsonian staff, fellows, and interns have taken at least one Carpentries course since then. We also conduct custom workshops, most of which have been genomics-related. Workshop materials can be found on our <a href="http://github.com/SmithsonianWorkshops">GitHub page</a>. You can read more about the Smithsonian Carpentries team in our <a href="https://datascience.si.edu/sites/default/files/si_carpentries_annual_2019.pdf">2019 annual report</a>.</p>
+<p>We offer peer-led workshops for Smithsonian staff, academic appointees, contractors, volunteers, and other SI-affiliated individuals on a fairly regular basis. To be informed of these workshops and other SI Carpentries events, you can sign up for our announcement mailing list. To sign up for notifications, click the button below and enter your email address:</p>
+<center>
+<div class="button button1">
+<p><a href="https://si-listserv.si.edu/cgi-bin/wa?SUBED1=CARPENTRIES-ANNOUNCE&amp;A=1">Sign up for the Carpentries-annouce mailing list</a></p>
+</div>
+</center>
+</section>
+<section id="trained-carpentries-instructors" class="level1">
+<h1>Trained Carpentries Instructors</h1>
+<p><strong>We are looking for Smithsonian staff and fellows to be trained to join our team of instructors.</strong> No prior teaching experience is necessary, but we suggest experience with using one or more of the following: OpenRefine, Python, R, SQL, Unix, or GitHub. All instructors attend a virtual 4-half-day training workshop using evidence-based techniques for teaching computational skills.</p>
+<p>We will be accepting applications on a rolling basis.</p>
+<center>
+<div class="button button1">
+<p><a href="https://forms.office.com/r/Qi9xEmhGpY">Apply to join the SI Carpentries Instructor Team</a></p>
+</div>
+</center>
+<section id="active-instructors" class="level2">
+<h2 class="anchored" data-anchor-id="active-instructors">Active Instructors</h2>
+<ul>
+<li><strong>Maddy Bursell</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Stephen Cox</strong>, Smithsonian Libraries and Archives (SLA)</li>
+<li><strong>Carrie Craig</strong>, National Museum of Natural History (NMNH)</li>
+<li><strong>Corey DiPietro</strong>, National Museum of American History (NMAH)</li>
+<li><strong>Rebecca Dikow</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Jennifer Giaccai</strong>, Freer-Sackler (FSG)</li>
+<li><strong>Vanessa Gonzalez</strong>, Global Genome Initiative (GGI)</li>
+<li><strong>Jennifer Hammock</strong>, Encyclopedia of Life (EOL)</li>
+<li><strong>Kristina Heinricy</strong>, Smithsonian Libraries and Archives (SLA)</li>
+<li><strong>Valentine Herrmann</strong>, Smithsonian Conservation Biology Institute (SCBI)</li>
+<li><strong>James Holmquist</strong>, Smithsonian Environmental Research Center (SERC)</li>
+<li><strong>Sylvain Korzennik</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
+<li><strong>Matt Kweskin</strong>, National Museum of Natural History (NMNH)</li>
+<li><strong>Holly Little</strong>, National Museum of Natural History (NMNH)</li>
+<li><strong>Rayvn Manuel</strong>, National Museum of African American History and Culture (NMAAHC)</li>
+<li><strong>Rodolfo Montez</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
+<li><strong>Christopher Moriarty</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
+<li><strong>Michael O’Mahoney</strong>, National Museum of Natural History (NMNH)</li>
+<li><strong>Paula Pappalardo</strong>, Smithsonian Environmental Research Center (SERC)</li>
+<li><strong>Crystal Sanchez</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Jennifer Spillane</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Mike Trizna</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Luis Villanueva</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Alex White</strong>, Office of the Chief Information Officer (OCIO)</li>
+<li><strong>Sue Zwicker</strong>, Smithsonian Libraries and Archives (SLA)</li>
+</ul>
+</section>
+<section id="alumni-instructors" class="level2">
+<h2 class="anchored" data-anchor-id="alumni-instructors">Alumni Instructors</h2>
+<ul>
+<li><strong>Lucy Chang</strong>, NMNH Paleo</li>
+<li><strong>Tauana Cunha</strong>, STRI</li>
+<li><strong>Amanda Devine</strong>, GGI</li>
+<li><strong>Jenna Ekwealor</strong>, OCIO</li>
+<li><strong>Dave Klinges</strong>, SERC</li>
+<li><strong>Mauro Lepore</strong>, ForestGEO</li>
+<li><strong>Bruno de Medeiros</strong>, STRI</li>
+<li><strong>Alex Robillard</strong>, OCIO</li>
+<li><strong>Mirian Tsuchiya</strong>, OCIO</li>
+</ul>
+</section>
+</section>
+<section id="requesting-a-workshop" class="level1">
+<h1>Requesting a Workshop</h1>
+<p><strong>Do you work at the Smithsonian and want to organize a workshop to be held at your unit?</strong> Send an email to <a href="mailto:Carpentries@si.edu">Carpentries@si.edu</a>, and answer the following questions:</p>
+<ul>
+<li>Who is the contact person?
+<ul>
+<li>Tell us about yourself and your role with the Smithsonian.</li>
+</ul></li>
+<li>How many learners do you expect to participate?
+<ul>
+<li>We have taught workshops with as many as 40 learners, but we understand that some units and locations at the Smithsonian will only be able to host smaller workshops.</li>
+</ul></li>
+<li>What lesson(s) do you have in mind?
+<ul>
+<li>Take a look at the existing <a href="https://datacarpentry.org/lessons/">Data</a>, <a href="https://librarycarpentry.org/lessons/">Library</a>, and <a href="https://software-carpentry.org/lessons/">Software</a> Carpentries lessons, and decide if these cover the skills the learners would benefit from. Also check out the list of <a href="https://carpentries.org/community-lessons/">Carpentries Incubator</a> lessons. We have developed custom workshops in the past.</li>
+</ul></li>
+<li>What is the timeframe?
+<ul>
+<li>Keep in mind that it will take a few weeks to pull together instructors and helpers who can devote 1-2 days of their time.</li>
+<li>Also keep in mind that it will take considerably more time to develop custom lessons.</li>
+</ul></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright © 2023 <a href="https://www.si.edu/">Smithsonian</a></div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/sidatasciencelab">
+      <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/SIDataScience">
+      <i class="bi bi-twitter" role="img" aria-label="Twitter">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right"><a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
+  </div>
+</footer>
+
+
+
+</body></html>
