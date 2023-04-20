@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sidatasciencelab.github.io/about-dsl.html</loc>
-    <lastmod>2023-04-20T19:34:00.813Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/aivalues/index.html</loc>
-    <lastmod>2023-04-20T19:34:01.283Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/collaborators.html</loc>
-    <lastmod>2023-04-20T19:34:01.622Z</lastmod>
+    <loc>https://sidatasciencelab.github.io/index.html</loc>
+    <lastmod>2023-04-20T19:51:40.598Z</lastmod>
   </url>
   <url>
     <loc>https://sidatasciencelab.github.io/contact.html</loc>
-    <lastmod>2023-04-20T19:34:01.932Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/index.html</loc>
-    <lastmod>2023-04-20T19:34:03.033Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/latest-content.html</loc>
-    <lastmod>2023-04-20T19:34:03.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/news/index.html</loc>
-    <lastmod>2023-04-20T19:34:04.071Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/news/news-blog/index.html</loc>
-    <lastmod>2023-04-20T19:34:04.457Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/news/news-blog/posts/2023/04/19/open.html</loc>
-    <lastmod>2023-04-20T19:34:05.073Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/people.html</loc>
-    <lastmod>2023-04-20T19:34:05.522Z</lastmod>
+    <lastmod>2023-04-20T19:51:41.270Z</lastmod>
   </url>
   <url>
     <loc>https://sidatasciencelab.github.io/publications.html</loc>
-    <lastmod>2023-04-20T19:34:06.089Z</lastmod>
+    <lastmod>2023-04-20T19:51:41.714Z</lastmod>
   </url>
   <url>
-    <loc>https://sidatasciencelab.github.io/research/index.html</loc>
-    <lastmod>2023-04-20T19:34:06.637Z</lastmod>
+    <loc>https://sidatasciencelab.github.io/news/index.html</loc>
+    <lastmod>2023-04-20T19:51:42.098Z</lastmod>
   </url>
   <url>
-    <loc>https://sidatasciencelab.github.io/research/projects/index.html</loc>
-    <lastmod>2023-04-20T19:34:07.103Z</lastmod>
+    <loc>https://sidatasciencelab.github.io/news/news-blog/posts/2023/04/19/open.html</loc>
+    <lastmod>2023-04-20T19:51:42.678Z</lastmod>
   </url>
   <url>
-    <loc>https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/names.html</loc>
-    <lastmod>2023-04-20T19:34:07.818Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sidatasciencelab.github.io/research/projects/posts/2020/10/22/impact.html</loc>
-    <lastmod>2023-04-20T19:34:08.768Z</lastmod>
+    <loc>https://sidatasciencelab.github.io/news/news-blog/index.html</loc>
+    <lastmod>2023-04-20T19:51:43.018Z</lastmod>
   </url>
   <url>
     <loc>https://sidatasciencelab.github.io/training/index.html</loc>
-    <lastmod>2023-04-20T19:34:09.281Z</lastmod>
+    <lastmod>2023-04-20T19:51:43.406Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/collaborators.html</loc>
+    <lastmod>2023-04-20T19:51:43.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/latest-content.html</loc>
+    <lastmod>2023-04-20T19:51:44.142Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/research/index.html</loc>
+    <lastmod>2023-04-20T19:51:44.542Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/research/projects/posts/2020/10/22/impact.html</loc>
+    <lastmod>2023-04-20T19:51:45.282Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/names.html</loc>
+    <lastmod>2023-04-20T19:51:46.146Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/research/projects/index.html</loc>
+    <lastmod>2023-04-20T19:51:46.518Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/aivalues/index.html</loc>
+    <lastmod>2023-04-20T19:51:46.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/people.html</loc>
+    <lastmod>2023-04-20T19:51:47.334Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sidatasciencelab.github.io/about-dsl.html</loc>
+    <lastmod>2023-04-20T19:51:47.642Z</lastmod>
   </url>
 </urlset>
