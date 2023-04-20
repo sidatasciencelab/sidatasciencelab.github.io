@@ -18,6 +18,7 @@ website:
     title: false
     collapse-below: lg
     right:
+      - people/index.qmd
       - research/index.qmd
       - training/index.qmd
       - news/index.qmd

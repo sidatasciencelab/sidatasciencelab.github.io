@@ -182,7 +182,7 @@ Keep up with Smithsonian Data Science Lab news
 ::: {.g-col-12 .g-col-md-2}
 ### About us
 [Our aims](about-dsl.qmd)\
-[Our team](people.qmd)\
+[Our team](people/index.qmd)\
 [Collaborations](collaborators.qmd)\
 [Contact us](contact.qmd)
 :::
