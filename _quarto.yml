@@ -35,8 +35,6 @@ website:
 
   page-navigation: true
 
-  back-to-top-navigation: false
-
   page-footer:
     background: "#000000"
     left: |
