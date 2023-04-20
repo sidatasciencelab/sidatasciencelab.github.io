@@ -4,11 +4,11 @@ title: Training
 subtitle: "Carpentries, Genomics, and Data Science training at the Smithsonian"
 search: false 
 ---
+
 # Our Committment to Education
 The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.  
-\
 
-## ![](https://carpentries.org/assets/img/TheCarpentries.svg)
+![](https://carpentries.org/assets/img/TheCarpentries.svg)
 
 [The Carpentries](https://carpentries.org/) (comprised of Data Carpentry, Library Carpentry, and Software Carpentry) is a project whose mission is to teach foundational computational and data science skills to researchers and others who create, manage, and use data.
 
