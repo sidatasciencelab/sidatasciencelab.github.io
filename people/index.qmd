@@ -6,6 +6,7 @@ toc: false
 image: images/team.png
 image-alt: Portrait photos of Data Science Lab members
 comments: false
+search: false
 ---
 ## Team
 [**Dr. Rebecca Dikow**](https://profiles.si.edu/display/nDikowR9182012)
