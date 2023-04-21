@@ -22,11 +22,12 @@ website:
       - research/index.qmd
       - training/index.qmd
       - news/index.qmd
-      - aivalues/index.qmd
       - text: "About SI-DSL"
         menu: 
         - text: "Who we are"
           href: about-dsl.qmd
+        - text: "AI Values Statement"
+          href: aivalues/index.qmd
         - text: "Publications"
           href: publications.qmd
         - text: "Collaboration"
