@@ -5,7 +5,7 @@ subtitle: "Code and vignettes for software developed by Smithsonian Data Science
 search: false
 listing:
   contents: 
-  - projects
+  - vignettes
   - "!index.qmd"
   sort: "date desc"
   type: grid
