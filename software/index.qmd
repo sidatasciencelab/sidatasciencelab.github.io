@@ -1,7 +1,7 @@
 ---
 pagetitle: Software | Smithsonian Data Science Lab
 title: Software
-subtitle: "Code and vignettes for software developed by Smithsonian Data Science Lab scientists | [Vignettes](projects/index.qmd)"
+subtitle: "Code and vignettes for software developed by Smithsonian Data Science Lab scientists | [Vignettes](vignettes/index.qmd)"
 search: false
 listing:
   contents: 
