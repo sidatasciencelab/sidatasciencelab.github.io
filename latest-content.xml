@@ -249,6 +249,31 @@
   <media:content url="https://sidatasciencelab.github.io/research/projects/posts/2020/10/22/images/presentation2.png" medium="image" type="image/png" height="55" width="144"/>
 </item>
 <item>
+  <title>Ecostructure</title>
+  <dc:creator>Alex White</dc:creator>
+  <link>https://sidatasciencelab.github.io/software/vignettes/posts/2023/04/24/ecostructure.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="a-vignette-for-ecostructure-2.0-coming-soon" class="level2">
+<h2 class="anchored" data-anchor-id="a-vignette-for-ecostructure-2.0-coming-soon">A vignette for ecostructure 2.0 coming soon</h2>
+<p>The ecostructure model is described in detail in our paper:</p>
+<ul>
+<li>White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. <a href="https://doi.org/10.1038/s41467-019-10253-6">https://doi.org/10.1038/s41467-019-10253-6</a></li>
+</ul>
+<p>A new github repo containing ecostructure 2.0 will soon be available on the Data Science Lab github page.</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://sidatasciencelab.github.io/software/vignettes/posts/2023/04/24/ecostructure.html</guid>
+  <pubDate>Fri, 24 Apr 2020 00:00:00 GMT</pubDate>
+  <media:content url="https://sidatasciencelab.github.io/software/vignettes/posts/2023/04/24/images/global_ecostruc.png" medium="image" type="image/png" height="62" width="144"/>
+</item>
+<item>
   <title>What’s in a name?</title>
   <dc:creator>Rebecca Dikow and Megan Glenn</dc:creator>
   <link>https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/names.html</link>
@@ -262,7 +287,7 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/Tiana.jpeg" class="lightbox" title="Tiana Curry" data-gallery="quarto-lightbox-gallery-1"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/Tiana.jpeg" class="img-fluid figure-img"></a></p>
+<p><a href="images/Tiana.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Tiana Curry"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/Tiana.jpeg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Tiana Curry</figcaption>
 </figure>
 </div>
@@ -271,7 +296,7 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_portrait.jpeg" class="lightbox" title="Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives" data-gallery="quarto-lightbox-gallery-2"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_portrait.jpeg" class="img-fluid figure-img"></a></p>
+<p><a href="images/walcott_portrait.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_portrait.jpeg" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives</figcaption>
 </figure>
 </div>
@@ -280,7 +305,7 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_specimen2.png" class="lightbox" title="Thistle specimen and illustration by MV Walcott" data-gallery="quarto-lightbox-gallery-3"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/walcott_specimen2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Thistle specimen and illustration by MV Walcott"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Thistle specimen and illustration by MV Walcott</figcaption>
 </figure>
 </div>
@@ -291,7 +316,7 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_labels_0.png" class="lightbox" title="Walcott specimen labels" data-gallery="quarto-lightbox-gallery-4"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_labels_0.png" class="img-fluid figure-img"></a></p>
+<p><a href="images/walcott_labels_0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Walcott specimen labels"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_labels_0.png" class="img-fluid figure-img"></a></p>
 <figcaption class="figure-caption">Walcott specimen labels</figcaption>
 </figure>
 </div>
