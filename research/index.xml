@@ -16,7 +16,7 @@
 <height>144</height>
 <width>144</width>
 </image>
-<generator>quarto-1.2.475</generator>
+<generator>quarto-1.3.336</generator>
 <lastBuildDate>Thu, 22 Oct 2020 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Uncovering the scientific impact of women at the Smithsonian</title>
@@ -241,8 +241,8 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/Tiana.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Tiana Curry"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/Tiana.jpeg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Tiana Curry</figcaption><p></p>
+<p><a href="images/Tiana.jpeg" class="lightbox" title="Tiana Curry" data-gallery="quarto-lightbox-gallery-1"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/Tiana.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Tiana Curry</figcaption>
 </figure>
 </div>
 </center>
@@ -250,8 +250,8 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_portrait.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_portrait.jpeg" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives</figcaption><p></p>
+<p><a href="images/walcott_portrait.jpeg" class="lightbox" title="Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives" data-gallery="quarto-lightbox-gallery-2"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_portrait.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Mary Vaux Walcott, 1914. Smithsonian Libraries and Archives</figcaption>
 </figure>
 </div>
 </center>
@@ -259,8 +259,8 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_specimen2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Thistle specimen and illustration by MV Walcott"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Thistle specimen and illustration by MV Walcott</figcaption><p></p>
+<p><a href="images/walcott_specimen2.png" class="lightbox" title="Thistle specimen and illustration by MV Walcott" data-gallery="quarto-lightbox-gallery-3"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_specimen2.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Thistle specimen and illustration by MV Walcott</figcaption>
 </figure>
 </div>
 </center>
@@ -270,8 +270,8 @@
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="images/walcott_labels_0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Walcott specimen labels"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_labels_0.png" class="img-fluid figure-img"></a></p>
-<p></p><figcaption class="figure-caption">Walcott specimen labels</figcaption><p></p>
+<p><a href="images/walcott_labels_0.png" class="lightbox" title="Walcott specimen labels" data-gallery="quarto-lightbox-gallery-4"><img src="https://sidatasciencelab.github.io/research/projects/posts/2020/04/14/images/walcott_labels_0.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Walcott specimen labels</figcaption>
 </figure>
 </div>
 </center>
