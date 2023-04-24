@@ -10,6 +10,7 @@ listing:
   - /training
   - /research
   - /news
+  - /software
   - "!index.qmd"
   sort: "date desc"
   type: grid
