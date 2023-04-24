@@ -21,6 +21,7 @@ website:
       - people/index.qmd
       - research/index.qmd
       - training/index.qmd
+      - software/index.qmd
       - news/index.qmd
       - text: "About SI-DSL"
         menu: 

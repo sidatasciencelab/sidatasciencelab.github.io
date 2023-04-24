@@ -68,6 +68,18 @@ listing:
     filter-ui: false
     max-items: 3
     feed: false
+
+  - id: software
+    contents: 
+    - /software/projects
+    - "!index.qmd"
+    sort: "date desc"
+    type: grid
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    max-items: 3
+    feed: false
 toc: false
 ---
 ::: {.content-container}
