@@ -107,23 +107,23 @@
   {
     "objectID": "software/index.html",
     "href": "software/index.html",
-    "title": "Research",
+    "title": "Software",
     "section": "",
-    "text": "More to come here soon, but please check out some of our in-depth blog posts below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEcostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Ecostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2020\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "software/projects/posts/2023/04/24/ecostructure.html",
     "href": "software/projects/posts/2023/04/24/ecostructure.html",
     "title": "Ecostructure",
     "section": "",
-    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6"
+    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6\nA new github repo containing ecostructure 2.0 will soon be available on the Data Science Lab github page."
   },
   {
     "objectID": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
     "href": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
     "title": "Ecostructure",
     "section": "",
-    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6"
+    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6\nA new github repo containing ecostructure 2.0 will soon be available on the Data Science Lab github page."
   },
   {
     "objectID": "software/projects/index.html",
