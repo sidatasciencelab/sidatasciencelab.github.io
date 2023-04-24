@@ -80,9 +80,9 @@ listing:
     max-items: 3
     feed: false
 
-  - id: software
+  - id: vignettes
     contents: 
-    - /software/projects
+    - /software/vignettes
     - "!index.qmd"
     sort: "date desc"
     type: grid
