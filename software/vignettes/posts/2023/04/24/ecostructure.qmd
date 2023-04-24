@@ -4,11 +4,11 @@ subtitle: "Investigating structure in complex ecological data"
 description: |
   A vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage diversity.  
 author: Alex White
-date: 04/24/2020
+date: 04/24/2023
 #bibliography: references.bib
 #citation-location: margin
-image: images/global_ecostruc.png
-image-alt: Ecostructure visualization of global bird species motifs
+image: images/ecos.jpeg
+image-alt: Manali sanctuary in India where large numbers of temperate and tropical birds converge to form complex ecological structure
 toc: true
 filters:
   - lightbox

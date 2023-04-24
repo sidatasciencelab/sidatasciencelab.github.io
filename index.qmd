@@ -13,6 +13,7 @@ listing:
     contents: 
     - /research
     - /news
+    - /software
     - "!index.qmd"
     sort: "date desc"
     type: grid
@@ -91,6 +92,7 @@ listing:
     filter-ui: false
     max-items: 3
     feed: false
+
 toc: false
 ---
 ::: {.content-container}
@@ -185,6 +187,34 @@ Keep up with Smithsonian Data Science Lab news
 </a> 
 
 ::: {#news-blog}
+:::
+
+:::
+:::
+
+::: {.pullout-text}
+::: {.pullout-container}
+::: {.pullout-block .black-background}
+
+## Software development
+Tutorials and vignettes for software developed in the Data Science Lab
+
+::: {.button .button1}
+[Explore software vignettes](software/vignettes/index.qmd)
+:::
+
+:::
+:::
+:::
+
+::: {.content-container}
+::: {.listing-block}
+<a href="software/vignettes/index.qmd">
+
+## Software Vignettes 
+</a>
+
+::: {#vignettes}
 :::
 
 :::
