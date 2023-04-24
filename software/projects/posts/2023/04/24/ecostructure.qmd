@@ -1,0 +1,22 @@
+---
+title: "Ecostructure"
+subtitle: "Investigating structure in complex ecological data"
+description: |
+  A vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage diversity.  
+author: Alex White
+date: 04/24/2020
+#bibliography: references.bib
+#citation-location: margin
+image: images/global_ecostruc.png
+image-alt: Ecostructure visualization of global bird species motifs
+toc: true
+filters:
+  - lightbox
+lightbox: auto
+---
+
+## A vignette for ecostructure 2.0 coming soon
+
+The ecostructure model is described in detail in our paper:
+* White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. [https://doi.org/10.1038/s41467-019-10253-6](https://doi.org/10.1038/s41467-019-10253-6)
+

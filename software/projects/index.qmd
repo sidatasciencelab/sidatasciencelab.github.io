@@ -1,0 +1,15 @@
+---
+pagetitle: Vignettes | Software | Data Science Lab
+title: Vignettes
+subtitle: Software vignettes for code and packages developed by Smithsonian Data Science Lab scientists 
+search: false
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  page-size: 12
+comments: false
+---
