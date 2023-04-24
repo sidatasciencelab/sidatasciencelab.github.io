@@ -22,7 +22,9 @@
   },
   {
     "listing": "/software/index.html",
-    "items": []
+    "items": [
+      "/software/vignettes/posts/2023/04/24/ecostructure.html"
+    ]
   },
   {
     "listing": "/software/vignettes/index.html",
