@@ -105,6 +105,34 @@
     "text": "The Data Science Lab is collaborative: we work with Smithsonian partners (staff, fellows, interns) at many different Smithsonian units, as well as with partners at other academic institutions, government agencies, and industry. We strive to make these collaborations productive, positive, and inclusive.\nWhen we are approached about a potential collaboration or for technical help, we feel that it is important to manage expectations including the amount of time we can spend on a particular project and whether co-authorship is warranted. Communicating clearly about these issues is important to ensure a productive collaboration.\nOur members are expected to communicate professionally with past, present, and future collaborators and we expect the same in return.\nWorkshop attendees are expected to adhere to the Carpentries Code of Conduct."
   },
   {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "More to come here soon, but please check out some of our in-depth blog posts below.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEcostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "software/projects/posts/2023/04/24/ecostructure.html",
+    "href": "software/projects/posts/2023/04/24/ecostructure.html",
+    "title": "Ecostructure",
+    "section": "",
+    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6"
+  },
+  {
+    "objectID": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
+    "href": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
+    "title": "Ecostructure",
+    "section": "",
+    "text": "The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6"
+  },
+  {
+    "objectID": "software/projects/index.html",
+    "href": "software/projects/index.html",
+    "title": "Vignettes",
+    "section": "",
+    "text": "Ecostructure\n\n\nInvestigating structure in complex ecological data\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage diversity.\n\n\n\n\n\n\nApr 24, 2020\n\n\nAlex White\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "latest-content.html",
     "href": "latest-content.html",
     "title": "Latest content",

@@ -20,6 +20,18 @@
     ]
   },
   {
+    "listing": "/software/index.html",
+    "items": [
+      "/software/projects/posts/2023/04/24/ecostructure.html"
+    ]
+  },
+  {
+    "listing": "/software/projects/index.html",
+    "items": [
+      "/software/projects/posts/2023/04/24/ecostructure.html"
+    ]
+  },
+  {
     "listing": "/latest-content.html",
     "items": [
       "/news/news-blog/posts/2023/04/19/open.html",

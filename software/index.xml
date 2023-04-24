@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Smithsonian Data Science Lab</title>
+<link>https://sidatasciencelab.github.io/software/index.html</link>
+<atom:link href="https://sidatasciencelab.github.io/software/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<image>
+<url>https://sidatasciencelab.github.io/images/dsl_logo.png</url>
+<title>Smithsonian Data Science Lab</title>
+<link>https://sidatasciencelab.github.io/software/index.html</link>
+<height>144</height>
+<width>144</width>
+</image>
+<generator>quarto-1.3.336</generator>
+<lastBuildDate>Fri, 24 Apr 2020 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Ecostructure</title>
+  <dc:creator>Alex White</dc:creator>
+  <link>https://sidatasciencelab.github.io/software/projects/posts/2023/04/24/ecostructure.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="a-vignette-for-ecostructure-2.0-coming-soon" class="level2">
+<h2 class="anchored" data-anchor-id="a-vignette-for-ecostructure-2.0-coming-soon">A vignette for ecostructure 2.0 coming soon</h2>
+<p>The ecostructure model is described in detail in our paper: * White, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. <a href="https://doi.org/10.1038/s41467-019-10253-6">https://doi.org/10.1038/s41467-019-10253-6</a></p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://sidatasciencelab.github.io/software/projects/posts/2023/04/24/ecostructure.html</guid>
+  <pubDate>Fri, 24 Apr 2020 00:00:00 GMT</pubDate>
+  <media:content url="https://sidatasciencelab.github.io/software/projects/posts/2023/04/24/images/global_ecostruc.png" medium="image" type="image/png" height="62" width="144"/>
+</item>
+</channel>
+</rss>
