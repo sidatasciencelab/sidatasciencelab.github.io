@@ -109,25 +109,25 @@
     "href": "software/index.html",
     "title": "Software",
     "section": "",
-    "text": "Ecostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "No matching items"
   },
   {
-    "objectID": "software/projects/posts/2023/04/24/ecostructure.html",
-    "href": "software/projects/posts/2023/04/24/ecostructure.html",
+    "objectID": "software/vignettes/posts/2023/04/24/ecostructure.html",
+    "href": "software/vignettes/posts/2023/04/24/ecostructure.html",
     "title": "Ecostructure",
     "section": "",
     "text": "The ecostructure model is described in detail in our paper:\n\nWhite, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6\n\nA new github repo containing ecostructure 2.0 will soon be available on the Data Science Lab github page."
   },
   {
-    "objectID": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
-    "href": "software/projects/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
+    "objectID": "software/vignettes/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
+    "href": "software/vignettes/posts/2023/04/24/ecostructure.html#a-vignette-for-ecostructure-2.0-coming-soon",
     "title": "Ecostructure",
     "section": "",
     "text": "The ecostructure model is described in detail in our paper:\n\nWhite, A.E., Dey, K.K., Mohan, D., Stephens M., and Price, T.D. Regional influences on community structure across the tropical-temperate divide. Nature Communications. 2019. 10 (1). 2646. https://doi.org/10.1038/s41467-019-10253-6\n\nA new github repo containing ecostructure 2.0 will soon be available on the Data Science Lab github page."
   },
   {
-    "objectID": "software/projects/index.html",
-    "href": "software/projects/index.html",
+    "objectID": "software/vignettes/index.html",
+    "href": "software/vignettes/index.html",
     "title": "Vignettes",
     "section": "",
     "text": "Ecostructure\n\n\nInvestigating structure in complex ecological data\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage diversity.\n\n\n\n\n\n\nApr 24, 2020\n\n\nAlex White\n\n\n\n\n\n\nNo matching items"

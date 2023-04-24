@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,17 +97,11 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../dsl.css">
 <link rel="alternate" type="application/rss+xml" title="Smithsonian Data Science Lab" href="index.xml"><meta property="og:title" content="Software | Smithsonian Data Science Lab">
 <meta property="og:description" content="Code and vignettes for software developed by Smithsonian Data Science Lab scientists | Vignettes">
-<meta property="og:image" content="https://sidatasciencelab.github.io/software/projects/posts/2023/04/24/images/global_ecostruc.png">
 <meta property="og:site-name" content="Smithsonian Data Science Lab">
-<meta property="og:image:height" content="1256">
-<meta property="og:image:width" content="2908">
 <meta name="twitter:title" content="Software | Smithsonian Data Science Lab">
 <meta name="twitter:description" content="Code and vignettes for software developed by Smithsonian Data Science Lab scientists | Vignettes">
-<meta name="twitter:image" content="https://sidatasciencelab.github.io/software/projects/posts/2023/04/24/images/global_ecostruc.png">
 <meta name="twitter:site" content="@SIDataScience">
-<meta name="twitter:image-height" content="1256">
-<meta name="twitter:image-width" content="2908">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -186,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Software</h1>
-            <p class="subtitle lead">Code and vignettes for software developed by Smithsonian Data Science Lab scientists | <a href="../software/projects/index.html">Vignettes</a></p>
+            <p class="subtitle lead">Code and vignettes for software developed by Smithsonian Data Science Lab scientists | <a href="projects/index.qmd">Vignettes</a></p>
                       </div>
   </div>
     
@@ -217,31 +211,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1587686400000" data-listing-file-modified-sort="1682358334459" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../software/projects/posts/2023/04/24/ecostructure.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../software/projects/posts/2023/04/24/images/global_ecostruc.png" class="thumbnail-image card-img" style="height: 150px;" alt="Ecostructure visualization of global bird species motifs">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Ecostructure
-</h5>
-<div class="card-text listing-description">
-A vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Alex White
-</div>
-<div class="listing-date">
-Apr 24, 2020
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
+
 </div>
 <div class="listing-no-matching d-none">
 No matching items
