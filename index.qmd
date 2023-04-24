@@ -45,6 +45,17 @@ listing:
   #   max-items: 3
   #   feed: false
 
+  # - id: software
+  #   contents: 
+  #   - /software
+  #   sort: "date desc"
+  #   type: grid
+  #   categories: false
+  #   sort-ui: false
+  #   filter-ui: false
+  #   max-items: 3
+  #   feed: false
+
   - id: news-blog
     contents: 
     - /news/news-blog
