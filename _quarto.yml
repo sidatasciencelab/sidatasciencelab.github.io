@@ -50,7 +50,8 @@ website:
         icon: twitter
         aria-label: Twitter
     right: |
-      [Terms of Use](https://www.si.edu/Termsofuse)
+      [Privacy Statement](https://www.si.edu/privacy) | [Terms of Use](https://www.si.edu/Termsofuse)
+      
 
 format:
   html:
