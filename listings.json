@@ -1,9 +1,14 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/research/projects/index.html",
     "items": [
-      "/software/vignettes/posts/2023/04/24/ecostructure.html",
-      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/research/index.html",
+    "items": [
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
     ]
@@ -21,15 +26,12 @@
     ]
   },
   {
-    "listing": "/software/index.html",
+    "listing": "/index.html",
     "items": [
-      "/software/vignettes/posts/2023/04/24/ecostructure.html"
-    ]
-  },
-  {
-    "listing": "/software/vignettes/index.html",
-    "items": [
-      "/software/vignettes/posts/2023/04/24/ecostructure.html"
+      "/software/vignettes/posts/2023/04/24/ecostructure.html",
+      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -42,17 +44,15 @@
     ]
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/software/vignettes/index.html",
     "items": [
-      "/research/projects/posts/2020/10/22/impact.html",
-      "/research/projects/posts/2020/04/14/names.html"
+      "/software/vignettes/posts/2023/04/24/ecostructure.html"
     ]
   },
   {
-    "listing": "/research/projects/index.html",
+    "listing": "/software/index.html",
     "items": [
-      "/research/projects/posts/2020/10/22/impact.html",
-      "/research/projects/posts/2020/04/14/names.html"
+      "/software/vignettes/posts/2023/04/24/ecostructure.html"
     ]
   }
 ]
