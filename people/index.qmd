@@ -9,7 +9,8 @@ comments: false
 search: false
 ---
 ## Team
-[**Dr. Rebecca Dikow**](https://profiles.si.edu/display/nDikowR9182012)
+#### [**Dr. Rebecca Dikow**](https://profiles.si.edu/display/nDikowR9182012) |  [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)  
+  
 
 ::: {.column-margin}
 ![](images/headshots/Rebecca.jpeg)
@@ -17,7 +18,7 @@ search: false
 
 Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She has a B.S. in Biology from Cornell University and a Ph.D. in Evolutionary Biology from the University of Chicago. Her dissertation research focused on using whole-genome data to build evolutionary trees (phylogenies). After the completion of her Ph.D., she was the Biodiversity Genomics postdoctoral fellow at the Smithsonian. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is also an affiliated faculty member in the George Mason University School of Systems Biology.
 
-[**Mike Trizna**](https://profiles.si.edu/display/nTRIZNAM5302007)
+#### [**Mike Trizna**](https://profiles.si.edu/display/nTRIZNAM5302007) |  [{{< ai orcid >}}](https://orcid.org/0000-0002-0537-8382) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=dBG05GYAAAAJ&hl=en&oi=sra) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/miketrizna) [{{< fa envelope >}}](mailto:triznam@si.edu)
 
 ::: {.column-margin}
 ![](images/headshots/Mike.jpeg)
@@ -25,7 +26,7 @@ Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution
 
 Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian's partnership with the [Carpentries](https://carpentries.org/) (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers.
 
-[**Dr. Alex White**](https://profiles.si.edu/display/nWhiteAE952018)
+#### [**Dr. Alex White**](https://profiles.si.edu/display/nWhiteAE952018) |  [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)
 
 ::: {.column-margin}
 ![](images/headshots/Alex.png)
@@ -36,7 +37,7 @@ Alex White’s areas of scholarly expertise include statistical modeling in biog
 Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, where he developed these and other questions to study the evolution and ecology of Himalayan birds.
 
 ## Postdoctoral Fellows
-**Dr. Richie Hodel** 
+#### **Dr. Richie Hodel** 
 
 ::: {.column-margin}
 ![](images/headshots/Richie.jpeg)
@@ -44,7 +45,7 @@ Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, w
 
 Richie Hodel is a Biodiversity Genomics Postdoctoral Fellow in the Smithsonian Data Science Lab and the Department of Botany at the National Museum of Natural History. He has a B.A. in Music Theory from Amherst College, a M.S. in Biology from Appalachian State University, and a Ph.D. in Botany from the University of Florida. His work in the Data Science Lab is focused on developing methods that use machine learning to generate high throughput phenotypic data from digitized herbarium specimen images, with species in the cherry genus (Prunus) used as test cases. Ultimately, the goal is to combine multidimensional phenotypic trait data with genomic and environmental data from the same specimens to improve our understanding of the genome-phenome-environment connection and how it shapes biodiversity.
 
-**Dr. William Mattingly** 
+#### **Dr. William Mattingly** 
 
 ::: {.column-margin}
 ![](images/headshots/William.jpeg)
@@ -54,7 +55,7 @@ William Mattingly is a Postdoctoral Fellow at the Smithsonian Institution Data S
 
 Follow William on Twitter @wjb_mattingly
 
-**Dr. Jennifer Spillane** 
+#### **Dr. Jennifer Spillane** 
 
 ::: {.column-margin}
 ![](images/headshots/JenniferS.jpeg)
@@ -63,7 +64,7 @@ Follow William on Twitter @wjb_mattingly
 Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a B.A. in Biology from Trinity Christian College and an M.Sc. in Biology from Western Washington University. Spillane recently finished her Ph.D. in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab, she will work on developing machine learning models to address the problem of DNA sequence contamination. She is generally interested in improving genomic and bioinformatic methods to better study non-model and under-represented organisms.
 
 ## Research Associates
-**Dr. Paul Frandsen** 
+#### **Dr. Paul Frandsen** | [{{< fa envelope >}}](mailto:paul_frandsen@byu.edu)
 
 ::: {.column-margin}
 ![](images/headshots/Paul.jpeg)
@@ -71,11 +72,9 @@ Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institut
 
 Paul Frandsen is an Assistant Professor of Plant and Wildlife Sciences at Brigham Young University. He helped co-found the Data Science Lab and remains a close collaborator. Paul earned his PhD from Rutgers University in the Department of Entomology where he worked on the phylogenetics of caddisflies and on developing algorithms for the automatic selection of models of molecular evolution.
 
-[Paul's email](mailto:paul_frandsen@byu.edu)
-
 [Paul's website](http://paulfrandsen.com/)
 
-**Dr. Mirian Tsuchiya** 
+#### **Dr. Mirian Tsuchiya** 
 
 ::: {.column-margin}
 ![](images/headshots/Mirian.jpeg)
