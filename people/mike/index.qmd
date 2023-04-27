@@ -1,0 +1,30 @@
+---
+title: "Mike Trizna | [{{< ai orcid >}}](https://orcid.org/0000-0002-0537-8382) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=dBG05GYAAAAJ&hl=en&oi=sra) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/miketrizna) [{{< fa envelope >}}](mailto:triznam@si.edu)"
+description: |
+  Bioinformatics, data science, machine learning, and museum informatics
+toc: false
+image: images/headshots/Mike.png
+image-alt: Portrait of Mike Trizna
+comments: false
+search: false
+---
+::: {.content-container}
+::: {.header-block}
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/Mike.jpeg)
+  </div>
+
+Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian's partnership with the [Carpentries](https://carpentries.org/) (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers.
+</div>
+:::
+::: 
+
+::: {.listing-block}
+### Interns working with Mike
+#### **Matt Bollinger** 
+
+Matt's bio coming soon.
+:::
+
+

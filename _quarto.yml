@@ -18,7 +18,16 @@ website:
     title: false
     collapse-below: lg
     right:
-      - people/index.qmd
+      - text: "Our Team"
+        menu: 
+        - text: "The Lab"
+          href: people/index.qmd
+        - text: "Rebecca Dikow"
+          href: people/rebecca/index.qmd
+        - text: "Mike Trizna"
+          href: people/mike/index.qmd
+        - text: "Alex White"
+          href: people/alex/index.qmd
       - research/index.qmd
       - training/index.qmd
       - software/index.qmd
