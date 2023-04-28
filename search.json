@@ -245,6 +245,13 @@
     "text": "Footnotes\n\n\nThe term “AI tools” includes a variety of technologies that seek to create decision-making software. Some examples include facial and speech recognition, machine learning based optical character recognition, language translation, natural language processing, image recognition, object detection and segmentation, and data clustering. Common commercial examples include virtual assistants such as Siri or Alexa, website search and recommendation algorithms, and tagging and identification of people in images on social media platforms.↩︎\nThe term “AI project” refers to an intentional effort to utilize or create an AI tool in research or in an existing workflow.↩︎"
   },
   {
+    "objectID": "people2.html",
+    "href": "people2.html",
+    "title": "People",
+    "section": "",
+    "text": "People Current members of the Data Science Lab:\n\n\n    \n        \n          \n            Dr. Alex White\n          \n        \n          \n        \n        \n            Data Scientist\n        \n        \n            GitHub\n        \n      \n    \n        \n          \n            Dr. Rebecca Dikow\n          \n        \n          \n        \n        \n            Data Scientist\n        \n        \n            GitHub\n        \n      \n    \n        \n          \n            Mike Trizna\n          \n        \n          \n        \n        \n            Data Scientist\n        \n        \n            GitHub\n        \n      \n\n\nNo matching items"
+  },
+  {
     "objectID": "training/index.html",
     "href": "training/index.html",
     "title": "Training",
@@ -278,6 +285,48 @@
     "title": "Expectations for Collaboration",
     "section": "",
     "text": "The Data Science Lab is collaborative: we work with Smithsonian partners (staff, fellows, interns) at many different Smithsonian units, as well as with partners at other academic institutions, government agencies, and industry. We strive to make these collaborations productive, positive, and inclusive.\nWhen we are approached about a potential collaboration or for technical help, we feel that it is important to manage expectations including the amount of time we can spend on a particular project and whether co-authorship is warranted. Communicating clearly about these issues is important to ensure a productive collaboration.\nOur members are expected to communicate professionally with past, present, and future collaborators and we expect the same in return.\nWorkshop attendees are expected to adhere to the Carpentries Code of Conduct."
+  },
+  {
+    "objectID": "people2/rebecca.html",
+    "href": "people2/rebecca.html",
+    "title": "Dr. Rebecca Dikow",
+    "section": "",
+    "text": "Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She has a B.S. in Biology from Cornell University and a Ph.D. in Evolutionary Biology from the University of Chicago. Her dissertation research focused on using whole-genome data to build evolutionary trees (phylogenies). After the completion of her Ph.D., she was the Biodiversity Genomics postdoctoral fellow at the Smithsonian. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is also an affiliated faculty member in the George Mason University School of Systems Biology."
+  },
+  {
+    "objectID": "people2/rebecca.html#meta-title",
+    "href": "people2/rebecca.html#meta-title",
+    "title": "Dr. Rebecca Dikow",
+    "section": "",
+    "text": "Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She has a B.S. in Biology from Cornell University and a Ph.D. in Evolutionary Biology from the University of Chicago. Her dissertation research focused on using whole-genome data to build evolutionary trees (phylogenies). After the completion of her Ph.D., she was the Biodiversity Genomics postdoctoral fellow at the Smithsonian. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is also an affiliated faculty member in the George Mason University School of Systems Biology."
+  },
+  {
+    "objectID": "people2/mike.html",
+    "href": "people2/mike.html",
+    "title": "Mike Trizna",
+    "section": "",
+    "text": "Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian’s partnership with the Carpentries (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers."
+  },
+  {
+    "objectID": "people2/mike.html#meta-title",
+    "href": "people2/mike.html#meta-title",
+    "title": "Mike Trizna",
+    "section": "",
+    "text": "Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian’s partnership with the Carpentries (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers."
+  },
+  {
+    "objectID": "people2/alex.html",
+    "href": "people2/alex.html",
+    "title": "Dr. Alex White",
+    "section": "",
+    "text": "Alex White’s areas of scholarly expertise include statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics. Dr. White’s research focuses on how ecological and evolutionary forces (e.g., dispersal, range expansion, competition, and speciation) interact to mediate broad scale patterns of biodiversity and how those interactions are influenced by local ecological dynamics. Most of this research focuses on birds, though he compares avian patterns with those of other taxonomic groups including plants, mammals, and invertebrates. This work combines traditional methods in ecology and evolution with modern advances in statistics and computation, particularly those in machine learning and data science. As a Biodiversity Research Data Scientist in the Smithsonian Data Science Lab, he leads projects that leverage digitized museum collections as well as applications of computer hardware technology in edge uses of machine learning for field studies of animal and plant ecology. He is an Associate Editor for Ornithology.\nAlex received his Ph.D. in Ecology and Evolution at the University of Chicago, where he developed these and other questions to study the evolution and ecology of Himalayan birds."
+  },
+  {
+    "objectID": "people2/alex.html#meta-title",
+    "href": "people2/alex.html#meta-title",
+    "title": "Dr. Alex White",
+    "section": "",
+    "text": "Alex White’s areas of scholarly expertise include statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics. Dr. White’s research focuses on how ecological and evolutionary forces (e.g., dispersal, range expansion, competition, and speciation) interact to mediate broad scale patterns of biodiversity and how those interactions are influenced by local ecological dynamics. Most of this research focuses on birds, though he compares avian patterns with those of other taxonomic groups including plants, mammals, and invertebrates. This work combines traditional methods in ecology and evolution with modern advances in statistics and computation, particularly those in machine learning and data science. As a Biodiversity Research Data Scientist in the Smithsonian Data Science Lab, he leads projects that leverage digitized museum collections as well as applications of computer hardware technology in edge uses of machine learning for field studies of animal and plant ecology. He is an Associate Editor for Ornithology.\nAlex received his Ph.D. in Ecology and Evolution at the University of Chicago, where he developed these and other questions to study the evolution and ecology of Himalayan birds."
   },
   {
     "objectID": "software/vignettes/posts/2023/04/24/ecostructure.html",

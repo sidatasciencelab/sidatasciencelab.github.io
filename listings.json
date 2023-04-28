@@ -26,6 +26,14 @@
     ]
   },
   {
+    "listing": "/people2.html",
+    "items": [
+      "/people2/alex.html",
+      "/people2/rebecca.html",
+      "/people2/mike.html"
+    ]
+  },
+  {
     "listing": "/index.html",
     "items": [
       "/software/vignettes/posts/2023/04/24/ecostructure.html",
