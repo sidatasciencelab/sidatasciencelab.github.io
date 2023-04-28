@@ -1,0 +1,16 @@
+---
+title: "People"
+listing:
+  id: people
+  contents:
+    - people2/rebecca.qmd
+    - people2/mike.qmd
+    - people2/alex.qmd
+  template: people.ejs
+---
+
+People
+Current members of the Data Science Lab:
+
+::: {#people}
+:::

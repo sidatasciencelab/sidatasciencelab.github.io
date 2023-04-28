@@ -1,0 +1,14 @@
+---
+toc: false
+title: "Dr. Rebecca Dikow"
+first_name: "Rebecca"
+last_name: "Dikow"
+position: "Data Scientist"
+photo: "https://datascience.si.edu/sites/default/files/styles/grid/public/pictures/people/rdikow_photo.jpg"
+github: rdikow
+twitter: rdikow
+---
+
+## {{< meta title >}}
+
+Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She has a B.S. in Biology from Cornell University and a Ph.D. in Evolutionary Biology from the University of Chicago. Her dissertation research focused on using whole-genome data to build evolutionary trees (phylogenies). After the completion of her Ph.D., she was the Biodiversity Genomics postdoctoral fellow at the Smithsonian. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is also an affiliated faculty member in the George Mason University School of Systems Biology.
