@@ -3,6 +3,7 @@ toc: false
 title: "Mike Trizna"
 first_name: "Mike"
 last_name: "Trizna"
+page_link: mike
 position: "Data Scientist"
 photo: "https://datascience.si.edu/sites/default/files/styles/grid/public/pictures/people/profile_pic.jpg"
 github: MikeTrizna
@@ -10,5 +11,7 @@ twitter: MikeTrizna
 ---
 
 ## {{< meta title >}}
+
+![Profile photo]({{< meta photo >}}){fig-align="left"}
 
 Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian's partnership with the [Carpentries](https://carpentries.org/) (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers.
