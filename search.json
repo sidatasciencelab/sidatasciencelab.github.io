@@ -172,7 +172,21 @@
     "href": "news/index.html",
     "title": "News",
     "section": "",
-    "text": "The Year of Open Science\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…\n\n\n\nAlex White\n\n\nApr 19, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Machine Learning of Amazonian Fish\n\n\nAs part of his work with the Data Science Lab and SCBI, former graduate student fellow Dr. Alex Robillard publishes a new machine learning model trained to identify…\n\n\n\nAlex White\n\n\nMay 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Year of Open Science\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…\n\n\n\nAlex White\n\n\nApr 19, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "news/news-blog/posts/2023/05/01/amz_fish.html",
+    "href": "news/news-blog/posts/2023/05/01/amz_fish.html",
+    "title": "Machine Learning of Amazonian Fish",
+    "section": "",
+    "text": "A more comprehensive post about the paper is coming soon."
+  },
+  {
+    "objectID": "news/news-blog/posts/2023/05/01/amz_fish.html#coming-soon",
+    "href": "news/news-blog/posts/2023/05/01/amz_fish.html#coming-soon",
+    "title": "Machine Learning of Amazonian Fish",
+    "section": "",
+    "text": "A more comprehensive post about the paper is coming soon."
   },
   {
     "objectID": "news/news-blog/posts/2023/04/19/open.html",
@@ -193,7 +207,7 @@
     "href": "news/news-blog/index.html",
     "title": "News",
     "section": "",
-    "text": "The Year of Open Science\n\n\nFederal agencies join together to advocate for open science practices\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices accross the institution.\n\n\n\n\n\n\nApr 19, 2023\n\n\nAlex White\n\n\n\n\n\n\nNo matching items"
+    "text": "Machine Learning of Amazonian Fish\n\n\nA new paper out today in Ecology and Evolution\n\n\nAs part of his work with the Data Science Lab and SCBI, former graduate student fellow Dr. Alex Robillard publishes a new machine learning model trained to identify Amazonian fish. Along side colleagues in the DSL, Dr. Robbilard built and trained the model using images captured on board fishing and research boats in the Amazon.\n\n\n\n\n\n\nMay 1, 2023\n\n\nAlex White\n\n\n\n\n\n\n  \n\n\n\n\nThe Year of Open Science\n\n\nFederal agencies join together to advocate for open science practices\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices accross the institution.\n\n\n\n\n\n\nApr 19, 2023\n\n\nAlex White\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "contact.html",
@@ -270,7 +284,7 @@
     "href": "latest-content.html",
     "title": "Latest content",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nEcostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Year of Open Science\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…\n\n\n\nAlex White\n\n\nApr 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUncovering the scientific impact of women at the Smithsonian\n\n\nInspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of…\n\n\n\nRebecca Dikow and Mirian Tsuchiya\n\n\nOct 22, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat’s in a name?\n\n\nAn investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana…\n\n\n\nRebecca Dikow and Megan Glenn\n\n\nApr 14, 2020\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nMachine Learning of Amazonian Fish\n\n\nAs part of his work with the Data Science Lab and SCBI, former graduate student fellow Dr. Alex Robillard publishes a new machine learning model trained to identify…\n\n\n\nAlex White\n\n\nMay 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEcostructure\n\n\nA vignette for ecostructure, an R package for clustering and visualization of ecological strucutre across local, regional, phylogenetic, and functional axes of assemblage…\n\n\n\nAlex White\n\n\nApr 24, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Year of Open Science\n\n\nThe Smithsonian Data Science Lab is proud to support the Smithsonian’s effort to celebrate the benefits of open science and expand the adoption of open science practices…\n\n\n\nAlex White\n\n\nApr 19, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUncovering the scientific impact of women at the Smithsonian\n\n\nInspired by the immense research output and strong mentoring ethos of the late Vicki Funk, Drs. Dikow and Tsuchiya use machine learning to explore the historical archives of…\n\n\n\nRebecca Dikow and Mirian Tsuchiya\n\n\nOct 22, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWhat’s in a name?\n\n\nAn investigation of digitized museum records reveals how the historical contributions of women are obscured in the vast digitized Smithsonian collections. Our intern Tiana…\n\n\n\nRebecca Dikow and Megan Glenn\n\n\nApr 14, 2020\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "collaborators.html",
