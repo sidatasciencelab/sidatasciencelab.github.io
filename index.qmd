@@ -240,10 +240,10 @@ Tutorials and vignettes for software developed in the Data Science Lab
 [Contact us](contact.qmd)
 :::
 ::: {.g-col-12 .g-col-md-2}
-### Our partners
-UCSB-SI Scholars\
-OCIO\
-Carpentries
+### External Links
+[UCSB-SI Scholars](https://oep.ucsb.edu/programs/smithsonian-scholars-program)
+[Carpentries](https://carpentries.org/)
+[Smithsonian OCIO](https://www.si.edu/ocio)
 :::
 ::: {.g-col-12 .g-col-md-2}
 ### Follow us
