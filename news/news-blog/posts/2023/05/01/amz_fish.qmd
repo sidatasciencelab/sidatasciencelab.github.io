@@ -1,0 +1,17 @@
+---
+title: "Machine Learning of Amazonian Fish"
+subtitle: A new paper out today in Ecology and Evolution 
+description: |
+  As part of his work with the Data Science Lab and SCBI, former graduate student fellow Dr. Alex Robillard publishes a new machine learning model trained to identify Amazonian fish. Along side colleagues in the DSL, Dr. Robbilard built and trained the model using images captured on board fishing and research boats in the Amazon.   
+author: Alex White
+date: 05/01/2023
+image: images/Mask_example_Bario.png
+image-alt: a bario fish
+toc: true
+filters:
+  - lightbox
+lightbox: auto
+---
+## Coming soon
+
+A more comprehensive post about the paper is coming soon.
