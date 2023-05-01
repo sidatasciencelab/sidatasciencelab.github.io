@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/people/index.html",
+    "items": []
+  },
+  {
     "listing": "/research/projects/index.html",
     "items": [
       "/research/projects/posts/2020/10/22/impact.html",
@@ -46,10 +50,6 @@
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
     ]
-  },
-  {
-    "listing": "/people2/index.html",
-    "items": []
   },
   {
     "listing": "/software/vignettes/index.html",
