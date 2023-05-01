@@ -1,0 +1,23 @@
+---
+title: "Dr. William Mattingly | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu) [{{< fa brands twitter >}}](https://twitter.com/wjb_mattingly)"
+description: |
+  Digital Humanities and Natural Language Processing
+toc: false
+image: headshots/William.jpeg
+image-alt: Portrait of William Mattingly
+comments: false
+search: false
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](headshots/William.jpeg)
+  </div>
+
+William Mattingly is a Postdoctoral Fellow at the Smithsonian Institution Data Science Lab in collaboration with the United States Holocaust Memorial Museum (USHMM). He has a B.A. and M.A. in History from Florida Gulf Coast University and a Ph.D. in History from the University of Kentucky. His dissertation research explored using historical social network analysis, cluster analysis, and computational methods for identifying ninth-century intellectual and pedagogical networks. Most recently, his research has focused on developing text classification neural network models to identify sources in medieval texts and developing natural language processing (NLP) methods for medieval Latin. At the Smithsonian and USHMM, he is developing machine learning methods to aid, in among other things, the cataloging of Holocaust documents. He is co-investigator and developer for the Structured Data Extraction and Enhancement in South Africa’s Truth and Reconciliation Archive project and lead investigator and developer for the Digital Alcuin Project.
+
+</div>
+:::
+:::

@@ -1,0 +1,23 @@
+---
+title: "Dr. Mirian Tsuchiya | [{{< fa envelope >}}](mailto:Tsuchiyam@si.edu)"
+description: |
+  Genomics and Bioinformatics
+toc: false
+image: headshots/Mirian.jpeg
+image-alt: Portrait of Mirian Tsuchiya
+comments: false
+search: false
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](headshots/mirian.jpeg)
+  </div>
+
+Mirian Tsuchiya was the Smithsonian Women's Committee Data Science Postdoctoral Fellow. She has a B.S. in Biology from the Universidade Estadual de Londrina, an M.Sc. in Zoology from the Pontificia Universidade Católica do Rio Grande do Sul and a Ph.D. in Environmental Science and Policy from the George Mason University. Her dissertation research focused on using whole genome sequencing, targeted enrichment of ultraconserved elements (UCEs) and mitogenomes under a phylogenomics framework to assess questions regarding the biogeography, taxonomy, and evolutionary history of Neotropical mammals. Mirian worked on a variety of biodiversity genomics projects with the Data Science Lab and now an ORISE fellow at the Food and Drug Administration Center for Applied Food Safety.
+
+</div>
+:::
+:::

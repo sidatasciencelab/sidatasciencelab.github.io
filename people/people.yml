@@ -3,17 +3,17 @@
     Smithsonian Data Science Lab Postdoctoral Fellows
   tiles:
     - title: Richie Hodel
-      subtitle: Genomics, Coservation, and Biogeography
-      href: richie/index.qmd
-      thumbnail: images/headshots/Richie.jpeg
+      subtitle: Genomics, Conservation, and Biogeography
+      href: postdocs/richie.qmd
+      thumbnail: postdocs/headshots/Richie.jpeg
     - title: William Mattingly
       subtitle: Digital Humanities and NLP
-      href: william/index.qmd
-      thumbnail: images/headshots/William.jpeg
+      href: postdocs/william.qmd
+      thumbnail: postdocs/headshots/William.jpeg
     - title: Jennifer Spillane
       subtitle: Genomics and the Tree of Life
-      href: jennifer/index.qmd
-      thumbnail: images/headshots/JenniferS.jpeg
+      href: postdocs/jennifer.qmd
+      thumbnail: postdocs/headshots/JenniferS.jpeg
 
 - category: Research Associates
   description: |
@@ -21,9 +21,9 @@
   tiles:
     - title: Paul Frandsen
       subtitle: Genomics, Phylogenetics, and Entomology
-      href: paul/index.qmd
-      thumbnail: images/headshots/Paul.jpeg
+      href: associates/paul.qmd
+      thumbnail: associates/headshots/Paul.jpeg
     - title: Mirian Tsuchiya
       subtitle: Genomics and Bioinformatics
-      href: mirian/index.qmd
-      thumbnail: images/headshots/Mirian.jpeg
+      href: associates/mirian.qmd
+      thumbnail: associates/headshots/Mirian.jpeg

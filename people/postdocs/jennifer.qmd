@@ -1,0 +1,23 @@
+---
+title: "Dr. Jennifer Spillane | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)"
+description: |
+  Genomics and the Tree of Life
+toc: false
+image: headshots/JenniferS.jpeg
+image-alt: Portrait of Jennifer Spillane
+comments: false
+search: false
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](headshots/JenniferS.jpeg)
+  </div>
+
+Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a B.A. in Biology from Trinity Christian College and an M.Sc. in Biology from Western Washington University. Spillane recently finished her Ph.D. in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab, she will work on developing machine learning models to address the problem of DNA sequence contamination. She is generally interested in improving genomic and bioinformatic methods to better study non-model and under-represented organisms.
+
+</div>
+:::
+:::

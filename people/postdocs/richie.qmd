@@ -1,0 +1,23 @@
+---
+title: "Dr. Richie Hodel | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)"
+description: |
+  Genomics, Conservation, and Biogeography
+toc: false
+image: headshots/Richie.jpeg
+image-alt: Portrait of Richie Hodel
+comments: false
+search: false
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](headshots/Richie.jpeg)
+  </div>
+
+Richie Hodel is a Biodiversity Genomics Postdoctoral Fellow in the Smithsonian Data Science Lab and the Department of Botany at the National Museum of Natural History. He has a B.A. in Music Theory from Amherst College, a M.S. in Biology from Appalachian State University, and a Ph.D. in Botany from the University of Florida. His work in the Data Science Lab is focused on developing methods that use machine learning to generate high throughput phenotypic data from digitized herbarium specimen images, with species in the cherry genus (Prunus) used as test cases. Ultimately, the goal is to combine multidimensional phenotypic trait data with genomic and environmental data from the same specimens to improve our understanding of the genome-phenome-environment connection and how it shapes biodiversity.
+
+</div>
+:::
+:::
