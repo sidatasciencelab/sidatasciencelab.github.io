@@ -1,18 +1,35 @@
 ---
+title: "Dr. Alex White | [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)"
+description: |
+  Statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics
 toc: false
-title: "Dr. Alex White"
-first_name: "Alex"
-last_name: "White"
-page_link: alex
-position: "Data Scientist"
-photo: "https://datascience.si.edu/sites/default/files/styles/grid/public/pictures/people/6a01156e4c2c3d970c022ad3755e5d200c.png"
-github: aewhite100
+image: images/headshots/Alex.png
+image-alt: Portrait of Alex White
+comments: false
+search: false
 ---
+::: {.content-container}
+::: {.header-block}
 
-## {{< meta title >}}
-
-![Profile photo]({{< meta photo >}}){fig-align="left"}
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/Alex.png)
+  </div>
 
 Alex White’s areas of scholarly expertise include statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics. Dr. White’s research focuses on how ecological and evolutionary forces (e.g., dispersal, range expansion, competition, and speciation) interact to mediate broad scale patterns of biodiversity and how those interactions are influenced by local ecological dynamics. Most of this research focuses on birds, though he compares avian patterns with those of other taxonomic groups including plants, mammals, and invertebrates. This work combines traditional methods in ecology and evolution with modern advances in statistics and computation, particularly those in machine learning and data science. As a Biodiversity Research Data Scientist in the Smithsonian Data Science Lab, he leads projects that leverage digitized museum collections as well as applications of computer hardware technology in edge uses of machine learning for field studies of animal and plant ecology. He is an Associate Editor for Ornithology.
 
 Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, where he developed these and other questions to study the evolution and ecology of Himalayan birds.
+</div>
+:::
+:::
+
+::: {.listing-block}
+## Interns working with Alex
+#### **Richard Lumes** 
+
+Richie's bio coming soon.
+
+#### **Zachary Wilson** 
+
+Zach's bio coming soon.
+:::
