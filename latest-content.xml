@@ -27,9 +27,10 @@
 
 
 
-<section id="coming-soon" class="level2">
-<h2 class="anchored" data-anchor-id="coming-soon">Coming soon</h2>
-<p>A more comprehensive post about the paper is coming soon.</p>
+<section id="stay-tuned" class="level2">
+<h2 class="anchored" data-anchor-id="stay-tuned">Stay tuned</h2>
+<p>Robillard, A., Trizna, M. G., Ruiz-Tafur, K., Panduro, E. D., de Santana, C. D., White, A. E., Dikow, R. B., Deichmann, J. 2023. Application of a Deep Learning Image Classifier for Identification of Amazonian Fishes. <em>Ecology and Evolution</em> <a href="https://doi.org/10.1002/ece3.9987">https://doi.org/10.1002/ece3.9987</a></p>
+<p>A more comprehensive post about the paper is coming soon. In the meantime, try using our model <a href="https://huggingface.co/spaces/Smithsonian/amazonian_fish_classifier">here</a> or peruse our GitHub repo <a href="https://github.com/sidatasciencelab/Amazonian_Fish_ML_Classifier">here</a>.</p>
 
 
 </section>
