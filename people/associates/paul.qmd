@@ -8,7 +8,7 @@ categories:
   - Entomology
 toc: false
 lastname: Frandsen
-image: headshots/paul.jpeg
+image: headshots/Paul.jpeg
 image-alt: Portrait of Paul Frandsen
 comments: false
 search: false
@@ -18,7 +18,7 @@ search: false
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](headshots/paul.jpeg)
+  ![](headshots/Paul.jpeg)
   </div>
 
 Paul Frandsen is an Assistant Professor of Plant and Wildlife Sciences at Brigham Young University. He helped co-found the Data Science Lab and remains a close collaborator. Paul earned his PhD from Rutgers University in the Department of Entomology where he worked on the phylogenetics of caddisflies and on developing algorithms for the automatic selection of models of molecular evolution.
