@@ -23,11 +23,11 @@ website:
         - text: "The Lab"
           href: people/index.qmd
         - text: "Rebecca Dikow"
-          href: people/rebecca/index.qmd
+          href: people/leads/rebecca.qmd
         - text: "Mike Trizna"
-          href: people/mike/index.qmd
+          href: people/leads/mike.qmd
         - text: "Alex White"
-          href: people/alex/index.qmd
+          href: people/leads/alex.qmd
       - research/index.qmd
       - training/index.qmd
       - software/index.qmd
