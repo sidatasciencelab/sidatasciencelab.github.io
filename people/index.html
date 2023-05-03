@@ -68,20 +68,76 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-people .list');
+    const listingTargetEl = window.document.querySelector('#listing-leads .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-category','listing-description','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-category","listing-description","listing-tiles"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-people'] = new List('listing-people', options);
+    window['quarto-listings']['listing-leads'] = new List('listing-leads', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-postdocs .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-postdocs'] = new List('listing-postdocs', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-associates .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-associates'] = new List('listing-associates', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -101,16 +157,16 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../dsl.css">
 <meta property="og:title" content="Our Team">
 <meta property="og:description" content="Our team of research data scientists, postdoctoral and graduate fellows, academic interns, and research associates">
-<meta property="og:image" content="https://sidatasciencelab.github.io/people/rebecca/images/headshots/Rebecca.jpeg">
+<meta property="og:image" content="https://sidatasciencelab.github.io/people/leads/images/headshots/Rebecca.jpeg">
 <meta property="og:site-name" content="Smithsonian Data Science Lab">
 <meta name="twitter:title" content="Our Team">
 <meta name="twitter:description" content="Our team of research data scientists, postdoctoral and graduate fellows, academic interns, and research associates">
-<meta name="twitter:image" content="https://sidatasciencelab.github.io/people/rebecca/images/headshots/Rebecca.jpeg">
+<meta name="twitter:image" content="https://sidatasciencelab.github.io/people/leads/images/headshots/Rebecca.jpeg">
 <meta name="twitter:site" content="@SIDataScience">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -137,15 +193,15 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">The Lab</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../people/rebecca/index.html" rel="" target="">
+    <a class="dropdown-item" href="../people/rebecca/index.qmd" rel="" target="">
  <span class="dropdown-text">Rebecca Dikow</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../people/mike/index.html" rel="" target="">
+    <a class="dropdown-item" href="../people/mike/index.qmd" rel="" target="">
  <span class="dropdown-text">Mike Trizna</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../people/alex/index.html" rel="" target="">
+    <a class="dropdown-item" href="../people/alex/index.qmd" rel="" target="">
  <span class="dropdown-text">Alex White</span></a>
   </li>  
     </ul>
@@ -221,7 +277,8 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Biogeography">Biogeography <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Bioinformatics">Bioinformatics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Digital Humanities">Digital Humanities <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Entomology">Entomology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Genomics">Genomics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Museum Informatics">Museum Informatics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Natural Language Processing">Natural Language Processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phenomics">Phenomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenentics">Phylogenentics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenetics">Phylogenetics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quantitative ecology">Quantitative ecology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tree of life">Tree of life <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
@@ -230,158 +287,306 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="research-data-scientists" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="research-data-scientists">Research Data Scientists</h2>
-<div class="content-container">
-<div class="header-block">
-<div class="columns">
-<div class="column" style="width:4%;">
-
-</div><div class="column" style="width:31%;">
-<p><br> <a href="../people/rebecca/index.html"><img src="rebecca/images/headshots/Rebecca.jpeg" class="img-fluid"></a></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:60%;">
-<section id="dr.-rebecca-dikow-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope" class="level4">
-<h4 class="anchored" data-anchor-id="dr.-rebecca-dikow-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope"><a href="../people/rebecca/index.html"><strong>Dr.&nbsp;Rebecca Dikow</strong></a> | <a href="https://orcid.org/0000-0001-9668-3683"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=gBRB_OkAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/rdikow"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:dikowr@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></h4>
-<p><br> Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is an affiliated faculty member in the George Mason University School of Systems Biology.</p>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div class="content-container">
-<div class="header-block">
-<div class="columns">
-<div class="column" style="width:4%;">
-
-</div><div class="column" style="width:31%;">
-<p><br> <a href="../people/mike/index.html"><img src="mike/images/headshots/Mike.jpeg" class="img-fluid"></a></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:60%;">
-<section id="mike-trizna-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope" class="level4">
-<h4 class="anchored" data-anchor-id="mike-trizna-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope"><a href="../people/mike/index.html"><strong>Mike Trizna</strong></a> | <a href="https://orcid.org/0000-0002-0537-8382"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=dBG05GYAAAAJ&amp;hl=en&amp;oi=sra"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/miketrizna"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:triznam@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></h4>
-<p><br> Mike Trizna is a Research Data Scientist with an expertise in bioinformatics and machine learning. Mike works with Smithsonian partners on machine learning and visualization projects and leads the Smithsonian’s partnership with the <a href="https://carpentries.org/">Carpentries</a> (formerly Software Carpentry and Data Carpentry).</p>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div class="content-container">
-<div class="header-block">
-<div class="columns">
-<div class="column" style="width:4%;">
-
-</div><div class="column" style="width:31%;">
-<p><br> <a href="../people/alex/index.html"><img src="alex/images/headshots/Alex.png" class="img-fluid"></a></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:60%;">
-<section id="dr.-alex-white-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope" class="level4">
-<h4 class="anchored" data-anchor-id="dr.-alex-white-ai-orcid-ai-google-scholar-ai-cv-fa-brands-github-fa-envelope"><a href="../people/alex/index.html"><strong>Dr.&nbsp;Alex White</strong></a> | <a href="https://orcid.org/0000-0002-9708-2406"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.dk/citations?user=YkggDqgAAAAJ&amp;hl=en"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/aewhite100"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:whiteae@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></h4>
-<p><br> Alex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, ornithology, and community phylogenetics. Alex leads projects that leverage digitized museum collections as well as applications of machine learning in field studies of animal and plant ecology. He is an Associate Editor for Ornithology.</p>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div id="gallery" class="column-page">
-
-</div>
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-custom" id="listing-people">
-<h2 class="anchored">Postdoctoral Fellows</h2>
-<p>Smithsonian Data Science Lab Postdoctoral Fellows
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-leads" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenetics,Digital Humanities" data-listing-file-modified-sort="1683146624818" data-listing-reading-time-sort="1">
+<a href="../people/leads/rebecca.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/rebecca.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/leads/images/headshots/Rebecca.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Rebecca Dikow">
 </p>
-<div class="list grid" style="column-gap: 10px;">
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text text-nowrap inline-block">
-        <a href="../people/postdocs/richie.html" class="listing-title">Richie Hodel</a>
-      </small> 
-    </div>
-    <a href="../people/postdocs/richie.html">
-      <img src="postdocs/headshots/Richie.jpeg" alt="" class="card-img-top">
-    </a>
-    <small class="card-text text-nowrap inline-block">
-      Genomics, Conservation, and Biogeography
-    </small>
-    <p>
-    </p>
-  </div>
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text text-nowrap inline-block">
-        <a href="../people/postdocs/william.html" class="listing-title">William Mattingly</a>
-      </small> 
-    </div>
-    <a href="../people/postdocs/william.html">
-      <img src="postdocs/headshots/William.jpeg" alt="" class="card-img-top">
-    </a>
-    <small class="card-text text-nowrap inline-block">
-      Digital Humanities and NLP
-    </small>
-    <p>
-    </p>
-  </div>
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text text-nowrap inline-block">
-        <a href="../people/postdocs/jennifer.html" class="listing-title">Jennifer Spillane</a>
-      </small> 
-    </div>
-    <a href="../people/postdocs/jennifer.html">
-      <img src="postdocs/headshots/JenniferS.jpeg" alt="" class="card-img-top">
-    </a>
-    <small class="card-text text-nowrap inline-block">
-      Genomics and the Tree of Life
-    </small>
-    <p>
-    </p>
-  </div>
+</a><div class="card-body post-contents"><a href="../people/leads/rebecca.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/leads/rebecca.html" class="quarto-grid-link">
+Dr.&nbsp;Rebecca Dikow | </a><a href="https://orcid.org/0000-0001-9668-3683"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=gBRB_OkAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/rdikow"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:dikowr@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
 </div>
-<h2 class="anchored">Research Associates</h2>
-<p>Smithsonian Data Science Lab Research Associates
+<div class="listing-category" onclick="window.quartoListingCategory('Phylogenetics'); return false;">
+Phylogenetics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Digital Humanities'); return false;">
+Digital Humanities
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Data Science Lab. She leads projects in genomics, informatics, and machine learning.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Museum Informatics" data-listing-file-modified-sort="1683146624818" data-listing-reading-time-sort="1">
+<a href="../people/leads/mike.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/mike.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/leads/images/headshots/Mike.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Mike Trizna">
 </p>
-<div class="list grid" style="column-gap: 10px;">
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text text-nowrap inline-block">
-        <a href="../people/associates/paul.html" class="listing-title">Paul Frandsen</a>
-      </small> 
-    </div>
-    <a href="../people/associates/paul.html">
-      <img src="associates/headshots/Paul.jpeg" alt="" class="card-img-top">
-    </a>
-    <small class="card-text text-nowrap inline-block">
-      Genomics, Phylogenetics, and Entomology
-    </small>
-    <p>
-    </p>
-  </div>
-  <div class="card border-2 rounded-3 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4">
-    <div class="card-header py-1 px-2 border-bottom border-1 bg-light">
-      <small class="card-text text-nowrap inline-block">
-        <a href="../people/associates/mirian.html" class="listing-title">Mirian Tsuchiya</a>
-      </small> 
-    </div>
-    <a href="../people/associates/mirian.html">
-      <img src="associates/headshots/Mirian.jpeg" alt="" class="card-img-top">
-    </a>
-    <small class="card-text text-nowrap inline-block">
-      Genomics and Bioinformatics
-    </small>
-    <p>
-    </p>
-  </div>
+</a><div class="card-body post-contents"><a href="../people/leads/mike.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/leads/mike.html" class="quarto-grid-link">
+Mike Trizna | </a><a href="https://orcid.org/0000-0002-0537-8382"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=dBG05GYAAAAJ&amp;hl=en&amp;oi=sra"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/miketrizna"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:triznam@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
+Bioinformatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Museum Informatics'); return false;">
+Museum Informatics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Mike Trizna is a Data Scientist with expertise in bioinformatics and machine learning. Mike leads the Smithsonian <span>Carpentries</span>.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="2" data-categories="Biogeography,Quantitative ecology,Statistics" data-listing-file-modified-sort="1683146624818" data-listing-reading-time-sort="2">
+<a href="../people/leads/alex.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/alex.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/leads/images/headshots/Alex.png" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Alex White">
+</p>
+</a><div class="card-body post-contents"><a href="../people/leads/alex.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/leads/alex.html" class="quarto-grid-link">
+Dr.&nbsp;Alex White | </a><a href="https://orcid.org/0000-0002-9708-2406"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.dk/citations?user=YkggDqgAAAAJ&amp;hl=en"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/aewhite100"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:whiteae@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Biogeography'); return false;">
+Biogeography
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quantitative ecology'); return false;">
+Quantitative ecology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Statistics'); return false;">
+Statistics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Alex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, and community phylogenetics. He is an Associate Editor for Ornithology.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+</div>
+</section>
+<section id="postdoctoral-fellows" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="postdoctoral-fellows">Postdoctoral Fellows</h2>
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-postdocs" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Phylogenetics,Phenomics,Biogeography" data-listing-file-modified-sort="1683146624822" data-listing-reading-time-sort="1">
+<a href="../people/postdocs/richie.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/richie.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/postdocs/headshots/Richie.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Richie Hodel">
+</p>
+</a><div class="card-body post-contents"><a href="../people/postdocs/richie.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/postdocs/richie.html" class="quarto-grid-link">
+Dr.&nbsp;Richie Hodel | </a><a href="https://orcid.org/0000-0002-2896-4907"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?hl=en&amp;user=TOdtjkwAAAAJ"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/richiehodel"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:hodelr@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Phylogenetics'); return false;">
+Phylogenetics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Phenomics'); return false;">
+Phenomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Biogeography'); return false;">
+Biogeography
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Richie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="1" data-categories="Natural Language Processing,Digital Humanities" data-listing-file-modified-sort="1683146624822" data-listing-reading-time-sort="1">
+<a href="../people/postdocs/william.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/william.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/postdocs/headshots/William.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of William Mattingly">
+</p>
+</a><div class="card-body post-contents"><a href="../people/postdocs/william.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/postdocs/william.html" class="quarto-grid-link">
+Dr.&nbsp;William Mattingly | </a><a href="https://orcid.org/0000-0003-4334-5714"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=gBRB_OkAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href="https://wjbmattingly.com/cv/"><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/wjbmattingly"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:dikowr@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a> <a href="https://twitter.com/wjb_mattingly"><i class="fa-brands fa-twitter" aria-label="twitter"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Natural Language Processing'); return false;">
+Natural Language Processing
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Digital Humanities'); return false;">
+Digital Humanities
+</div>
+</div>
+<div class="card-text listing-description">
+<p>William Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="2" data-categories="Genomics,Bioinformatics,Tree of life" data-listing-file-modified-sort="1683146624822" data-listing-reading-time-sort="1">
+<a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/postdocs/headshots/JenniferS.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Jennifer Spillane">
+</p>
+</a><div class="card-body post-contents"><a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
+Dr.&nbsp;Jennifer Spillane | </a><a href="https://orcid.org/0000-0001-9668-3683"><i class="ai  ai-orcid" style="color:black"></i></a> <a href="https://scholar.google.com/citations?user=gBRB_OkAAAAJ&amp;hl=en&amp;oi=ao"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href=""><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/jls943"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:spillanej@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
+Bioinformatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Tree of life'); return false;">
+Tree of life
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Jennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+</section>
+<section id="research-associates" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="research-associates">Research Associates</h2>
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-associates" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenentics,Entomology" data-listing-file-modified-sort="1683146624818" data-listing-reading-time-sort="1">
+<a href="../people/associates/paul.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/associates/paul.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/associates/headshots/paul.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Paul Frandsen">
+</p>
+</a><div class="card-body post-contents"><a href="../people/associates/paul.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/associates/paul.html" class="quarto-grid-link">
+Dr.&nbsp;Paul Frandsen | </a><a href="mailto:paul_frandsen@byu.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Phylogenentics'); return false;">
+Phylogenentics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Entomology'); return false;">
+Entomology
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Paul Frandsen was a co-founder of the Data Science Lab and is an Assistant Professor of Plant and Wildlife Sciences at Brigham Young University.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Digital Humanities" data-listing-file-modified-sort="1683146624818" data-listing-reading-time-sort="1">
+<a href="../people/associates/mirian.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/associates/mirian.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/associates/headshots/Mirian.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Mirian Tsuchiya">
+</p>
+</a><div class="card-body post-contents"><a href="../people/associates/mirian.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/associates/mirian.html" class="quarto-grid-link">
+Dr.&nbsp;Mirian Tsuchiya | </a><a href="mailto:Tsuchiyam@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
+Bioinformatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Digital Humanities'); return false;">
+Digital Humanities
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Dr.&nbsp;Tsuchiya was the Smithsonian Data Science Lab Postdoctoral Fellow and is now an ORISE fellow at the FDA Center for Applied Food Safety.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

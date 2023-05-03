@@ -1,7 +1,16 @@
 [
   {
     "listing": "/people/index.html",
-    "items": []
+    "items": [
+      "/people/leads/rebecca.html",
+      "/people/leads/mike.html",
+      "/people/leads/alex.html",
+      "/people/postdocs/richie.html",
+      "/people/postdocs/william.html",
+      "/people/postdocs/jennifer.html",
+      "/people/associates/paul.html",
+      "/people/associates/mirian.html"
+    ]
   },
   {
     "listing": "/research/projects/index.html",
