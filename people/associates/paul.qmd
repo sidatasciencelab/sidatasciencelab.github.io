@@ -1,8 +1,13 @@
 ---
 title: "Dr. Paul Frandsen | [{{< fa envelope >}}](mailto:paul_frandsen@byu.edu)"
 description: |
-  Genomics, Phylogenetics, and Entomology
+  Paul Frandsen was a co-founder of the Data Science Lab and is an Assistant Professor of Plant and Wildlife Sciences at Brigham Young University. 
+categories:
+  - Genomics
+  - Phylogenentics
+  - Entomology
 toc: false
+lastname: Frandsen
 image: headshots/paul.jpeg
 image-alt: Portrait of Paul Frandsen
 comments: false

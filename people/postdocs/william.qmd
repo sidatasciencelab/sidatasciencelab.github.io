@@ -1,12 +1,19 @@
 ---
-title: "Dr. William Mattingly | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu) [{{< fa brands twitter >}}](https://twitter.com/wjb_mattingly)"
+title: "Dr. William Mattingly | [{{< ai orcid >}}](https://orcid.org/0000-0003-4334-5714) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}](https://wjbmattingly.com/cv/) [{{< fa brands github >}}](https://github.com/wjbmattingly) [{{< fa envelope >}}](mailto:dikowr@si.edu) [{{< fa brands twitter >}}](https://twitter.com/wjb_mattingly)"
 description: |
-  Digital Humanities and Natural Language Processing
+  William Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.
+categories:
+  - Natural Language Processing
+  - Digital Humanities
 toc: false
+lastname: Mattingly
 image: headshots/William.jpeg
 image-alt: Portrait of William Mattingly
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}

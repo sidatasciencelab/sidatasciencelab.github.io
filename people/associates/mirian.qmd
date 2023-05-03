@@ -1,13 +1,23 @@
 ---
 title: "Dr. Mirian Tsuchiya | [{{< fa envelope >}}](mailto:Tsuchiyam@si.edu)"
+subtitle: "Genomics and Bioinformatics"
+categories:
+  - Genomics
+  - Bioinformatics
+  - Digital Humanities
 description: |
-  Genomics and Bioinformatics
-toc: false
+  Dr. Tsuchiya was the Smithsonian Data Science Lab Postdoctoral Fellow and is now an ORISE fellow at the FDA Center for Applied Food Safety.
+toc: true
+lastname: Tsuchiya
 image: headshots/Mirian.jpeg
 image-alt: Portrait of Mirian Tsuchiya
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
+
 ::: {.content-container}
 ::: {.header-block}
 

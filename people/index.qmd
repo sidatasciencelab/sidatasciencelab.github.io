@@ -2,98 +2,79 @@
 pagetitle: "Our Team"
 title: Our team
 subtitle: Our team of research data scientists, postdoctoral and graduate fellows, academic interns, and research associates
+search: false
 toc: false
 comments: false
-search: false
 execute:
   echo: false
 listing:
-  - id: people
-    template: people.ejs
-    contents: people.yml
+  - id: leads
+    contents: 
+    - leads
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    image-height: 188px
+    max-description-length: 250
+    page-size: 30
+    feed: false
+
+  - id: postdocs
+    contents: 
+    - postdocs
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    image-height: 188px
+    max-description-length: 250
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    page-size: 30
+    feed: false
+
+  - id: associates
+    contents: 
+    - associates
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    image-height: 188px
+    max-description-length: 250
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    page-size: 30
+    feed: false
 ---
 ## Research Data Scientists
-::: {.content-container}
-::: {.header-block}
 
-:::: {.columns}
+:::{.peoplelisting-block}
 
-::: {.column width="4%"}
+::: {#leads .column-page}
 :::
-::: {.column width="31%"}
-<br/>
-[![](rebecca/images/headshots/Rebecca.jpeg)](rebecca/index.qmd)
-:::
-::: {.column width="5%"}
-:::
-
-::: {.column width="60%"}
-#### [**Dr. Rebecca Dikow**](rebecca/index.qmd) |  [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)  
-<br/>
-Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution Data Science Lab. She is working with Smithsonian scientists to conduct biodiversity research, including genomics, informatics, and machine learning. She is an affiliated faculty member in the George Mason University School of Systems Biology.
-:::
-
-::::
-
-:::
-:::
-
-::: {.content-container}
-::: {.header-block}
-
-:::: {.columns}
-
-::: {.column width="4%"}
-:::
-::: {.column width="31%"}
-<br/>
-[![](mike/images/headshots/Mike.jpeg)](mike/index.qmd)
-:::
-::: {.column width="5%"}
-:::
-
-::: {.column width="60%"}
-#### [**Mike Trizna**](mike/index.qmd) |  [{{< ai orcid >}}](https://orcid.org/0000-0002-0537-8382) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=dBG05GYAAAAJ&hl=en&oi=sra) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/miketrizna) [{{< fa envelope >}}](mailto:triznam@si.edu)
-<br/>
-Mike Trizna is a Research Data Scientist with an expertise in bioinformatics and machine learning. Mike works with Smithsonian partners on machine learning and visualization projects and leads the Smithsonian's partnership with the [Carpentries](https://carpentries.org/) (formerly Software Carpentry and Data Carpentry).
-:::
-
-::::
-
-:::
-:::
-
-::: {.content-container}
-::: {.header-block}
-
-:::: {.columns}
-
-::: {.column width="4%"}
-:::
-::: {.column width="31%"}
-<br/>
-[![](alex/images/headshots/Alex.png)](alex/index.qmd)
-:::
-::: {.column width="5%"}
-:::
-
-::: {.column width="60%"}
-#### [**Dr. Alex White**](alex/index.qmd) |  [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)
-<br/>
-Alex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, ornithology, and community phylogenetics. Alex leads projects that leverage digitized museum collections as well as applications of machine learning in field studies of animal and plant ecology. He is an Associate Editor for Ornithology.
 
 :::
 
-::::
+## Postdoctoral Fellows
 
-:::
-:::
+:::{.peoplelisting-block}
 
-
-
-::: {#gallery .column-page}
+::: {#postdocs .column-page}
 :::
 
+:::
 
+## Research Associates
+
+:::{.peoplelisting-block}
+
+::: {#associates .column-page}
+:::
+
+:::
 
 

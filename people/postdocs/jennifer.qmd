@@ -1,12 +1,20 @@
 ---
-title: "Dr. Jennifer Spillane | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)"
+title: "Dr. Jennifer Spillane | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/jls943) [{{< fa envelope >}}](mailto:spillanej@si.edu)"
 description: |
-  Genomics and the Tree of Life
+  Jennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.
+categories:
+  - Genomics
+  - Bioinformatics
+  - Tree of life
 toc: false
+lastname: Spillane
 image: headshots/JenniferS.jpeg
 image-alt: Portrait of Jennifer Spillane
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}

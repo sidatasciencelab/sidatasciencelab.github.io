@@ -1,12 +1,20 @@
 ---
 title: "Dr. Rebecca Dikow | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)"
 description: |
-  Genomics, phylogenentics, digital humanities, and history of science
+  Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Data Science Lab. She leads projects in genomics, informatics, and machine learning.
+categories:
+  - Genomics
+  - Phylogenetics
+  - Digital Humanities
+lastname: Dikow
 toc: false
-image: images/headshots/Rebecca.png
+image: images/headshots/Rebecca.jpeg
 image-alt: Portrait of Rebecca Dikow
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}

@@ -1,12 +1,20 @@
 ---
 title: "Dr. Alex White | [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)"
 description: |
-  Statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics
+  Alex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, and community phylogenetics. He is an Associate Editor for Ornithology.
+categories:
+  - Biogeography
+  - Quantitative ecology
+  - Statistics
 toc: false
+lastname: White
 image: images/headshots/Alex.png
 image-alt: Portrait of Alex White
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}

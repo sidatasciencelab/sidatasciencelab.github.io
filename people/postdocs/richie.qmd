@@ -1,12 +1,20 @@
 ---
-title: "Dr. Richie Hodel | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/rdikow) [{{< fa envelope >}}](mailto:dikowr@si.edu)"
+title: "Dr. Richie Hodel | [{{< ai orcid >}}](https://orcid.org/0000-0002-2896-4907) [{{< ai google-scholar >}}](https://scholar.google.com/citations?hl=en&user=TOdtjkwAAAAJ) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/richiehodel) [{{< fa envelope >}}](mailto:hodelr@si.edu)"
 description: |
-  Genomics, Conservation, and Biogeography
+  Richie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.
+categories:
+  - Phylogenetics
+  - Phenomics
+  - Biogeography
 toc: false
+lastname: Hodel
 image: headshots/Richie.jpeg
 image-alt: Portrait of Richie Hodel
 comments: false
 search: false
+filters:
+  - lightbox
+lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}
