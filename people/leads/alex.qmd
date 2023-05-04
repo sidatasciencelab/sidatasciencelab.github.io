@@ -33,11 +33,11 @@ Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, w
 
 ::: {.listing-block}
 ## Interns working with Alex
-#### **Richard Lemus** 
+#### [**Richard Montes Lemus**](../interns/richiemonteslemus.qmd)
 
 Richie's bio coming soon.
 
-#### **Zachary Wilson** 
+#### [**Zachary Wilson**](../interns/zacharywilson.qmd) 
 
 Zach's bio coming soon.
 :::
