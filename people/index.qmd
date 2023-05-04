@@ -3,6 +3,7 @@ pagetitle: "Our Team"
 title: Our team
 subtitle: Our team of research data scientists, postdoctoral and graduate fellows, academic interns, and research associates
 search: false
+image: team.jpeg
 toc: false
 comments: false
 execute:
