@@ -105,7 +105,7 @@ toc: false
 The Smithsonian Data Science Lab is proud to support the Smithsonian's effort to celebrate the benefits of open science and expand the adoption of open science practices across the institution.   
 :::
 ::: {.g-col-12 .g-col-lg-8 .top-story-img}
-![](images/YOS_image.jpeg)
+![](images/YOS_image.jpeg){decoding="sync"}
 :::
 :::
 
