@@ -124,6 +124,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-interns .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-interns'] = new List('listing-interns', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-associates .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -138,6 +166,62 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-associates'] = new List('listing-associates', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-alumni .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-alumni'] = new List('listing-alumni', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-affiliated .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-affiliated'] = new List('listing-affiliated', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -278,7 +362,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Biogeography">Biogeography <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Bioinformatics">Bioinformatics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Digital Humanities">Digital Humanities <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Entomology">Entomology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Genomics">Genomics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Museum Informatics">Museum Informatics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Natural Language Processing">Natural Language Processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phenomics">Phenomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenentics">Phylogenentics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenetics">Phylogenetics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quantitative ecology">Quantitative ecology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tree of life">Tree of life <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(16)</span></div><div class="category" data-category="Biogeography">Biogeography <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Bioinformatics">Bioinformatics <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Digital Humanities">Digital Humanities <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Entomology">Entomology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Genomics">Genomics <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Machine learning">Machine learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Museum Informatics">Museum Informatics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Natural Language Processing">Natural Language Processing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phenomics">Phenomics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenentics">Phylogenentics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Phylogenetics">Phylogenetics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Quantitative Ecology">Quantitative Ecology <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Quantitative ecology">Quantitative ecology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Statistics">Statistics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Tree of life">Tree of life <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Web Accessibility">Web Accessibility <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
@@ -290,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="peoplelisting-block page-columns page-full">
 <div id="listing-leads" class="column-page quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenetics,Digital Humanities" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenetics,Digital Humanities" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
 <a href="../people/leads/rebecca.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/rebecca.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -323,7 +407,7 @@ Digital Humanities
 </div>
 
 </div>
-<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Museum Informatics" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Museum Informatics" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
 <a href="../people/leads/mike.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/mike.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -356,7 +440,7 @@ Museum Informatics
 </div>
 
 </div>
-<div class="g-col-1" data-index="2" data-categories="Biogeography,Quantitative ecology,Statistics" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="2" data-categories="Biogeography,Quantitative ecology,Statistics" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="2">
 <a href="../people/leads/alex.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/leads/alex.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -401,7 +485,7 @@ No matching items
 <div class="peoplelisting-block page-columns page-full">
 <div id="listing-postdocs" class="column-page quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Phylogenetics,Phenomics,Biogeography" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="0" data-categories="Phylogenetics,Phenomics,Biogeography" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
 <a href="../people/postdocs/richie.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/richie.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -434,7 +518,7 @@ Biogeography
 </div>
 
 </div>
-<div class="g-col-1" data-index="1" data-categories="Natural Language Processing,Digital Humanities" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="1" data-categories="Natural Language Processing,Digital Humanities" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
 <a href="../people/postdocs/william.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/william.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -464,7 +548,7 @@ Digital Humanities
 </div>
 
 </div>
-<div class="g-col-1" data-index="2" data-categories="Genomics,Bioinformatics,Tree of life" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="2" data-categories="Genomics,Bioinformatics,Tree of life" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
 <a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/postdocs/jennifer.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -504,12 +588,249 @@ No matching items
 </div>
 </div>
 </section>
+<section id="interns" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="interns">Interns</h2>
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-interns" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Digital Humanities,Machine learning" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
+<a href="../people/interns/samiyaali.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/samiyaali.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/sun.jpg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Samiya">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/samiyaali.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/samiyaali.html" class="quarto-grid-link">
+Samiya Ali | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Digital Humanities'); return false;">
+Digital Humanities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine learning'); return false;">
+Machine learning
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Samiya Ali is a UCSB-Smithsonian Scholars summer intern. Samiya is an undergraduate Data Science major at University of California-Santa Barbara.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="1" data-categories="Museum Informatics,Web Accessibility" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
+<a href="../people/interns/mattbollinger.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/mattbollinger.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/bollinger.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Matt">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/mattbollinger.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/mattbollinger.html" class="quarto-grid-link">
+Matt Bollinger | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Museum Informatics'); return false;">
+Museum Informatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Web Accessibility'); return false;">
+Web Accessibility
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Matt Bollinger is a Data Science Lab Graduate intern. Matt is working to build machine learning tools to enhance web Accessibility in digitized museum collections. He is a graduate student in Computer Science at Georgia Tech.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="2" data-categories="Digital Humanities,Museum Informatics" data-listing-file-modified-sort="1683224542734" data-listing-reading-time-sort="1">
+<a href="../people/interns/amalimchie.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/amalimchie.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/sun.jpg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Amali">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/amalimchie.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/amalimchie.html" class="quarto-grid-link">
+Amali McHie | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Digital Humanities'); return false;">
+Digital Humanities
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Museum Informatics'); return false;">
+Museum Informatics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Amalie McHie is an American Women’s History Initiative <em>Becuase of Her Story</em> summer intern. Amali in an undergraduate Software Engineering major at Kennesaw State.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="3" data-categories="Quantitative Ecology,Machine learning" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
+<a href="../people/interns/richiemonteslemus.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/richiemonteslemus.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/sun.jpg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Richard">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/richiemonteslemus.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/richiemonteslemus.html" class="quarto-grid-link">
+Richard Montes Lemus | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Quantitative Ecology'); return false;">
+Quantitative Ecology
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Machine learning'); return false;">
+Machine learning
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Richard Montes Lemus is a UCSB-Smithsonian Scholars summer intern. Richard is an undergraduate Environmental Science major at University of California-Santa Barbara.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="4" data-categories="Bioinformatics,Genomics" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
+<a href="../people/interns/natalienyborg.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/natalienyborg.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/sun.jpg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Natalie">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/natalienyborg.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/natalienyborg.html" class="quarto-grid-link">
+Natalie Nyborg | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
+Bioinformatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Natalie Nyborg is a Data Scinece Lab summer intern. Natalie in an undergraduate Bioinformatics major at Brigham Young University.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="g-col-1" data-index="5" data-categories="Machine learning,Quantitative Ecology" data-listing-file-modified-sort="1683224542738" data-listing-reading-time-sort="1">
+<a href="../people/interns/zacharywilson.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/interns/zacharywilson.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/interns/images/headshots/sun.jpg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Zachary">
+</p>
+</a><div class="card-body post-contents"><a href="../people/interns/zacharywilson.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/interns/zacharywilson.html" class="quarto-grid-link">
+Zachary Wilson | </a><a href=""><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a href="https://github.com/"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Machine learning'); return false;">
+Machine learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Quantitative Ecology'); return false;">
+Quantitative Ecology
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Zachary Wilson is a UCSB-Smithsonian Scholars summer intern. Zachary is an undergraduate Computer Science major at Hancock College.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+</section>
+<section id="affiliated-smithsonian-staff" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="affiliated-smithsonian-staff">Affiliated Smithsonian Staff</h2>
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-affiliated" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Genomics,Biogeography,Phylogenetics" data-listing-file-modified-sort="1683224542734" data-listing-reading-time-sort="1">
+<a href="../people/affiliated/carlos_a.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/affiliated/carlos_a.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/affiliated/images/headshots/ariasc.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Carlos Arias">
+</p>
+</a><div class="card-body post-contents"><a href="../people/affiliated/carlos_a.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/affiliated/carlos_a.html" class="quarto-grid-link">
+Dr.&nbsp;Carlos Arias | </a><a href="https://scholar.google.com/citations?hl=en&amp;user=0ON_-9AAAAAJ"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href="https://github.com/solracarias"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:ariasc@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Biogeography'); return false;">
+Biogeography
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Phylogenetics'); return false;">
+Phylogenetics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Carlos Arias is a Staff Scientist at the Smithsonian Tropical Research Institute in Panama. He develops genomic tools to investigate evolutionary questions about the unique fauna of the isthmus of Panama.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+</section>
 <section id="research-associates" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="research-associates">Research Associates</h2>
 <div class="peoplelisting-block page-columns page-full">
 <div id="listing-associates" class="column-page quarto-listing quarto-listing-container-grid">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenentics,Entomology" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="0" data-categories="Genomics,Phylogenentics,Entomology" data-listing-file-modified-sort="1683224542734" data-listing-reading-time-sort="1">
 <a href="../people/associates/paul.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/associates/paul.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -542,7 +863,7 @@ Entomology
 </div>
 
 </div>
-<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Digital Humanities" data-listing-file-modified-sort="1683217605250" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="1" data-categories="Genomics,Bioinformatics,Digital Humanities" data-listing-file-modified-sort="1683224542734" data-listing-reading-time-sort="1">
 <a href="../people/associates/mirian.html" class="quarto-grid-link">
 </a><div class="quarto-grid-item card h-100 card-left"><a href="../people/associates/mirian.html" class="quarto-grid-link">
 <p class="card-img-top">
@@ -581,9 +902,70 @@ No matching items
 </div>
 </div>
 </div>
+</section>
+<section id="lab-alumni" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lab-alumni">Lab Alumni</h2>
+<section id="past-postdoctoral-fellows" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="past-postdoctoral-fellows">Past Postdoctoral Fellows</h3>
+<div class="peoplelisting-block page-columns page-full">
+<div id="listing-alumni" class="column-page quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Bioinformatics,Biogeography,Genomics" data-listing-file-modified-sort="1683224542734" data-listing-reading-time-sort="2">
+<a href="../people/alumni/jenna_e.html" class="quarto-grid-link">
+</a><div class="quarto-grid-item card h-100 card-left"><a href="../people/alumni/jenna_e.html" class="quarto-grid-link">
+<p class="card-img-top">
+<img src="../people/alumni/images/headshots/jenna_e.jpeg" class="thumbnail-image card-img" style="height: 188px;" alt="Portrait of Jenna Ekwealor">
+</p>
+</a><div class="card-body post-contents"><a href="../people/alumni/jenna_e.html" class="quarto-grid-link">
+</a><h5 class="no-anchor card-title listing-title"><a href="../people/alumni/jenna_e.html" class="quarto-grid-link">
+Dr.&nbsp;Jenna Ekwealor | </a><a href="https://scholar.google.com/citations?user=kfZjYxYAAAAJ&amp;hl=en"><i class="ai  ai-google-scholar" style="color:black"></i></a> <a href="https://www.jennaekwealor.com/files/cv.pdf"><i class="ai  ai-cv" style="color:black"></i></a> <a href="https://github.com/jenna-tb-ekwealor"><i class="fa-brands fa-github" aria-label="github"></i></a> <a href="mailto:ekwealorj@si.edu"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a>
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Bioinformatics'); return false;">
+Bioinformatics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Biogeography'); return false;">
+Biogeography
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Genomics'); return false;">
+Genomics
+</div>
+</div>
+<div class="card-text listing-description">
+<p>Jenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.</p>
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</div>
+</section>
+<section id="past-predoctoral-fellows" class="level3">
+<h3 class="anchored" data-anchor-id="past-predoctoral-fellows">Past Predoctoral Fellows</h3>
+<ul>
+<li>Dr.&nbsp;Alex Robillard (2019-2021)</li>
+</ul>
+</section>
+<section id="past-interns" class="level3">
+<h3 class="anchored" data-anchor-id="past-interns">Past Interns</h3>
+<ul>
+<li>Alumni here</li>
+<li>More alumni here</li>
+</ul>
 
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
