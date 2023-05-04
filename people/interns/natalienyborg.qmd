@@ -1,0 +1,30 @@
+---
+title: "Natalie Nyborg | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Natalie Nyborg is a Data Scinece Lab summer intern. Natalie in an undergraduate Bioinformatics major at Brigham Young University.
+categories:
+  - Bioinformatics
+  - Genomics
+toc: false
+lastname: Nyborg
+image: images/headshots/sun.jpg
+image-alt: Portrait of Natalie
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/sun.jpg)
+  </div>
+
+Natalie's bio coming soon.
+</div>
+:::
+:::
+

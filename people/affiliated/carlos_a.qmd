@@ -1,0 +1,31 @@
+---
+title: "Dr. Carlos Arias | [{{< ai google-scholar >}}](https://scholar.google.com/citations?hl=en&user=0ON_-9AAAAAJ) [{{< fa brands github >}}](https://github.com/solracarias) [{{< fa envelope >}}](mailto:ariasc@si.edu)"
+description: |
+  Carlos Arias is a Staff Scientist at the Smithsonian Tropical Research Institute in Panama. He develops genomic tools to investigate evolutionary questions about the unique fauna of the isthmus of Panama. 
+categories:
+  - Genomics
+  - Biogeography
+  - Phylogenetics
+toc: false
+lastname: Arias
+image: images/headshots/ariasc.jpeg
+image-alt: Portrait of Carlos Arias
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/ariasc.jpeg)
+  </div>
+
+Carlos F. Arias Mejia was a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab in the Smithsonian Office of the CIO and the Smithsonian Tropical Research Institute (STRI) in Panama. He has B.S and M.Sc. in Biology from the University of the Andes (Colombia) and a Ph.D. in Biology with focus in Neotropical Environment from McGill University (Canada). His research focuses on the evolutionary processes and mechanisms driving and constraining the origin of new species in nature. He is particularly interested on how historical and contemporary processes interact to create and maintain novel variation. Carlos will be using population genomics and bioinformatic approaches to characterize patterns of genome-wide divergence at both local and regional spatial scales within neotropical taxa.
+</div>
+:::
+:::
+

@@ -1,0 +1,31 @@
+---
+title: "Amali McHie | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Amalie McHie is an American Women's History Initiative *Becuase of Her Story* summer intern. Amali in an undergraduate Software Engineering major at Kennesaw State.
+categories:
+  - Digital Humanities
+  - Museum Informatics
+toc: false
+lastname: McHie
+image: images/headshots/sun.jpg
+image-alt: Portrait of Amali
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/sun.jpg)
+  </div>
+
+Amali's bio coming soon.
+</div>
+:::
+:::
+
+

@@ -1,0 +1,30 @@
+---
+title: "Samiya Ali | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Samiya Ali is a UCSB-Smithsonian Scholars summer intern. Samiya is an undergraduate Data Science major at University of California-Santa Barbara.
+categories:
+  - Digital Humanities
+  - Machine learning
+toc: false
+lastname: Ali
+image: images/headshots/sun.jpg
+image-alt: Portrait of Samiya
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/sun.jpg)
+  </div>
+
+Samiya's bio coming soon.
+</div>
+:::
+:::
+

@@ -1,0 +1,30 @@
+---
+title: "Richard Montes Lemus | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Richard Montes Lemus is a UCSB-Smithsonian Scholars summer intern. Richard is an undergraduate Environmental Science major at University of California-Santa Barbara.
+categories:
+  - Quantitative Ecology
+  - Machine learning
+toc: false
+lastname: Montes
+image: images/headshots/sun.jpg
+image-alt: Portrait of Richard
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/sun.jpg)
+  </div>
+
+Richard's bio coming soon.
+</div>
+:::
+:::
+

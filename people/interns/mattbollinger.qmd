@@ -1,0 +1,30 @@
+---
+title: "Matt Bollinger | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Matt Bollinger is a Data Science Lab Graduate intern. Matt is working to build machine learning tools to enhance web Accessibility in digitized museum collections. He is a graduate student in Computer Science at Georgia Tech.
+categories:
+  - Museum Informatics
+  - Web Accessibility 
+toc: false
+lastname: Bollinger
+image: images/headshots/bollinger.jpeg
+image-alt: Portrait of Matt
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/bollinger.jpeg)
+  </div>
+
+Matt Bollinger is an alumnus of the University of Virginia with a background in Classics and Finance. Matt is interested in neural networks and deep learning, especially as it applies to image recognition and natural language. In his free time, Matt enjoys reading, playing music, and participating in trivia competitions.
+</div>
+:::
+:::
+

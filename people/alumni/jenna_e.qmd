@@ -1,0 +1,31 @@
+---
+title: "Dr. Jenna Ekwealor | [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=kfZjYxYAAAAJ&hl=en) [{{< ai cv >}}](https://www.jennaekwealor.com/files/cv.pdf) [{{< fa brands github >}}](https://github.com/jenna-tb-ekwealor) [{{< fa envelope >}}](mailto:ekwealorj@si.edu)"
+description: |
+  Jenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.
+categories:
+  - Bioinformatics
+  - Biogeography
+  - Genomics
+toc: false
+lastname: Ekwealor
+image: images/headshots/jenna_e.jpeg
+image-alt: Portrait of Jenna Ekwealor
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/jenna_e.jpeg)
+  </div>
+
+Jenna Ekwealor was a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She earned a B.S. in Biology from Purdue University, a B.A. in Religious Studies from Indiana University, a M.S. in Environmental Science from California State University, Los Angeles, and a Ph.D. in Integrative Biology from University of California, Berkeley. Her research focuses on plant adaptations to extreme environments, using dryland mosses in the genus Syntrichia as a model system for adaptive abiotic stress tolerance. These small plants have found a way to only truly “live” when enough water is present and dry out and go quiescent when water is absent. For desert mosses that may be most of the time! Yet, Syntrichia species are able to quickly begin to grow and thrive again, while recovering from damage that accumulated while they were desiccated. In the Data Science Lab, Jenna will explore the evolutionary history of the genomic underpinnings of tolerance of UV and desiccation in Syntrichia and in land plants in a phylogenetic context. She also looks forward to beginning new, integrative projects in the realms of plant evolutionary eco-physiology or life history using phylogenomic, metabolomic, or other bioinformatic techniques.
+</div>
+:::
+:::
+

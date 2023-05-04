@@ -1,0 +1,30 @@
+---
+title: "Zachary Wilson | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+description: |
+  Zachary Wilson is a UCSB-Smithsonian Scholars summer intern. Zachary is an undergraduate Computer Science major at Hancock College.
+categories:
+  - Machine learning
+  - Quantitative Ecology
+toc: false
+lastname: Wilson
+image: images/headshots/sun.jpg
+image-alt: Portrait of Zachary
+comments: false
+search: false
+filters:
+  - lightbox
+lightbox: auto
+---
+::: {.content-container}
+::: {.header-block}
+
+<div>
+  <div style="float: left; position: relative; top: 0px; padding: 30px;">
+  ![](images/headshots/sun.jpg)
+  </div>
+
+Zachary's bio coming soon.
+</div>
+:::
+:::
+

@@ -36,9 +36,51 @@ listing:
     page-size: 30
     feed: false
 
+  - id: interns
+    contents: 
+    - interns
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    image-height: 188px
+    max-description-length: 250
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    page-size: 30
+    feed: false
+
   - id: associates
     contents: 
     - associates
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    image-height: 188px
+    max-description-length: 250
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    page-size: 30
+    feed: false
+
+  - id: alumni
+    contents: 
+    - alumni
+    - "!index.qmd"
+    sort: "lastname asc"
+    type: grid
+    image-height: 188px
+    max-description-length: 250
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    page-size: 30
+    feed: false
+
+  - id: affiliated
+    contents: 
+    - affiliated
     - "!index.qmd"
     sort: "lastname asc"
     type: grid
@@ -68,6 +110,24 @@ listing:
 
 :::
 
+## Interns
+
+:::{.peoplelisting-block}
+
+::: {#interns .column-page}
+:::
+
+:::
+
+## Affiliated Smithsonian Staff
+
+:::{.peoplelisting-block}
+
+::: {#affiliated .column-page}
+:::
+
+:::
+
 ## Research Associates
 
 :::{.peoplelisting-block}
@@ -77,4 +137,22 @@ listing:
 
 :::
 
+## Lab Alumni
+
+### Past Postdoctoral Fellows
+:::{.peoplelisting-block}
+
+::: {#alumni .column-page}
+:::
+
+:::
+
+### Past Predoctoral Fellows
+
+* Dr. Alex Robillard (2019-2021)
+
+### Past Interns
+
+* Alumni here
+* More alumni here
 
