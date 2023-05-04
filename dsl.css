@@ -654,7 +654,7 @@ div.quarto-post a {
 }
 
 .top-story img {
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
