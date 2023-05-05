@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Training | Smithsonian Data Science Lab</title>
+<title>UCSB-Smithsonian Scholars | Smithsonian Data Science Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,15 +62,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../dsl.css">
-<meta property="og:title" content="Training | Smithsonian Data Science Lab">
-<meta property="og:description" content="Carpentries, Genomics, and Data Science training at the Smithsonian">
-<meta property="og:image" content="https://carpentries.org/assets/img/TheCarpentries.svg">
+<meta property="og:title" content="UCSB-Smithsonian Scholars | Smithsonian Data Science Lab">
+<meta property="og:description" content="Conservation and Data Science training for underrepresented students in Southern California">
 <meta property="og:site-name" content="Smithsonian Data Science Lab">
-<meta name="twitter:title" content="Training | Smithsonian Data Science Lab">
-<meta name="twitter:description" content="Carpentries, Genomics, and Data Science training at the Smithsonian">
-<meta name="twitter:image" content="https://carpentries.org/assets/img/TheCarpentries.svg">
+<meta name="twitter:title" content="UCSB-Smithsonian Scholars | Smithsonian Data Science Lab">
+<meta name="twitter:description" content="Conservation and Data Science training for underrepresented students in Southern California">
 <meta name="twitter:site" content="@SIDataScience">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
@@ -117,10 +115,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../research/index.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="../training/index.html" rel="" target="" aria-current="page">
- <span class="menu-text">Training</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-education" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Education</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-education">    
+        <li>
+    <a class="dropdown-item" href="../education/carpentries.html" rel="" target="">
+ <span class="dropdown-text">Data Science Training</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../education/si_scholars.html" rel="" target="">
+ <span class="dropdown-text">UCSB-Smithsonian Scholars</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../software/index.html" rel="" target="">
  <span class="menu-text">Software</span></a>
@@ -167,8 +176,8 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Training</h1>
-            <p class="subtitle lead">Carpentries, Genomics, and Data Science training at the Smithsonian</p>
+      <h1 class="title">UCSB-Smithsonian Scholars</h1>
+            <p class="subtitle lead">Conservation and Data Science training for underrepresented students in Southern California</p>
                       </div>
   </div>
     
@@ -190,15 +199,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#our-committment-to-education" id="toc-our-committment-to-education" class="nav-link active" data-scroll-target="#our-committment-to-education">Our Committment to Education</a></li>
-  <li><a href="#carpentries-at-the-smithsonian" id="toc-carpentries-at-the-smithsonian" class="nav-link" data-scroll-target="#carpentries-at-the-smithsonian">Carpentries at the Smithsonian</a></li>
-  <li><a href="#trained-carpentries-instructors" id="toc-trained-carpentries-instructors" class="nav-link" data-scroll-target="#trained-carpentries-instructors">Trained Carpentries Instructors</a>
-  <ul class="collapse">
-  <li><a href="#active-instructors" id="toc-active-instructors" class="nav-link" data-scroll-target="#active-instructors">Active Instructors</a></li>
-  <li><a href="#alumni-instructors" id="toc-alumni-instructors" class="nav-link" data-scroll-target="#alumni-instructors">Alumni Instructors</a></li>
-  </ul></li>
-  <li><a href="#requesting-a-workshop" id="toc-requesting-a-workshop" class="nav-link" data-scroll-target="#requesting-a-workshop">Requesting a Workshop</a></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/training/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/edit/main/education/si_scholars.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sidatasciencelab/sidatasciencelab.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -209,95 +211,6 @@ ul.task-list li input[type="checkbox"] {
 <section id="our-committment-to-education" class="level1">
 <h1>Our Committment to Education</h1>
 <p>The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.</p>
-</section>
-<section id="carpentries-at-the-smithsonian" class="level1">
-<h1>Carpentries at the Smithsonian</h1>
-<p><img src="https://carpentries.org/assets/img/TheCarpentries.svg" class="img-fluid"></p>
-<p><a href="https://carpentries.org/">The Carpentries</a> (comprised of Data Carpentry, Library Carpentry, and Software Carpentry) is a project whose mission is to teach foundational computational and data science skills to researchers and others who create, manage, and use data.</p>
-<p>The Smithsonian Institution has been a <a href="https://carpentries.org/members/">member organization</a> since 2017, and a Platinum Member since 2021. More than 500 Smithsonian staff, fellows, and interns have taken at least one Carpentries course since then. We also conduct custom workshops, most of which have been genomics-related. Workshop materials can be found on our <a href="http://github.com/SmithsonianWorkshops">GitHub page</a>. You can read more about the Smithsonian Carpentries team in our <a href="https://datascience.si.edu/sites/default/files/si_carpentries_annual_2019.pdf">2019 annual report</a>.</p>
-<p>We offer peer-led workshops for Smithsonian staff, academic appointees, contractors, volunteers, and other SI-affiliated individuals on a fairly regular basis. To be informed of these workshops and other SI Carpentries events, you can sign up for our announcement mailing list. To sign up for notifications, click the button below and enter your email address:</p>
-<center>
-<div class="button button1">
-<p><a href="https://si-listserv.si.edu/cgi-bin/wa?SUBED1=CARPENTRIES-ANNOUNCE&amp;A=1">Sign up for the Carpentries-annouce mailing list</a></p>
-</div>
-</center>
-</section>
-<section id="trained-carpentries-instructors" class="level1">
-<h1>Trained Carpentries Instructors</h1>
-<p><strong>We are looking for Smithsonian staff and fellows to be trained to join our team of instructors.</strong> No prior teaching experience is necessary, but we suggest experience with using one or more of the following: OpenRefine, Python, R, SQL, Unix, or GitHub. All instructors attend a virtual 4-half-day training workshop using evidence-based techniques for teaching computational skills.</p>
-<p>We will be accepting applications on a rolling basis.</p>
-<center>
-<div class="button button1">
-<p><a href="https://forms.office.com/r/Qi9xEmhGpY">Apply to join the SI Carpentries Instructor Team</a></p>
-</div>
-</center>
-<section id="active-instructors" class="level2">
-<h2 class="anchored" data-anchor-id="active-instructors">Active Instructors</h2>
-<ul>
-<li><strong>Maddy Bursell</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Stephen Cox</strong>, Smithsonian Libraries and Archives (SLA)</li>
-<li><strong>Carrie Craig</strong>, National Museum of Natural History (NMNH)</li>
-<li><strong>Corey DiPietro</strong>, National Museum of American History (NMAH)</li>
-<li><strong>Rebecca Dikow</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Jennifer Giaccai</strong>, Freer-Sackler (FSG)</li>
-<li><strong>Vanessa Gonzalez</strong>, Global Genome Initiative (GGI)</li>
-<li><strong>Jennifer Hammock</strong>, Encyclopedia of Life (EOL)</li>
-<li><strong>Kristina Heinricy</strong>, Smithsonian Libraries and Archives (SLA)</li>
-<li><strong>Valentine Herrmann</strong>, Smithsonian Conservation Biology Institute (SCBI)</li>
-<li><strong>James Holmquist</strong>, Smithsonian Environmental Research Center (SERC)</li>
-<li><strong>Sylvain Korzennik</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
-<li><strong>Matt Kweskin</strong>, National Museum of Natural History (NMNH)</li>
-<li><strong>Holly Little</strong>, National Museum of Natural History (NMNH)</li>
-<li><strong>Rayvn Manuel</strong>, National Museum of African American History and Culture (NMAAHC)</li>
-<li><strong>Rodolfo Montez</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
-<li><strong>Christopher Moriarty</strong>, Smithsonian Astrophysical Observatory (SAO)</li>
-<li><strong>Michael O’Mahoney</strong>, National Museum of Natural History (NMNH)</li>
-<li><strong>Paula Pappalardo</strong>, Smithsonian Environmental Research Center (SERC)</li>
-<li><strong>Crystal Sanchez</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Jennifer Spillane</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Mike Trizna</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Luis Villanueva</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Alex White</strong>, Office of the Chief Information Officer (OCIO)</li>
-<li><strong>Sue Zwicker</strong>, Smithsonian Libraries and Archives (SLA)</li>
-</ul>
-</section>
-<section id="alumni-instructors" class="level2">
-<h2 class="anchored" data-anchor-id="alumni-instructors">Alumni Instructors</h2>
-<ul>
-<li><strong>Lucy Chang</strong>, NMNH Paleo</li>
-<li><strong>Tauana Cunha</strong>, STRI</li>
-<li><strong>Amanda Devine</strong>, GGI</li>
-<li><strong>Jenna Ekwealor</strong>, OCIO</li>
-<li><strong>Dave Klinges</strong>, SERC</li>
-<li><strong>Mauro Lepore</strong>, ForestGEO</li>
-<li><strong>Bruno de Medeiros</strong>, STRI</li>
-<li><strong>Alex Robillard</strong>, OCIO</li>
-<li><strong>Mirian Tsuchiya</strong>, OCIO</li>
-</ul>
-</section>
-</section>
-<section id="requesting-a-workshop" class="level1">
-<h1>Requesting a Workshop</h1>
-<p><strong>Do you work at the Smithsonian and want to organize a workshop to be held at your unit?</strong> Send an email to <a href="mailto:Carpentries@si.edu">Carpentries@si.edu</a>, and answer the following questions:</p>
-<ul>
-<li>Who is the contact person?
-<ul>
-<li>Tell us about yourself and your role with the Smithsonian.</li>
-</ul></li>
-<li>How many learners do you expect to participate?
-<ul>
-<li>We have taught workshops with as many as 40 learners, but we understand that some units and locations at the Smithsonian will only be able to host smaller workshops.</li>
-</ul></li>
-<li>What lesson(s) do you have in mind?
-<ul>
-<li>Take a look at the existing <a href="https://datacarpentry.org/lessons/">Data</a>, <a href="https://librarycarpentry.org/lessons/">Library</a>, and <a href="https://software-carpentry.org/lessons/">Software</a> Carpentries lessons, and decide if these cover the skills the learners would benefit from. Also check out the list of <a href="https://carpentries.org/community-lessons/">Carpentries Incubator</a> lessons. We have developed custom workshops in the past.</li>
-</ul></li>
-<li>What is the timeframe?
-<ul>
-<li>Keep in mind that it will take a few weeks to pull together instructors and helpers who can devote 1-2 days of their time.</li>
-<li>Also keep in mind that it will take considerably more time to develop custom lessons.</li>
-</ul></li>
-</ul>
 
 
 </section>

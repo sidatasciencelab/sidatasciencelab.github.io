@@ -125,10 +125,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../research/index.html" rel="" target="">
  <span class="menu-text">Research</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../training/index.html" rel="" target="">
- <span class="menu-text">Training</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-education" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Education</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-education">    
+        <li>
+    <a class="dropdown-item" href="../../education/carpentries.html" rel="" target="">
+ <span class="dropdown-text">Data Science Training</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../../education/si_scholars.html" rel="" target="">
+ <span class="dropdown-text">UCSB-Smithsonian Scholars</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../software/index.html" rel="" target="">
  <span class="menu-text">Software</span></a>
@@ -477,7 +488,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right"><a href="https://www.si.edu/privacy">Privacy Statement</a> | <a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});</script>
 
 
 

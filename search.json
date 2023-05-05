@@ -137,7 +137,7 @@
     "href": "people/index.html#lab-alumni",
     "title": "Our team",
     "section": "Lab Alumni",
-    "text": "Lab Alumni\n\nPast Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Jenna Ekwealor |    \n\n\n\nBioinformatics\n\n\nBiogeography\n\n\nGenomics\n\n\n\nJenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nPast Predoctoral Fellows\n\nDr. Alex Robillard (University of Maryland; 2019-2021)\n\n\n\nPast Interns\n\n Alan Feria (UCSB; June 2022–December 2022)\n Kayla Geronimo-Anctil (Cal State Channel Islands; June 2022–August 2022)\n Cristina Gonzalez (UC Davis; June 2022–August 2022)\n Zumonjay Jackson (East Los Angeles College; June 2022–August 2022)\n Madeline Bursell (BYU; May 2019–July 2019; June 2021–July 2022)\n Luis Figueroa (Cal State Channel Islands; June 2021–August 2021)\n Christelle Inema (University of Chicago; June 2021–August 2021)\n Dalila Lara (UCSB; June 2021–August 2021)\n Isabella Schrader (Marshall University; June 2021–August 2021)\n Sarah Agarrat (UMD; July 2019–August 2019)\n Tiana Curry (UCSB; July 2019–September 2019)\n Alejandro Sanchez (UC Davis; June 2019–August 2019)\n Seth Wilson (BYU; June 2019–August 2019)\n John Ferry (Duke University; June 2018–August 2018)\n Chandra Earl (UF; June 2018–July 2018)\n Katherine Jensen (UNCC; June 2018–July 2018)"
+    "text": "Lab Alumni\n\nPast Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Jenna Ekwealor |    \n\n\n\nBioinformatics\n\n\nBiogeography\n\n\nGenomics\n\n\n\nJenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nPast Predoctoral Fellows\n\nDr. Alex Robillard (University of Maryland; 2019-2021)\n\n\n\nPast Interns\n\nAlan Feria (UCSB; June 2022–December 2022) \nKayla Geronimo-Anctil (Cal State Channel Islands; June 2022–August 2022) \nCristina Gonzalez (UC Davis; June 2022–August 2022)\nZumonjay Jackson (East Los Angeles College; June 2022–August 2022) \nMadeline Bursell (BYU; May 2019–July 2019; June 2021–July 2022) \nLuis Figueroa (Cal State Channel Islands; June 2021–August 2021)\nChristelle Inema (University of Chicago; June 2021–August 2021) \nDalila Lara (UCSB; June 2021–August 2021) \nIsabella Schrader (Marshall University; June 2021–August 2021) \nSarah Agarrat (UMD; July 2019–August 2019)\nTiana Curry (UCSB; July 2019–September 2019) \nAlejandro Sanchez (UC Davis; June 2019–August 2019)\nSeth Wilson (BYU; June 2019–August 2019) \nJohn Ferry (Duke University; June 2018–August 2018) \nChandra Earl (UF; June 2018–July 2018) \nKatherine Jensen (UNCC; June 2018–July 2018)"
   },
   {
     "objectID": "people/affiliated/carlos_a.html",
@@ -371,25 +371,32 @@
     "text": "Footnotes\n\n\nThe term “AI tools” includes a variety of technologies that seek to create decision-making software. Some examples include facial and speech recognition, machine learning based optical character recognition, language translation, natural language processing, image recognition, object detection and segmentation, and data clustering. Common commercial examples include virtual assistants such as Siri or Alexa, website search and recommendation algorithms, and tagging and identification of people in images on social media platforms.↩︎\nThe term “AI project” refers to an intentional effort to utilize or create an AI tool in research or in an existing workflow.↩︎"
   },
   {
-    "objectID": "training/index.html",
-    "href": "training/index.html",
-    "title": "Training",
+    "objectID": "education/carpentries.html",
+    "href": "education/carpentries.html",
+    "title": "Carpentries",
     "section": "",
     "text": "The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning."
   },
   {
-    "objectID": "training/index.html#active-instructors",
-    "href": "training/index.html#active-instructors",
-    "title": "Training",
+    "objectID": "education/carpentries.html#active-instructors",
+    "href": "education/carpentries.html#active-instructors",
+    "title": "Carpentries",
     "section": "Active Instructors",
     "text": "Active Instructors\n\nMaddy Bursell, Office of the Chief Information Officer (OCIO)\nStephen Cox, Smithsonian Libraries and Archives (SLA)\nCarrie Craig, National Museum of Natural History (NMNH)\nCorey DiPietro, National Museum of American History (NMAH)\nRebecca Dikow, Office of the Chief Information Officer (OCIO)\nJennifer Giaccai, Freer-Sackler (FSG)\nVanessa Gonzalez, Global Genome Initiative (GGI)\nJennifer Hammock, Encyclopedia of Life (EOL)\nKristina Heinricy, Smithsonian Libraries and Archives (SLA)\nValentine Herrmann, Smithsonian Conservation Biology Institute (SCBI)\nJames Holmquist, Smithsonian Environmental Research Center (SERC)\nSylvain Korzennik, Smithsonian Astrophysical Observatory (SAO)\nMatt Kweskin, National Museum of Natural History (NMNH)\nHolly Little, National Museum of Natural History (NMNH)\nRayvn Manuel, National Museum of African American History and Culture (NMAAHC)\nRodolfo Montez, Smithsonian Astrophysical Observatory (SAO)\nChristopher Moriarty, Smithsonian Astrophysical Observatory (SAO)\nMichael O’Mahoney, National Museum of Natural History (NMNH)\nPaula Pappalardo, Smithsonian Environmental Research Center (SERC)\nCrystal Sanchez, Office of the Chief Information Officer (OCIO)\nJennifer Spillane, Office of the Chief Information Officer (OCIO)\nMike Trizna, Office of the Chief Information Officer (OCIO)\nLuis Villanueva, Office of the Chief Information Officer (OCIO)\nAlex White, Office of the Chief Information Officer (OCIO)\nSue Zwicker, Smithsonian Libraries and Archives (SLA)"
   },
   {
-    "objectID": "training/index.html#alumni-instructors",
-    "href": "training/index.html#alumni-instructors",
-    "title": "Training",
+    "objectID": "education/carpentries.html#alumni-instructors",
+    "href": "education/carpentries.html#alumni-instructors",
+    "title": "Carpentries",
     "section": "Alumni Instructors",
     "text": "Alumni Instructors\n\nLucy Chang, NMNH Paleo\nTauana Cunha, STRI\nAmanda Devine, GGI\nJenna Ekwealor, OCIO\nDave Klinges, SERC\nMauro Lepore, ForestGEO\nBruno de Medeiros, STRI\nAlex Robillard, OCIO\nMirian Tsuchiya, OCIO"
+  },
+  {
+    "objectID": "education/si_scholars.html",
+    "href": "education/si_scholars.html",
+    "title": "UCSB-Smithsonian Scholars",
+    "section": "",
+    "text": "Our Committment to Education\nThe Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning."
   },
   {
     "objectID": "latest-content.html",
