@@ -46,14 +46,14 @@
     "href": "people/leads/rebecca.html#interns-working-with-rebecca",
     "title": "Dr. Rebecca Dikow |     ",
     "section": "Interns working with Rebecca",
-    "text": "Interns working with Rebecca\n\nSamiya Ali\nSamiyas’s bio coming soon."
+    "text": "Interns working with Rebecca\n\nSamiya Ali"
   },
   {
     "objectID": "people/leads/mike.html",
     "href": "people/leads/mike.html",
     "title": "Mike Trizna |     ",
     "section": "",
-    "text": "Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian’s partnership with the Carpentries (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers.\n\n\n\n\nInterns working with Mike\n\nMatt Bollinger\nMatt’s bio coming soon."
+    "text": "Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab since 2018. Mike has a B.S. in Biological Sciences from Virginia Tech, and a Masters in Bioinformatics from Virginia Commonwealth University. Mike has been working with the Smithsonian since 2007, when he interned with the Smithsonian DNA Barcode Network, and then worked with them full-time until 2018 as their Informatics Lead. As part of the Data Science Lab, Mike will be working with Smithsonian partners on machine learning and visualization projects. He also leads the Smithsonian’s partnership with the Carpentries (formerly Software Carpentry and Data Carpentry), whose goal is to teach foundational computational and data science skills to researchers.\n\n\n\n\nInterns working with Mike\n\nMatt Bollinger"
   },
   {
     "objectID": "people/leads/alex.html",
@@ -67,7 +67,7 @@
     "href": "people/leads/alex.html#interns-working-with-alex",
     "title": "Dr. Alex White |     ",
     "section": "Interns working with Alex",
-    "text": "Interns working with Alex\n\nRichard Montes Lemus\nRichie’s bio coming soon.\n\n\nZachary Wilson\nZach’s bio coming soon."
+    "text": "Interns working with Alex\n\nRichard Montes Lemus\n\n\nZachary Wilson"
   },
   {
     "objectID": "people/postdocs/richie.html",
@@ -105,6 +105,13 @@
     "text": "Genomics\n\n\nPhylogenetics\n\n\nDigital Humanities\n\n\n\nRebecca Dikow is a Research Data Scientist and leads the Smithsonian Data Science Lab. She leads projects in genomics, informatics, and machine learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGenomics\n\n\nBioinformatics\n\n\nMuseum Informatics\n\n\n\nMike Trizna is a Data Scientist with expertise in bioinformatics and machine learning. Mike leads the Smithsonian Carpentries.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBiogeography\n\n\nQuantitative ecology\n\n\nStatistics\n\n\n\nAlex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, and community phylogenetics. He is an Associate Editor for Ornithology.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
+    "objectID": "people/index.html#affiliated-smithsonian-staff",
+    "href": "people/index.html#affiliated-smithsonian-staff",
+    "title": "Our team",
+    "section": "Affiliated Smithsonian Staff",
+    "text": "Affiliated Smithsonian Staff\n\n\n\n\n\n\n\n\n\n\n\nDr. Carlos Arias |   \n\n\n\nGenomics\n\n\nBiogeography\n\n\nPhylogenetics\n\n\n\nCarlos Arias is a Staff Scientist at the Smithsonian Tropical Research Institute in Panama. He develops genomic tools to investigate evolutionary questions about the unique fauna of the isthmus of Panama.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "people/index.html#postdoctoral-fellows",
     "href": "people/index.html#postdoctoral-fellows",
     "title": "Our team",
@@ -119,13 +126,6 @@
     "text": "Interns\n\n\n\n\n\n\n\n\n\n\n\nSamiya Ali |   \n\n\n\nDigital Humanities\n\n\nMachine learning\n\n\n\nSamiya Ali is a UCSB-Smithsonian Scholars summer intern. Samiya is an undergraduate Data Science major at University of California-Santa Barbara.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMatt Bollinger |   \n\n\n\nMuseum Informatics\n\n\nWeb Accessibility\n\n\n\nMatt Bollinger is a Data Science Lab Graduate intern. Matt is working to build machine learning tools to enhance web Accessibility in digitized museum collections. He is a graduate student in Computer Science at Georgia Tech.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmali McHie |   \n\n\n\nDigital Humanities\n\n\nMuseum Informatics\n\n\n\nAmalie McHie is an American Women’s History Initiative Becuase of Her Story summer intern. Amali in an undergraduate Software Engineering major at Kennesaw State.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRichard Montes Lemus |   \n\n\n\nQuantitative Ecology\n\n\nMachine learning\n\n\n\nRichard Montes Lemus is a UCSB-Smithsonian Scholars summer intern. Richard is an undergraduate Environmental Science major at University of California-Santa Barbara.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNatalie Nyborg |   \n\n\n\nBioinformatics\n\n\nGenomics\n\n\n\nNatalie Nyborg is a Data Scinece Lab summer intern. Natalie in an undergraduate Bioinformatics major at Brigham Young University.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nZachary Wilson |   \n\n\n\nMachine learning\n\n\nQuantitative Ecology\n\n\n\nZachary Wilson is a UCSB-Smithsonian Scholars summer intern. Zachary is an undergraduate Computer Science major at Hancock College.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "people/index.html#affiliated-smithsonian-staff",
-    "href": "people/index.html#affiliated-smithsonian-staff",
-    "title": "Our team",
-    "section": "Affiliated Smithsonian Staff",
-    "text": "Affiliated Smithsonian Staff\n\n\n\n\n\n\n\n\n\n\n\nDr. Carlos Arias |   \n\n\n\nGenomics\n\n\nBiogeography\n\n\nPhylogenetics\n\n\n\nCarlos Arias is a Staff Scientist at the Smithsonian Tropical Research Institute in Panama. He develops genomic tools to investigate evolutionary questions about the unique fauna of the isthmus of Panama.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "people/index.html#research-associates",
     "href": "people/index.html#research-associates",
     "title": "Our team",
@@ -137,7 +137,7 @@
     "href": "people/index.html#lab-alumni",
     "title": "Our team",
     "section": "Lab Alumni",
-    "text": "Lab Alumni\n\nPast Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Jenna Ekwealor |    \n\n\n\nBioinformatics\n\n\nBiogeography\n\n\nGenomics\n\n\n\nJenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nPast Predoctoral Fellows\n\nDr. Alex Robillard (2019-2021)\n\n\n\nPast Interns\n\nAlumni here\nMore alumni here"
+    "text": "Lab Alumni\n\nPast Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Jenna Ekwealor |    \n\n\n\nBioinformatics\n\n\nBiogeography\n\n\nGenomics\n\n\n\nJenna Ekwealor is a Assistant Professor of Plant Biology at San Francisco State University. She was previously a Biodiversity Genomics Postdoctoral Fellow in the Data Science Lab. She studies adaptations for water and heat stress in desert mosses.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nPast Predoctoral Fellows\n\nDr. Alex Robillard (University of Maryland; 2019-2021)\n\n\n\nPast Interns\n\n Alan Feria (UCSB; June 2022–December 2022)\n Kayla Geronimo-Anctil (Cal State Channel Islands; June 2022–August 2022)\n Cristina Gonzalez (UC Davis; June 2022–August 2022)\n Zumonjay Jackson (East Los Angeles College; June 2022–August 2022)\n Madeline Bursell (BYU; May 2019–July 2019; June 2021–July 2022)\n Luis Figueroa (Cal State Channel Islands; June 2021–August 2021)\n Christelle Inema (University of Chicago; June 2021–August 2021)\n Dalila Lara (UCSB; June 2021–August 2021)\n Isabella Schrader (Marshall University; June 2021–August 2021)\n Sarah Agarrat (UMD; July 2019–August 2019)\n Tiana Curry (UCSB; July 2019–September 2019)\n Alejandro Sanchez (UC Davis; June 2019–August 2019)\n Seth Wilson (BYU; June 2019–August 2019)\n John Ferry (Duke University; June 2018–August 2018)\n Chandra Earl (UF; June 2018–July 2018)\n Katherine Jensen (UNCC; June 2018–July 2018)"
   },
   {
     "objectID": "people/affiliated/carlos_a.html",
