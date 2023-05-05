@@ -29,7 +29,12 @@ website:
         - text: "Alex White"
           href: people/leads/alex.qmd
       - research/index.qmd
-      - training/index.qmd
+      - text: "Education"
+        menu: 
+        - text: "Data Science Training"
+          href: education/carpentries.qmd
+        - text: "UCSB-Smithsonian Scholars"
+          href: education/si_scholars.qmd
       - software/index.qmd
       - news/index.qmd
       - text: "About SI-DSL"

@@ -1,7 +1,7 @@
 ---
-pagetitle: Training | Smithsonian Data Science Lab
-title: Training
-subtitle: "Carpentries, Genomics, and Data Science training at the Smithsonian"
+pagetitle: Carpentries | Smithsonian Data Science Lab
+title: Carpentries
+subtitle: "Carpentries Data Science training at the Smithsonian"
 search: false 
 ---
 
