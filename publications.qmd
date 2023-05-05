@@ -13,8 +13,10 @@ Deng X,  **Frandsen P. B.**, **Dikow R. B.**, Favre, A., Shah, D. N., Shah, R. D
 Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin, D., Hotaling, S., Cleland, T. P., **Dikow, R. B.**, Dikow, T., Kuranishi, R. B., Messcher, R., Pauls, S. U., Stewart, R. J., Tojo, K., **Frandsen, P. B.** 2022. Long-read HiFi Sequencing Correctly Assembles Repetitive heavy fibroin Silk Genes in New Moth and Caddisfly Genomes. bioRxiv 2022.06.01.494423; https://doi.org/10.1101/2022.06.01.494423
 
 ## Peer-reviewed publications
+### 2023
 **Robillard, A.**, **Trizna, M. G.**, Ruiz-Tafur, K., Panduro, E. D., de Santana, C. D., **White, A. E.**, **Dikow, R. B.**, Deichmann, J. 2023. Application of a Deep Learning Image Classifier for Identification of Amazonian Fishes. Ecology and Evolution 13(5): e9987. https://doi.org/10.1002/ece3.9987
 
+### 2022
 Madeline G. Bursell, **Rebecca B. Dikow**, Henrique V. Figueiró, Olga Dudchenko, Joseph P. Flanagan, Erez Lieberman Aiden, Benoit Goossens, Senthilvel K.S.S. Nathan, Warren E. Johnson, Klaus-Peter Koepfli, **Paul B. Frandsen**. 2022. Whole genome analysis of clouded leopard species reveals an ancient divergence and distinct demographic histories. iScience Volume 25, Issue 12. https://doi.org/10.1016/j.isci.2022.105647
 
 Barbour, Nicole,  **Robillard, Alexander J.**,  Shillinger, George L.,  Lyubchich, Vyacheslav,  Secor, David H., Fagan, William F., and  Bailey, Helen.  2023. Clustering and Classification of Vertical Movement Profiles for Ecological Inference of Behavior. Ecosphere  14(1): e4384. https://doi.org/10.1002/ecs2.4384
@@ -33,6 +35,7 @@ Corbo, M., Damas, J., **Bursell, M. G.**, Lewin, H. A. 2022. Conservation of chr
 
 Rana, S. K., **White, A. E.**, Price, T. D. 2022. Key roles for the freezing line and disturbance in driving the low plant species richness of temperate regions. Global Biogeography and Ecology  31(2);280-293 https://doi.org/10.1111/geb.13427
 
+### 2021
 Besnier, C. and **Mattingly, W.**, 2021. Named-Entity Dataset for Medieval Latin, Middle High German and Old Norse. Journal of Open Humanities Data, 7, p.23. DOI: http://doi.org/10.5334/johd.36
 
 **Arias, C. F.**, **Dikow, R. B.**,  McMillan, W. O., De Leon, L. F. 2021 De novo genome assembly of the electric fish Brachyhypopomus occidentalis (Hypopomidae, Gymnotiformes), Genome Biology and Evolution, evab223, https://doi.org/10.1093/gbe/evab223
@@ -43,6 +46,7 @@ Olsen, L. K.,  Heckenhauer, J.,  Sproul, J. S., **Dikow, R. B.**, Gonzalez, V. L
 
 **White, A. E.**, Dey, K. K., Stephens, M., Price, T. D. 2021. Dispersal syndromes drive the formation of biogeographical regions, illustrated by the case of Wallace's Line. Global Ecology and Biogeography https://doi.org/10.1111/geb.13250
 
+### 2020
 Roa-Varón, A., **Dikow, R. B.**, Carnevale, G., Tornabene, L., Baldwin, C. C., Li, C., Hilton, E. J. 2020. Confronting Sources of Systematic Error to Resolve Historically Contentious Relationships: A Case Study Using Gadiform Fishes (Teleostei, Paracanthopterygii, Gadiformes), Systematic Biology, , syaa095, https://doi.org/10.1093/sysbio/syaa095
 
 **Tsuchiya, M. T. N.**, **Dikow, R. B.**, Koepfli, K.-P., **Frandsen, P. B.**, Rockwood, L. L., Maldonado, J. E. 2020. Whole Genome Sequencing of Procyonids Reveals Distinct Demographic Histories in Kinkajou (Potos Flavus) and Northern Raccoon (Procyon Lotor), Genome Biology and Evolution, , evaa255, doi: https://doi.org/10.1093/gbe/evaa255
@@ -67,6 +71,7 @@ Muga, K., **Robillard, A.**, Somaweera, R., 2020. Eretmochelys imbricata (Hawksb
 
 Pearson K. D., Nelson G., Aronson M. F. J., Bonnet P., Brenskelle L., Davis C. C., Denny E. G., Ellwood E. R., Goëau H., Heberling J. M., Joly A., Lorieul T., Mazer S. J., Meineke E. K., Stucky B. J., Sweeney P., **White A. E.**, Soltis P. S. 2020. Machine Learning Using Digitized Herbarium Specimens to Advance Phenological Research, BioScience, biaa044. doi: 10.1093/biosci/biaa044
 
+### 2019
 Jones, K. E., Fér, T., Schmickl, R., **Dikow, R. B.**, Funk, V. A., Herrando-Morraira, S., Johnston, P. R., Siniscalchi, C. M., Susanna, A., Slovák, M., Thapa, R., Watson, L., Mandel, J. R., 2019. An empirical assessment of a single family-wide target capture locus set at multiple evolutionary timescales within the largest family of flowering plants. Applications in Plant Sciences 7 (10):Article e11295. doi: 10.1002%2Faps3.11295
 
 Edelman, N. B., **Frandsen, P. B.**, Miyagi, M., Clavijo, B. J., Davey, J., **Dikow, R. B.**, Accinelli, G. G., Van Belleghem, S., Patterson, N. J., Neafsey, D. E., Challis, R. J., Kumar, S., Moreira, G., Salazar, C., Chouteau, M., Counterman, B., Papa, R., Blaxter, M., Reed, R. D., Dasmahapatra, K., Kronforst, M., Joron, M., Jiggins, C. D., McMillan, W. O., Di-Palma, F., Blumberg, A. J., Wakeley, J., Jaffe, D., Mallet, J. 2019. Genomic architecture and introgression shape a butterfly radiation. Science 366 (6465), 594-599. doi: 10.1126/science.aaw2090
@@ -85,8 +90,10 @@ Cortes Rodrigues, N., Campana, M., Berry, L., Faegre, S., Derrickson, S., Ha, R.
 
 Ren, Z., von Dohlen, C. D., Harris, A. J., **Dikow, R. B.**, Su, X., Wen, J. 2019.  Congruent phylogenetic relationships of Melaphidina aphids (Aphididae:  Eriosomatinae:  Fordini) accordingto nuclear and mitochondrial DNA data with taxonomic implications on generic limits. PLoS One doi: 10.1371/journal/pone.0213181
 
+### 2018
 Hawkins, M. T. R., Culligan, R. C., **Dikow, R. B.**, Frasier, C.L., Lei, R., Louis Jr., E. E. 2018. Demographic history of the critically endangered greater bamboo lemur (Prolemur simus), evidence of population bottlenecks. BMC Genomics doi: 10.1186/s12864-018-4841-4.
 
+### 2017
 Schuettpelz, E., **Frandsen, P. B.**, **Dikow, R. B.**, Brown, A., Orli, S., Peters, M., Metallo, A., Funk, V. A., Dorr, L. J. 2017. Applications of deep convolutional neural networks to digitized natural history collections. Biodiversity Data Journal. doi: 10.3897/BDJ.5.e21139 
 
 Mandel, J. R., Barker, M. S., Bayer, R. J., **Dikow, R. B.**, Gao, T-G. Katy E. Jones, K. E., Keeley, S., Kilian, N., Ma, H, Siniscalchi, C. M., Susanna, A, Thapa, R., Watson, L., Funk, V. A. 2017. The Compositae Tree of Life in the age of phylogenomics. Journal of Systematics and Evolution. doi:10.1111/jse.12265 
