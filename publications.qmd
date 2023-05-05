@@ -13,9 +13,11 @@ Deng X,  **Frandsen P. B.**, **Dikow R. B.**, Favre, A., Shah, D. N., Shah, R. D
 Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin, D., Hotaling, S., Cleland, T. P., **Dikow, R. B.**, Dikow, T., Kuranishi, R. B., Messcher, R., Pauls, S. U., Stewart, R. J., Tojo, K., **Frandsen, P. B.** 2022. Long-read HiFi Sequencing Correctly Assembles Repetitive heavy fibroin Silk Genes in New Moth and Caddisfly Genomes. bioRxiv 2022.06.01.494423; https://doi.org/10.1101/2022.06.01.494423
 
 ## Peer-reviewed publications
+**Robillard, A.**, **Trizna, M. G.**, Ruiz-Tafur, K., Panduro, E. D., de Santana, C. D., **White, A. E.**, **Dikow, R. B.**, Deichmann, J. 2023. Application of a Deep Learning Image Classifier for Identification of Amazonian Fishes. Ecology and Evolution 13(5): e9987. https://doi.org/10.1002/ece3.9987
+
 Madeline G. Bursell, **Rebecca B. Dikow**, Henrique V. Figueiró, Olga Dudchenko, Joseph P. Flanagan, Erez Lieberman Aiden, Benoit Goossens, Senthilvel K.S.S. Nathan, Warren E. Johnson, Klaus-Peter Koepfli, **Paul B. Frandsen**. 2022. Whole genome analysis of clouded leopard species reveals an ancient divergence and distinct demographic histories. iScience Volume 25, Issue 12. https://doi.org/10.1016/j.isci.2022.105647
 
-Barbour, Nicole,  **Robillard, Alexander J.**,  Shillinger, George L.,  Lyubchich, Vyacheslav,  Secor, David H., Fagan, William F., and  Bailey, Helen.  2023. Clustering and Classification of Vertical Movement Profiles for Ecological Inference of Behavior. Ecosphere  14( 1): e4384. https://doi.org/10.1002/ecs2.4384
+Barbour, Nicole,  **Robillard, Alexander J.**,  Shillinger, George L.,  Lyubchich, Vyacheslav,  Secor, David H., Fagan, William F., and  Bailey, Helen.  2023. Clustering and Classification of Vertical Movement Profiles for Ecological Inference of Behavior. Ecosphere  14(1): e4384. https://doi.org/10.1002/ecs2.4384
 
 Chavez, D. E., Gronau, I., Hains, T., **Dikow, R. B.**, **Frandsen, P. B.**, Johnson, W. E., Eizirik, E., Koepfli, K.-P., Wayne, R. K. 2022. Comparative genomics uncovers the evolutionary history, demography and molecular adaptations of South American canids. PNAS 119 (34) e2205986119. https://doi.org/10.1073/pnas.2205986119
 
