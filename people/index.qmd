@@ -102,6 +102,15 @@ listing:
 
 :::
 
+## Affiliated Smithsonian Staff
+
+:::{.peoplelisting-block}
+
+::: {#affiliated .column-page}
+:::
+
+:::
+
 ## Postdoctoral Fellows
 
 :::{.peoplelisting-block}
@@ -120,14 +129,6 @@ listing:
 
 :::
 
-## Affiliated Smithsonian Staff
-
-:::{.peoplelisting-block}
-
-::: {#affiliated .column-page}
-:::
-
-:::
 
 ## Research Associates
 
@@ -150,10 +151,24 @@ listing:
 
 ### Past Predoctoral Fellows
 
-* Dr. Alex Robillard (2019-2021)
+* Dr. Alex Robillard (University of Maryland; 2019-2021)
 
 ### Past Interns
 
-* Alumni here
-* More alumni here
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/alan-feria-ucsb) Alan Feria (UCSB; June 2022–December 2022)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/kayla-geronimo-anctil-b2a7aa271) Kayla Geronimo-Anctil (Cal State Channel Islands; June 2022–August 2022)
+* [{{< fa brands linkedin >}}]() Cristina Gonzalez (UC Davis; June 2022–August 2022)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/zumonjay-jackson-97b917231) Zumonjay Jackson (East Los Angeles College; June 2022–August 2022)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/madeline-bursell) Madeline Bursell (BYU; May 2019–July 2019; June 2021–July 2022)
+* [{{< fa brands linkedin >}}]() Luis Figueroa (Cal State Channel Islands; June 2021–August 2021)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/christelle-inema) Christelle Inema (University of Chicago; June 2021–August 2021)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/dalilalara) Dalila Lara (UCSB; June 2021–August 2021) 
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/isabella-schrader) Isabella Schrader (Marshall University; June 2021–August 2021)
+* [{{< fa brands linkedin >}}]() Sarah Agarrat (UMD; July 2019–August 2019)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/tiana-curry) Tiana Curry (UCSB; July 2019–September 2019) 
+* [{{< fa brands linkedin >}}]() Alejandro Sanchez (UC Davis; June 2019–August 2019)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/seth-wilson-84a884142) Seth Wilson (BYU; June 2019–August 2019)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/john-w-ferry) John Ferry (Duke University; June 2018–August 2018)
+* [{{< fa brands linkedin >}}](https://www.linkedin.com/in/chandra-earl) Chandra Earl (UF; June 2018–July 2018)
+* [{{< fa brands linkedin >}}]() Katherine Jensen (UNCC; June 2018–July 2018)
 

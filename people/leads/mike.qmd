@@ -30,9 +30,7 @@ Mike is a Data Scientist and is a member of the Smithsonian Data Science Lab sin
 
 ::: {.listing-block}
 ### Interns working with Mike
-#### **Matt Bollinger** 
-
-Matt's bio coming soon.
+#### [**Matt Bollinger**](../interns/mattbollinger.qmd)
 :::
 
 

@@ -32,15 +32,13 @@ Rebecca Dikow is a Research Data Scientist and leads the Smithsonian Institution
 
 ::: {.listing-block}
 ## Post-doctoral fellows working with Rebecca
-#### [**Richie Hodel**]() 
+#### [**Richie Hodel**](../postdocs/richie.qmd)
 
-#### [**William Mattingly**]()
+#### [**William Mattingly**](../postdocs/william.qmd)
 
-#### [**Jennifer Spilane**]()
+#### [**Jennifer Spilane**](../postdocs/jennifer.qmd)
 
 ## Interns working with Rebecca
-#### **Samiya Ali** 
-
-Samiyas's bio coming soon.
+#### [**Samiya Ali**](../interns/samiyaali.qmd)
 :::
 
