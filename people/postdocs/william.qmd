@@ -1,5 +1,5 @@
 ---
-title: "Dr. William Mattingly | [{{< ai orcid >}}](https://orcid.org/0000-0003-4334-5714) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}](https://wjbmattingly.com/cv/) [{{< fa brands github >}}](https://github.com/wjbmattingly) [{{< fa envelope >}}](mailto:dikowr@si.edu) [{{< fa brands twitter >}}](https://twitter.com/wjb_mattingly)"
+title: "Dr. William Mattingly | [{{< ai orcid >}}](https://orcid.org/0000-0003-4334-5714) [{{< ai cv >}}](https://wjbmattingly.com/cv/) [{{< fa brands github >}}](https://github.com/wjbmattingly) [{{< fa envelope >}}](mailto:mattinglyw@si.edu) [{{< fa brands twitter >}}](https://twitter.com/wjb_mattingly)"
 description: |
   William Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.
 categories:
