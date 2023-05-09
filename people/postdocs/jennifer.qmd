@@ -1,10 +1,10 @@
 ---
-title: "Dr. Jennifer Spillane | [{{< ai orcid >}}](https://orcid.org/0000-0001-9668-3683) [{{< ai google-scholar >}}](https://scholar.google.com/citations?user=gBRB_OkAAAAJ&hl=en&oi=ao) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/jls943) [{{< fa envelope >}}](mailto:spillanej@si.edu)"
+title: "Dr. Jennifer Spillane | [{{< ai orcid >}}](https://orcid.org/0000-0003-0102-6133) [{{< fa brands linkedin >}}](https://www.linkedin.com/in/jennifer-spillane-phd-b2a896164/) [{{< fa brands github >}}](https://github.com/jls943) [{{< fa envelope >}}](mailto:spillanej@si.edu)"
 description: |
   Jennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.
 categories:
   - Genomics
-  - Bioinformatics
+  - Marine Invertebrates
   - Tree of life
 toc: false
 lastname: Spillane
@@ -24,7 +24,7 @@ lightbox: auto
   ![](headshots/JenniferS.jpeg)
   </div>
 
-Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a B.A. in Biology from Trinity Christian College and an M.Sc. in Biology from Western Washington University. Spillane recently finished her Ph.D. in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab, she will work on developing machine learning models to address the problem of DNA sequence contamination. She is generally interested in improving genomic and bioinformatic methods to better study non-model and under-represented organisms.
+Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a BA in Biology from Trinity Christian College and an MS in Biology from Western Washington University. Spillane earned her PhD in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab she works on the problem of DNA sequence contamination in non-model organisms using machine learning. She is a certified Carpentries Instructor and loves science communication in any form. 
 
 </div>
 :::
