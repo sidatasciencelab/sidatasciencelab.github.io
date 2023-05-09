@@ -79,9 +79,9 @@
   {
     "objectID": "people/postdocs/jennifer.html",
     "href": "people/postdocs/jennifer.html",
-    "title": "Dr. Jennifer Spillane |     ",
+    "title": "Dr. Jennifer Spillane |    ",
     "section": "",
-    "text": "Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a B.A. in Biology from Trinity Christian College and an M.Sc. in Biology from Western Washington University. Spillane recently finished her Ph.D. in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab, she will work on developing machine learning models to address the problem of DNA sequence contamination. She is generally interested in improving genomic and bioinformatic methods to better study non-model and under-represented organisms."
+    "text": "Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a BA in Biology from Trinity Christian College and an MS in Biology from Western Washington University. Spillane earned her PhD in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab she works on the problem of DNA sequence contamination in non-model organisms using machine learning. She is a certified Carpentries Instructor and loves science communication in any form."
   },
   {
     "objectID": "people/postdocs/william.html",
@@ -116,7 +116,7 @@
     "href": "people/index.html#postdoctoral-fellows",
     "title": "Our team",
     "section": "Postdoctoral Fellows",
-    "text": "Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Richie Hodel |     \n\n\n\nPhylogenetics\n\n\nPhenomics\n\n\nBiogeography\n\n\n\nRichie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. William Mattingly |      \n\n\n\nNatural Language Processing\n\n\nDigital Humanities\n\n\n\nWilliam Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Jennifer Spillane |     \n\n\n\nGenomics\n\n\nBioinformatics\n\n\nTree of life\n\n\n\nJennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Richie Hodel |     \n\n\n\nPhylogenetics\n\n\nPhenomics\n\n\nBiogeography\n\n\n\nRichie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. William Mattingly |      \n\n\n\nNatural Language Processing\n\n\nDigital Humanities\n\n\n\nWilliam Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Jennifer Spillane |    \n\n\n\nGenomics\n\n\nMarine Invertebrates\n\n\nTree of life\n\n\n\nJennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "people/index.html#interns",
