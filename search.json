@@ -86,7 +86,7 @@
   {
     "objectID": "people/postdocs/william.html",
     "href": "people/postdocs/william.html",
-    "title": "Dr. William Mattingly |      ",
+    "title": "Dr. William Mattingly |     ",
     "section": "",
     "text": "William Mattingly is a Postdoctoral Fellow at the Smithsonian Institution Data Science Lab in collaboration with the United States Holocaust Memorial Museum (USHMM). He has a B.A. and M.A. in History from Florida Gulf Coast University and a Ph.D. in History from the University of Kentucky. His dissertation research explored using historical social network analysis, cluster analysis, and computational methods for identifying ninth-century intellectual and pedagogical networks. Most recently, his research has focused on developing text classification neural network models to identify sources in medieval texts and developing natural language processing (NLP) methods for medieval Latin. At the Smithsonian and USHMM, he is developing machine learning methods to aid, in among other things, the cataloging of Holocaust documents. He is co-investigator and developer for the Structured Data Extraction and Enhancement in South Africa’s Truth and Reconciliation Archive project and lead investigator and developer for the Digital Alcuin Project."
   },
@@ -116,7 +116,7 @@
     "href": "people/index.html#postdoctoral-fellows",
     "title": "Our team",
     "section": "Postdoctoral Fellows",
-    "text": "Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Richie Hodel |     \n\n\n\nPhylogenetics\n\n\nPhenomics\n\n\nBiogeography\n\n\n\nRichie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. William Mattingly |      \n\n\n\nNatural Language Processing\n\n\nDigital Humanities\n\n\n\nWilliam Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Jennifer Spillane |    \n\n\n\nGenomics\n\n\nMarine Invertebrates\n\n\nTree of life\n\n\n\nJennifer Spillane is using machine learning to investigate deep evolutionary connections between branches of the Tree of Life.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Postdoctoral Fellows\n\n\n\n\n\n\n\n\n\n\n\nDr. Richie Hodel |     \n\n\n\nPhylogenetics\n\n\nPhenomics\n\n\nBiogeography\n\n\n\nRichie Hodel is developing methods to extract phenotypic trait data from digitzed botanical specimens to better understand the factors underlying patterns of diversity.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. William Mattingly |     \n\n\n\nNatural Language Processing\n\n\nDigital Humanities\n\n\n\nWilliam Mattingly is a historian developing methods to better understand complex historical themes in vast digital datasets of historical documents and images.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Jennifer Spillane |    \n\n\n\nGenomics\n\n\nMarine Invertebrates\n\n\nTree of life\n\n\n\nJennifer Spillane is using machine learning to address DNA contamination in genome sequences of non-model organisms.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "people/index.html#interns",
