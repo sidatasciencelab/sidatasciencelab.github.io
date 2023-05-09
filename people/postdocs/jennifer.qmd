@@ -25,6 +25,7 @@ lightbox: auto
   </div>
 
 Jennifer Spillane (she/her) is a Postdoctoral Fellow in the Smithsonian Institution Data Science Lab. She earned a BA in Biology from Trinity Christian College and an MS in Biology from Western Washington University. Spillane earned her PhD in Molecular and Evolutionary Systems Biology at the University of New Hampshire where she used phylogenomics and comparative genomics to learn more about trait evolution in animals, and particularly marine invertebrates. As part of the Data Science Lab she works on the problem of DNA sequence contamination in non-model organisms using machine learning. She is a certified Carpentries Instructor and loves science communication in any form. 
+<br/><br/><br/><br/><br/><br/><br/><br/>
 
 </div>
 :::
