@@ -14,6 +14,9 @@ Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin
 
 ## Peer-reviewed publications
 ### 2023
+
+**Rebecca B. Dikow, Jenna T. B. Ekwealor, William J. B. Mattingly, Michael G. Trizna**, Elizabeth Harmon, Torsten Dikow, **Carlos F. Arias, Richard G. J. Hodel, Jennifer Spillane, Mirian T. N. Tsuchiya**, Luis Villanueva, **Alexander E. White, Madeline G. Bursell, Tiana Curry, Christelle Inema, and Kayla Geronimo-Anctil**. 2023. Let the Records Show: Attribution of Scientific Credit in Natural History Collections. International Journal of Plant Sciences 0 0:0, 000-000. https://doi.org/10.1086/724949
+
 **Robillard, A.**, **Trizna, M. G.**, Ruiz-Tafur, K., Panduro, E. D., de Santana, C. D., **White, A. E.**, **Dikow, R. B.**, Deichmann, J. 2023. Application of a Deep Learning Image Classifier for Identification of Amazonian Fishes. Ecology and Evolution 13(5): e9987. https://doi.org/10.1002/ece3.9987
 
 ### 2022
