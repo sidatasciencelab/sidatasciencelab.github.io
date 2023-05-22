@@ -7,11 +7,6 @@ sidebar: false
 title-block-banner: true
 ---
 
-## Preprints
-Deng X,  **Frandsen P. B.**, **Dikow R. B.**, Favre, A., Shah, D. N., Shah, R. D. T., Schneider, J., Heckenhauer, J., Pauls, S. 2022. The impact of sequencing depth and relatedness of the reference genome in population genomic studies: a case study with two caddisfly species (Trichoptera, Rhyacophilidae, Himalopsyche). https://doi.org/10.22541/au.165633164.43557091/v1
-
-Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin, D., Hotaling, S., Cleland, T. P., **Dikow, R. B.**, Dikow, T., Kuranishi, R. B., Messcher, R., Pauls, S. U., Stewart, R. J., Tojo, K., **Frandsen, P. B.** 2022. Long-read HiFi Sequencing Correctly Assembles Repetitive heavy fibroin Silk Genes in New Moth and Caddisfly Genomes. bioRxiv 2022.06.01.494423; https://doi.org/10.1101/2022.06.01.494423
-
 ## Peer-reviewed publications
 ### 2023
 
@@ -20,6 +15,10 @@ Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin
 **Robillard, A.**, **Trizna, M. G.**, Ruiz-Tafur, K., Panduro, E. D., de Santana, C. D., **White, A. E.**, **Dikow, R. B.**, Deichmann, J. 2023. Application of a Deep Learning Image Classifier for Identification of Amazonian Fishes. Ecology and Evolution 13(5): e9987. https://doi.org/10.1002/ece3.9987
 
 ### 2022
+Deng, X., **Frandsen, P. B.**, **Dikow, R. B.**, Favre, A., Shah, D. N., Shah, R. D. T., Schneider, J., Heckenhauer, J., Pauls, S. 2022. The impact of sequencing depth and relatedness of the reference genome in population genomic studies: a case study with two caddisfly species (Trichoptera, Rhyacophilidae, Himalopsyche). Ecology and Evolution. doi:  10.1002/ece3.9583
+
+Kawahara, A. Y., Storer, C. G., Markee, A., Heckenhauer, J., Powell, A., Plotkin, D., Hotaling, S., Cleland, T. P., **Dikow, R. B.**, Dikow, T., Kuranishi, R. B., Messcher, R., Pauls, S. U., Stewart, R. J., Tojo, K., **Frandsen, P. B.** 2022. Long-read HiFi sequencing correctly assembles repetitive heavy fibroin silk genes in new moth and caddisfly genomes. Gigabyte doi: 10.46471/gigabyte.64.
+
 Madeline G. Bursell, **Rebecca B. Dikow**, Henrique V. Figueiró, Olga Dudchenko, Joseph P. Flanagan, Erez Lieberman Aiden, Benoit Goossens, Senthilvel K.S.S. Nathan, Warren E. Johnson, Klaus-Peter Koepfli, **Paul B. Frandsen**. 2022. Whole genome analysis of clouded leopard species reveals an ancient divergence and distinct demographic histories. iScience Volume 25, Issue 12. https://doi.org/10.1016/j.isci.2022.105647
 
 Barbour, Nicole,  **Robillard, Alexander J.**,  Shillinger, George L.,  Lyubchich, Vyacheslav,  Secor, David H., Fagan, William F., and  Bailey, Helen.  2023. Clustering and Classification of Vertical Movement Profiles for Ecological Inference of Behavior. Ecosphere  14(1): e4384. https://doi.org/10.1002/ecs2.4384
