@@ -1,13 +1,13 @@
 ---
-title: "Zachary Wilson | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
+title: "Zachary Willson | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/) [{{< fa envelope >}}](mailto:)"
 description: |
-  Zachary Wilson is a UCSB-Smithsonian Scholars summer intern. Zachary is an undergraduate Computer Science major at Hancock College.
+  Zachary Willson is a UCSB-Smithsonian Scholars summer intern. Zachary is an undergraduate Computer Science major at UC Davis.
 categories:
   - Machine learning
   - Quantitative Ecology
 toc: false
-lastname: Wilson
-image: images/headshots/sun.jpg
+lastname: Willson
+image: images/headshots/willson.jpg
 image-alt: Portrait of Zachary
 comments: false
 search: false
@@ -20,7 +20,7 @@ lightbox: auto
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](images/headshots/sun.jpg)
+  ![](images/headshots/willson.jpg)
   </div>
 
 Zachary's bio coming soon.
