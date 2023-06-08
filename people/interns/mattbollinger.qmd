@@ -24,6 +24,7 @@ lightbox: auto
   </div>
 
 Matt Bollinger is an alumnus of the University of Virginia with a background in Classics and Finance. Matt is interested in neural networks and deep learning, especially as it applies to image recognition and natural language. In his free time, Matt enjoys reading, playing music, and participating in trivia competitions.
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
 :::
 :::
