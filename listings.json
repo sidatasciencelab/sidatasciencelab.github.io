@@ -1,16 +1,12 @@
 [
   {
-    "listing": "/news/index.html",
+    "listing": "/index.html",
     "items": [
       "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/news/news-blog/posts/2023/04/19/open.html"
-    ]
-  },
-  {
-    "listing": "/news/news-blog/index.html",
-    "items": [
-      "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/news/news-blog/posts/2023/04/19/open.html"
+      "/software/vignettes/posts/2023/04/24/ecostructure.html",
+      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -35,21 +31,15 @@
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/research/projects/index.html",
     "items": [
-      "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/software/vignettes/posts/2023/04/24/ecostructure.html",
-      "/news/news-blog/posts/2023/04/19/open.html",
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
-    "listing": "/latest-content.html",
+    "listing": "/research/index.html",
     "items": [
-      "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/software/vignettes/posts/2023/04/24/ecostructure.html",
-      "/news/news-blog/posts/2023/04/19/open.html",
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
     ]
@@ -67,17 +57,27 @@
     ]
   },
   {
-    "listing": "/research/index.html",
+    "listing": "/latest-content.html",
     "items": [
+      "/news/news-blog/posts/2023/05/01/amz_fish.html",
+      "/software/vignettes/posts/2023/04/24/ecostructure.html",
+      "/news/news-blog/posts/2023/04/19/open.html",
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
-    "listing": "/research/projects/index.html",
+    "listing": "/news/index.html",
     "items": [
-      "/research/projects/posts/2020/10/22/impact.html",
-      "/research/projects/posts/2020/04/14/names.html"
+      "/news/news-blog/posts/2023/05/01/amz_fish.html",
+      "/news/news-blog/posts/2023/04/19/open.html"
+    ]
+  },
+  {
+    "listing": "/news/news-blog/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/05/01/amz_fish.html",
+      "/news/news-blog/posts/2023/04/19/open.html"
     ]
   }
 ]
