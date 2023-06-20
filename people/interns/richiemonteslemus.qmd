@@ -8,7 +8,7 @@ categories:
 toc: false
 lastname: Montes
 image: images/headshots/sun.jpg
-image-alt: Portrait of Richard
+image-alt: Portrait of Richard Montes Lemus
 comments: false
 search: false
 filters:
