@@ -7,7 +7,7 @@ categories:
   - Machine learning
 toc: false
 lastname: Montes
-image: images/headshots/sun.jpg
+image: images/headshots/montes_lemus.jpg
 image-alt: Portrait of Richard Montes Lemus
 comments: false
 search: false
