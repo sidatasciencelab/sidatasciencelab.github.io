@@ -1,16 +1,12 @@
 [
   {
-    "listing": "/news/index.html",
+    "listing": "/index.html",
     "items": [
       "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/news/news-blog/posts/2023/04/19/open.html"
-    ]
-  },
-  {
-    "listing": "/news/news-blog/index.html",
-    "items": [
-      "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/news/news-blog/posts/2023/04/19/open.html"
+      "/software/vignettes/posts/2023/04/24/ecostructure.html",
+      "/news/news-blog/posts/2023/04/19/open.html",
+      "/research/projects/posts/2020/10/22/impact.html",
+      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -32,16 +28,6 @@
       "/people/associates/mirian.html",
       "/people/alumni/jenna_e.html",
       "/people/affiliated/carlos_a.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/news/news-blog/posts/2023/05/01/amz_fish.html",
-      "/software/vignettes/posts/2023/04/24/ecostructure.html",
-      "/news/news-blog/posts/2023/04/19/open.html",
-      "/research/projects/posts/2020/10/22/impact.html",
-      "/research/projects/posts/2020/04/14/names.html"
     ]
   },
   {
@@ -78,6 +64,20 @@
     "items": [
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
+    ]
+  },
+  {
+    "listing": "/news/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/05/01/amz_fish.html",
+      "/news/news-blog/posts/2023/04/19/open.html"
+    ]
+  },
+  {
+    "listing": "/news/news-blog/index.html",
+    "items": [
+      "/news/news-blog/posts/2023/05/01/amz_fish.html",
+      "/news/news-blog/posts/2023/04/19/open.html"
     ]
   }
 ]
