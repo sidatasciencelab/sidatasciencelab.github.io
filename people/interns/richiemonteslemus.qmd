@@ -20,7 +20,7 @@ lightbox: auto
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](images/headshots/sun.jpg)
+  ![](images/headshots/montes_lemus.jpg)
   </div>
 
 Richard's bio coming soon.
