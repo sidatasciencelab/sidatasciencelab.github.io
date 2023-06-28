@@ -1,5 +1,5 @@
 ---
-title: "Richard Montes Lemus | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/richardmonteslemus) [{{< fa envelope >}}](mailto:richard.montes.lemus@gmail.com)"
+title: "Richard Montes Lemus | [{{< https://www.linkedin.com/in/richard-montes-lemus-142a421b6/ >}}]() [{{< fa brands github >}}](https://github.com/richardmonteslemus) [{{< fa envelope >}}](mailto:richard.montes.lemus@gmail.com)"
 description: |
   Richard Montes Lemus is a UCSB-Smithsonian Scholars summer intern. Richard is an undergraduate Environmental Science major at University of California-Santa Barbara.
 categories:
