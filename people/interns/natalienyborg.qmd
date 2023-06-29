@@ -7,7 +7,7 @@ categories:
   - Genomics
 toc: false
 lastname: Nyborg
-image: images/headshots/sun.jpg
+image: natalie_nyborg_headshot.jpg
 image-alt: Portrait of Natalie
 comments: false
 search: false
