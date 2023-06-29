@@ -20,7 +20,7 @@ lightbox: auto
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](images/headshots/sun.jpg)
+  ![](images/headshots/natalie_nyborg_headshot.jpg)
   </div>
 
 Natalie's bio coming soon.
