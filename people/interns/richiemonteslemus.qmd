@@ -1,13 +1,13 @@
 ---
-title: "Richard Montes Lemus | [{{< fa brands linkedin >}}]() [{{< fa brands github >}}](https://github.com/richardmonteslemus) [{{< fa envelope >}}](mailto:richard.montes.lemus@gmail.com)"
+title: "Richard Montes Lemus | [{{< fa brands linkedin >}}](https://www.linkedin.com/in/richard-montes-lemus-142a421b6/) [{{< fa brands github >}}](https://github.com/richardmonteslemus) [{{< fa envelope >}}](mailto:richard.montes.lemus@gmail.com)"
 description: |
   Richard Montes Lemus is a UCSB-Smithsonian Scholars summer intern. Richard is an undergraduate Environmental Science major at University of California-Santa Barbara.
 categories:
   - Quantitative Ecology
   - Machine learning
 toc: false
-lastname: Montes
-image: images/headshots/sun.jpg
+lastname: Montes Lemus
+image: images/headshots/montes_lemus_headshot.jpg
 image-alt: Portrait of Richard Montes Lemus
 comments: false
 search: false
@@ -20,10 +20,15 @@ lightbox: auto
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](images/headshots/sun.jpg)
+  ![](images/headshots/montes_lemus_headshot.jpg)
   </div>
 
-Richard's bio coming soon.
+Richard Montes Lemus is an undergraduate student majoring in Environmental Science major at The University of California, Santa Barbara. He is currently an intern 
+for the Smithsonian OCIO Data Science Lab, where he works with Dr. Alex White to develop machine learning tools to survey Island Spotted Skunks on Santa Cruz Island
+from camera trap images. His work intends to streamline quantitative ecological research through machine learning. He is passionate about revolutionizing 
+environmental science through cutting-edge tools in data science. 
+
+<br/><br/><br/><br/><br/>
 </div>
 :::
 :::
