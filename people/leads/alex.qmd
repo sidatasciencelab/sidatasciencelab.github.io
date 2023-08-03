@@ -36,7 +36,4 @@ Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, w
 #### [**Richard Montes Lemus**](../interns/richiemonteslemus.qmd)
 
 #### [**Zachary Wilson**](../interns/zacharywilson.qmd)
-
- Check out Richie and Zach's joint presentation for the UCSB-Smithsonian Scholars lightening talk program
- {{< video videos/video1448152153.mp4 >}}
 :::
