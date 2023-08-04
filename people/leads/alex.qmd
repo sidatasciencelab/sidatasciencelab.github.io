@@ -12,9 +12,9 @@ image: images/headshots/Alex.png
 image-alt: Portrait of Alex White
 comments: false
 search: false
-filters:
-  - lightbox
-lightbox: auto
+#filters:
+#  - lightbox
+#lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}
@@ -31,9 +31,18 @@ Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, w
 :::
 :::
 
+{{< video https://youtu.be/dZpAISAGJz0
+    title="Deep learning and the evolution of plant shapes" 
+>}}
+
 ::: {.listing-block}
 ## Interns working with Alex
 #### [**Richard Montes Lemus**](../interns/richiemonteslemus.qmd)
 
 #### [**Zachary Wilson**](../interns/zacharywilson.qmd)
+\
+Richard and Zachary are working as summer interns in the Data Science Lab pursuing their own research goals and supporting data science education in the UCSB-Smithsonian Scholars *¡ERES! Early Research Experience Summer* data science program. Enjoy their presentation below where they discuss our work with UCSB, NPS, and the Nature Conservancy to understand the distribution of a one or California's rarest carnivores, the island spotted skunk (*Spilogale gracilis amphiala*). 
+\
+{{< video interns.mp4 >}}
 :::
+
