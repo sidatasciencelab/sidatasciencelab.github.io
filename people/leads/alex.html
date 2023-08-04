@@ -41,9 +41,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="../../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
@@ -229,13 +228,14 @@ ul.task-list li input[type="checkbox"] {
 <div class="header-block">
 <div>
 <div style="float: left; position: relative; top: 0px; padding: 30px;">
-<a href="images/headshots/Alex.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/headshots/Alex.png" class="img-fluid"></a>
+<img src="images/headshots/Alex.png" class="img-fluid">
 </div>
 <p>Alex White’s areas of scholarly expertise include statistical modeling in biogeography, quantitative ecology, ornithology, and community phylogenetics. Dr.&nbsp;White’s research focuses on how ecological and evolutionary forces (e.g., dispersal, range expansion, competition, and speciation) interact to mediate broad scale patterns of biodiversity and how those interactions are influenced by local ecological dynamics. Most of this research focuses on birds, though he compares avian patterns with those of other taxonomic groups including plants, mammals, and invertebrates. This work combines traditional methods in ecology and evolution with modern advances in statistics and computation, particularly those in machine learning and data science. As a Biodiversity Research Data Scientist in the Smithsonian Data Science Lab, he leads projects that leverage digitized museum collections as well as applications of computer hardware technology in edge uses of machine learning for field studies of animal and plant ecology. He is an Associate Editor for Ornithology.</p>
 <p>Alex received his Ph.D.&nbsp;in Ecology and Evolution at the University of Chicago, where he developed these and other questions to study the evolution and ecology of Himalayan birds.</p>
 </div>
 </div>
 </div>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/dZpAISAGJz0" title="Deep learning and the evolution of plant shapes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <section id="interns-working-with-alex" class="level2 listing-block">
 <h2 class="anchored" data-anchor-id="interns-working-with-alex">Interns working with Alex</h2>
 <section id="richard-montes-lemus" class="level4">
@@ -243,6 +243,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="zachary-wilson" class="level4">
 <h4 class="anchored" data-anchor-id="zachary-wilson"><a href="../../people/interns/zacharywilson.html"><strong>Zachary Wilson</strong></a></h4>
+<p><br>
+Richard and Zachary are working as summer interns in the Data Science Lab pursuing their own research goals and supporting data science education in the UCSB-Smithsonian Scholars <em>¡ERES! Early Research Experience Summer</em> data science program. Enjoy their presentation below where they discuss our work with UCSB, NPS, and the Nature Conservancy to understand the distribution of a one or California’s rarest carnivores, the island spotted skunk (<em>Spilogale gracilis amphiala</em>).<br>
+</p>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title=""><source src="interns.mp4"></video></div>
 </section>
 </section>
 
@@ -505,7 +509,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right"><a href="https://www.si.edu/privacy">Privacy Statement</a> | <a href="https://www.si.edu/Termsofuse">Terms of Use</a></div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom"});</script>
+<script>videojs(video_shortcode_videojs_video1);</script>
 
 
 
