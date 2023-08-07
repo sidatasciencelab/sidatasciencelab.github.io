@@ -11,10 +11,6 @@ Founded as a partnership between the Smithsonian National Zoo and Conservation B
 
 UCSB-SI Scholars are recruited from community colleges and universities in California to participate in a yearly cohort system that leverages a tiered mentorship model as students advance as peer mentors in years 2+. The Data Science Lab provides data science and biodiversity training opportunities for scholars in the form of two intercurricular data science courses. In the first summer, scholars engage in a 6 week online program for foundational skills in data management with R. Scholars in their 2+ cohort years have the opportunity to attend a 2-week intensive advanced data science field-course at the Smithsonian Tropical Research Institute in Panama. These programs are offered in close collaboration with the UCSB Office of Education Partnerships staff. Two scholars from the first year cohort are selected as peer mentors for these courses and develop research skills as Data Science Lab summer interns in years 2+.
 
-## ¡ERES! Early Research Experience Summer program
-
-## Advanced Data Science Field Course in Panama
-
 ## Our Committment to Education
 
 The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics and, with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.
