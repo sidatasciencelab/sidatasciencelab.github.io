@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: "actions checkout"
         uses: actions/checkout@v3
+        with:
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
 
       - name: "Setup Quarto"
         uses: quarto-dev/quarto-actions/setup@v2
