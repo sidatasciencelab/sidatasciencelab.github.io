@@ -1,11 +1,21 @@
 ---
 pagetitle: UCSB-Smithsonian Scholars | Smithsonian Data Science Lab
 title: UCSB-Smithsonian Scholars
-subtitle: "Conservation and Data Science training for underrepresented students in Southern California"
+subtitle: "Conservation and data science training for underrepresented students in southern California"
 search: false 
 ---
 
+## Closing the STEM oppotunities gap
+
+Founded as a partnership between the Smithsonian National Zoo and Conservation Biology Institute and UC Santa Barbara Office of Education Partnerships, the University of California, Santa Barbara (UCSB)-Smithsonian Scholars program is an intercurricular experiential learning program aimed to increase participation, retention, and success of underrepresented minority students in STEM fields in southern California. The program provides multidisciplinary research and field-training opportunities, social and environmental justice leadership seminars, and professional and academic development to students through interactions with Smithsonian scientists and University of California affiliates. The UCSB-SI Scholars program is funded by the Latino Initiatives Pool at the Smithsonian National Museum of the American Latino. Since 2019, the Smithsonian Data Science Lab and the Office of the Chief Information Officer have worked as partners with NZCBI, STRI, SERC, and UCSB OEP in developing and managing the UCSB-SI Scholars program trajectory.  
+
+UCSB-SI Scholars are recruited from community colleges and universities in California to participate in a yearly cohort system that leverages a tiered mentorship model as students advance as peer mentors in years 2+. The Data Science Lab provides data science and biodiversity training opportunities for scholars in the form of two intercurricular data science courses. In the first summer, scholars engage in a 6 week online program for foundational skills in data management with R. Scholars in their 2+ cohort years have the opportunity to attend a 2-week intensive advanced data science field-course at the Smithsonian Tropical Research Institute in Panama. These programs are offered in close collaboration with the UCSB Office of Education Partnerships staff. 
+
+## ¡ERES! Early Research Experience Summer program
+
+
+
 ## Our Committment to Education
 
-The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics, and with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.
+The Data Science Lab is committed to broad based data literacy both within the ranks of the Smithsonian and beyond. A primary component of this committment is training - the Data Science Lab offers trainings on a wide suite of topics and, with university partners, courses that develop techincal skills in research methods alongside conceptual foundations in data science. Topics include data science skills workshops (e.g., coding in UNIX, Python, and R), performaing analyses on Smithsonians high performance computing cluster, and advanced computing topics such a Genome Assembly and Machine Learning.
 
