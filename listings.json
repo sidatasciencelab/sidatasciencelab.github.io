@@ -1,5 +1,26 @@
 [
   {
+    "listing": "/people/index.html",
+    "items": [
+      "/people/leads/rebecca.html",
+      "/people/leads/mike.html",
+      "/people/leads/alex.html",
+      "/people/postdocs/richie.html",
+      "/people/postdocs/william.html",
+      "/people/postdocs/jennifer.html",
+      "/people/interns/samiyaali.html",
+      "/people/interns/mattbollinger.html",
+      "/people/interns/amalimchie.html",
+      "/people/interns/richiemonteslemus.html",
+      "/people/interns/natalienyborg.html",
+      "/people/interns/zacharywilson.html",
+      "/people/associates/paul.html",
+      "/people/associates/mirian.html",
+      "/people/alumni/jenna_e.html",
+      "/people/affiliated/carlos_a.html"
+    ]
+  },
+  {
     "listing": "/research/projects/index.html",
     "items": [
       "/research/projects/posts/2020/10/22/impact.html",
@@ -14,18 +35,6 @@
     ]
   },
   {
-    "listing": "/software/index.html",
-    "items": [
-      "/software/vignettes/posts/2023/04/24/ecostructure.html"
-    ]
-  },
-  {
-    "listing": "/software/vignettes/index.html",
-    "items": [
-      "/software/vignettes/posts/2023/04/24/ecostructure.html"
-    ]
-  },
-  {
     "listing": "/news/index.html",
     "items": [
       "/news/news-blog/posts/2023/05/01/amz_fish.html",
@@ -37,6 +46,18 @@
     "items": [
       "/news/news-blog/posts/2023/05/01/amz_fish.html",
       "/news/news-blog/posts/2023/04/19/open.html"
+    ]
+  },
+  {
+    "listing": "/software/vignettes/index.html",
+    "items": [
+      "/software/vignettes/posts/2023/04/24/ecostructure.html"
+    ]
+  },
+  {
+    "listing": "/software/index.html",
+    "items": [
+      "/software/vignettes/posts/2023/04/24/ecostructure.html"
     ]
   },
   {
@@ -57,27 +78,6 @@
       "/news/news-blog/posts/2023/04/19/open.html",
       "/research/projects/posts/2020/10/22/impact.html",
       "/research/projects/posts/2020/04/14/names.html"
-    ]
-  },
-  {
-    "listing": "/people/index.html",
-    "items": [
-      "/people/leads/rebecca.html",
-      "/people/leads/mike.html",
-      "/people/leads/alex.html",
-      "/people/postdocs/richie.html",
-      "/people/postdocs/william.html",
-      "/people/postdocs/jennifer.html",
-      "/people/interns/samiyaali.html",
-      "/people/interns/mattbollinger.html",
-      "/people/interns/amalimchie.html",
-      "/people/interns/richiemonteslemus.html",
-      "/people/interns/natalienyborg.html",
-      "/people/interns/zacharywilson.html",
-      "/people/associates/paul.html",
-      "/people/associates/mirian.html",
-      "/people/alumni/jenna_e.html",
-      "/people/affiliated/carlos_a.html"
     ]
   }
 ]
