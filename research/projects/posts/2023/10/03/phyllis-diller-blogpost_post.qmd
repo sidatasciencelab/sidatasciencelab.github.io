@@ -36,7 +36,7 @@ In 2003, shortly after her retirement, Diller reached out to the Smithsonian abo
 <center><img src="https://ids.si.edu/ids/deliveryService?max=500&id=NMAH-ET2010-28667-000002"></center>
 
 
-After obtaining the index cards, it was Mike Wilkins and Sheila Duignan who supported their digitization. At this point, the Smithsonian Transcription Department began crowd-sourcing their transcription. Today, the transcriptions are complete and available to the public.
+After obtaining the index cards, it was Mike Wilkins and Sheila Duignan who supported their digitization. At this point, the Smithsonian Transcription Center began crowd-sourcing their transcription. Today, the transcriptions are complete and available to the public.
 
 In this blog post, we will examine these index cards through a lens of machine learning and natural language processing (NLP) to see what kind of insights we can glean. To do  this, we will leverage Python, a common programming language used in data science, machine learning, and NLP. We will also work with several libraries that support machine learning approaches to data, namely [Sentence Transformers](https://github.com/UKPLab/sentence-transformers). The steps covered in this blog have been modified and compiled into a custom Python library, [LeetTopic](https://github.com/wjbmattingly/LeetTopic).
 
@@ -260,7 +260,7 @@ for joke in jokes[:1]:
     Content: The place where Phyllis Dillers' star is on Hollywood Blvd went out of business.
     
 
-As we can see in the above example, we were able to correctly parse each line in the index card purely through Python. However, we have an issue with our date category. While we, as humans, can easily interpret the raw text `10/MAR/1978` as a specific date, there is nothing about this string of text that let's a computer know that this is a date. In other words, a valuable piece of information is entirely missing. In its current state, it would be impossible, therefore, to map all of Diller's index cards over time. We can fix this, however, via the `dateparser` library in Python, specifically through the `parse` class which takes in a string (text) that contains a date and transforms that into consistent, structured Time Series data. While `dateparser` is a great first step, manual validation is essential. Some of the data may be formatted in a way that prevent `dateparser` from accurately formatting.
+As we can see in the above example, we were able to correctly parse each line in the index card purely through Python. However, we have an issue with our date category. While we, as humans, can easily interpret the raw text `10/MAR/1978` as a specific date, there is nothing about this string of text that lets a computer know that this is a date. In other words, a valuable piece of information is entirely missing. In its current state, it would be impossible, therefore, to map all of Diller's index cards over time. We can fix this, however, via the `dateparser` library in Python, specifically through the `parse` class which takes in a string (text) that contains a date and transforms that into consistent, structured Time Series data. While `dateparser` is a great first step, manual validation is essential. Some of the data may be formatted in a way that prevents `dateparser` from accurately formatting.
 
 
 ```python
@@ -606,7 +606,7 @@ Language, however, presents certain challenges not found in image-based problems
 
 Researchers have been exploring how to represent text numerically for decades. Nascent methods center around capturing a word's meaning in a given context and representing that word as a `vector`. Vectors are numerical representations of text which make it possible for a computer to parse words while also retaining information about syntax.
 
-There are many approaches for converting text to vectors. I have opted to do do this via transformer-based models, the current state-of-the-art language models that can parse and understand some of the more challenging aspects of language, such as typographical errors, misspellings, and idiomatic expressions. I will specifically be using the `all-MiniLM-L6-v2` model which is available from [HuggingFace](https://huggingface.co/), the main Python framework for working with transformer models.
+There are many approaches for converting text to vectors. I have opted to do this via transformer-based models, the current state-of-the-art language models that can parse and understand some of the more challenging aspects of language, such as typographical errors, misspellings, and idiomatic expressions. I will specifically be using the `all-MiniLM-L6-v2` model which is available from [HuggingFace](https://huggingface.co/), the main Python framework for working with transformer models.
 
 We can use language models, therefore, to create complex representations of our texts. We can then use machine learning algorithms to discover patterns, or clusters (topics) among those documents. To do this, we first need to load up our language model.
 
@@ -647,9 +647,9 @@ print(doc_embeddings[0][:10])
      -0.04357602  0.03907308  0.06891748 -0.01843095]
     
 
-Believe it or not, this is the precise same thing as the text above, just represented numerically. As we can see, this is not exactly easy to understand for humans, but for a computer this sequence of positive and negative numbers equates to semantic meaning of a string of text.
+Believe it or not, this is the precise same thing as the text above, just represented numerically. As we can see, this is not exactly easy to understand for humans, but for a computer this sequence of positive and negative numbers equates to the semantic meaning of a string of text.
 
-Once we have converted all our texts into vectors, we can then begin to explore them in a graph. Before we can do that, however, must first make these vectors readable to humans. At this stage, our vectors are high-dimensional representations of our texts (imagine hundreds of graphs that must be read simultaneously). In order to make these texts more readable, we must reduce the dimensionality of these vectors into two dimensions. There are many ways to do this today, but I am opting for <a href="https://umap-learn.readthedocs.io/en/latest/">UMAP (Uniform Manifold Approximation and Projection)</a>, an algorithm developed in 2018.
+Once we have converted all our texts into vectors, we can then begin to explore them in a graph. Before we can do that, however, we must first make these vectors readable to humans. At this stage, our vectors are high-dimensional representations of our texts (imagine hundreds of graphs that must be read simultaneously). In order to make these texts more readable, we must reduce the dimensionality of these vectors into two dimensions. There are many ways to do this today, but I am opting for <a href="https://umap-learn.readthedocs.io/en/latest/">UMAP (Uniform Manifold Approximation and Projection)</a>, an algorithm developed in 2018.
 
 
 ```python
@@ -733,7 +733,7 @@ final_df.head(1)
 
 
 
-Notice that our first document has an topic of 50. This means that it has been assigned to a specific topic alongside other documents.
+Notice that our first document has a topic of 50. This means that it has been assigned to a specific topic alongside other documents.
 
 The above steps are frequently used to perform transformer-based topic modeling. Topic modeling is a technique in NLP where we try to find patterns across a collection of documents to find latent, or hidden, topics. In other words, topic modeling allows us to place our texts into specific categories automatically. Visualizing these results is, however, quite challenging.
 
@@ -798,7 +798,7 @@ for res_text in res_texts:
     The Foolish Person: One who suppresses a fart for hours & hours.  The Thrifty Person: One who always has several good farts in reserve.  The Anti-Social Person: One who excuses himself and farts in complete privacy.  The Strategic Person: One who conceals his farts with loud coughing.
     
 
-What is particular interesting is that Tarzan is not a topic identified by Diller herself. Instead, it is a topic that naturally developed over the course of her career. These Tarzan texts align across several different categories in the Diller collection.
+What is particularly interesting is that Tarzan is not a topic identified by Diller herself. Instead, it is a topic that naturally developed over the course of her career. These Tarzan texts align across several different categories in the Diller collection.
 
 
 ```python
@@ -881,7 +881,7 @@ We can see from the graph above, that Diller has only three periods in which she
 
 ## Exploring the Data through Semantic Search
 
-We can explore this precise same data and document embeddings through a vector database via semantic search. Semantic searching is about understanding the meaning or context of a search query instead of simply matching keywords. Imagine you're searching for a "animals." In a traditional search engine, it might just look for webpages that contain the word "animal" or "animals". But what if you wanted to find results that talked about various animals, not just the pages where the word "animal" was used. Semantic search goes a step further and tries to understand the context of a query and the data that is being queried. Semantic search uses things like synonyms, context, and natural language processing to understand the searcher's intent and provide more relevant results.
+We can explore these same data and document embeddings through a vector database via semantic search. Semantic searching is about understanding the meaning or context of a search query instead of simply matching keywords. Imagine you're searching for a "animals." In a traditional search engine, it might just look for webpages that contain the word "animal" or "animals." But what if you wanted to find results that talked about various animals, not just the pages where the word "animal" was used. Semantic search goes a step further and tries to understand the context of a query and the data that is being queried. Semantic search uses things like synonyms, context, and natural language processing to understand the searcher's intent and provide more relevant results.
 
 This is achieved via vector databases, sometimes called vector search engines. These are tools designed to store and retrieve data in a specific form called vectors. A vector is another word for embedding, such as the document embeddings that we have already seen above.
 
@@ -903,7 +903,7 @@ Once we have the class loaded, we can use it by creating an Annoy Index. This wi
 t = AnnoyIndex(384, 'angular')
 ```
 
-Once we have the index created, we can populate it with our embeddings. We can do this by iterating over our  embeddings and adding each one into the index. Note, that we also need to assign a unique numerical id to each item in the index. Here, we will begin at 0 and count up by 1 until we reach the end of our embeddings. We can do this in python with `enumerate`.
+Once we have the index created, we can populate it with our embeddings. We can do this by iterating over our embeddings and adding each one into the index. Note, that we also need to assign a unique numerical id to each item in the index. Here, we will begin at 0 and count up by 1 until we reach the end of our embeddings. We can do this in python with `enumerate`.
 
 
 ```python
@@ -911,7 +911,7 @@ for i, doc_embedding in enumerate(doc_embeddings):
     t.add_item(i, doc_embedding)
 ```
 
-With our index now populated with our embeddings, it's time to build it. The `Annoy Index` class has a method called `build` which  takes one argument, the number of trees that you wish to use when building the index. The higher the number, in theory, the better your index will be; this is not always the case, however. The larger the number, the larger the index. At some point there are diminished returns, but determining when precisely will depend on the data. A good rule of thumb is to begin with 10 and modify as necessary.
+With our index now populated with our embeddings, it's time to build it. The `Annoy Index` class has a method called `build` which  takes one argument, the number of trees that you wish to use when building the index. The higher the number, in theory, the better your index will be; this is not always the case, however. The larger the number, the larger the index. At some point there are diminishing returns, but determining when precisely will depend on the data. A good rule of thumb is to begin with 10 and modify as necessary.
 
 
 ```python
