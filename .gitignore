@@ -2,3 +2,5 @@
 /.vscode/
 /_site/
 /_docs/
+.DS_Store
+/.luarc.json

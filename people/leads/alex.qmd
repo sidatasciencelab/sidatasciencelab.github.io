@@ -1,5 +1,5 @@
 ---
-title: "Dr. Alex White | [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}]() [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)"
+title: "Dr. Alex White | [{{< ai orcid >}}](https://orcid.org/0000-0002-9708-2406) [{{< ai google-scholar >}}](https://scholar.google.dk/citations?user=YkggDqgAAAAJ&hl=en) [{{< ai cv >}}](https://github.com/aewhite100/cv/blob/9497335dce6a51f22b0d8e223c87fea9c5f6d4d7/cv.pdf) [{{< fa brands github >}}](https://github.com/aewhite100) [{{< fa envelope >}}](mailto:whiteae@si.edu)"
 description: |
   Alex White is a Biodiversity Research Data Scientist with expertise in biogeography, quantitative ecology, and community phylogenetics. He is an Associate Editor for Ornithology.
 categories:
@@ -12,9 +12,9 @@ image: images/headshots/Alex.png
 image-alt: Portrait of Alex White
 comments: false
 search: false
-filters:
-  - lightbox
-lightbox: auto
+#filters:
+#  - lightbox
+#lightbox: auto
 ---
 ::: {.content-container}
 ::: {.header-block}
@@ -31,9 +31,18 @@ Alex received his Ph.D. in Ecology and Evolution at the University of Chicago, w
 :::
 :::
 
+{{< video https://youtu.be/dZpAISAGJz0
+    title="Deep learning and the evolution of plant shapes" 
+>}}
+
 ::: {.listing-block}
 ## Interns working with Alex
 #### [**Richard Montes Lemus**](../interns/richiemonteslemus.qmd)
 
-#### [**Zachary Wilson**](../interns/zacharywilson.qmd)
+#### [**Zachary Willson**](../interns/zacharywilson.qmd)
+\
+Richard and Zachary are working as summer interns in the Data Science Lab pursuing their own research goals and supporting data science education in the UCSB-Smithsonian Scholars *¡ERES! Early Research Experience Summer* data science program. Enjoy their presentation below where they discuss our work with UCSB, NPS, and the Nature Conservancy to understand the distribution of a one or California's rarest carnivores, the island spotted skunk (*Spilogale gracilis amphiala*). 
+\
+{{< video videos/interns.mp4 >}}
 :::
+

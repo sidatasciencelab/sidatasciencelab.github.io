@@ -7,7 +7,7 @@ categories:
   - Genomics
 toc: false
 lastname: Nyborg
-image: images/headshots/sun.jpg
+image: images/headshots/natalie_nyborg_headshot.jpg
 image-alt: Portrait of Natalie
 comments: false
 search: false
@@ -20,10 +20,10 @@ lightbox: auto
 
 <div>
   <div style="float: left; position: relative; top: 0px; padding: 30px;">
-  ![](images/headshots/sun.jpg)
+  ![](images/headshots/natalie_nyborg_headshot.jpg)
   </div>
 
-Natalie's bio coming soon.
+Natalie Nyborg is an undergraduate student at BYU, majoring in Bioinformatics. She enjoys learning the biological computational skills to analyze data. Natalie is working with the HPC for genomic analyses and generating visuals from bionomia profiles in R. She is passionate about sustainability and hopes to pursue a career that ultimately encourages biodiversity and sustainable living.
 </div>
 :::
 :::
