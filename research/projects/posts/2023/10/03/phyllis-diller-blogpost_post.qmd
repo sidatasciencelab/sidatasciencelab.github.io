@@ -1,0 +1,989 @@
+---
+title: "Comedy and AI: Analyzing the Phyllis Diller Gag File through Machine Learning"
+description: |
+  The American comedian Phyllis Diller donated a collection of 52,000 jokes to the Smithsonian Institution, known as the Gag File. Here, we use Python, machine learning, and natural language processing techniques to interrogate this large dataset and glean new insights.
+author: William J.B. Mattingly
+date: 06/26/2023
+image: https://ids.si.edu/ids/deliveryService?max=500&id=NMAH-ET2010-28667-000002
+image-alt:  Phyllis Diller Gag File
+toc: true
+filters:
+  - lightbox
+lightbox: auto
+format:
+  html:
+    self-contained: true
+    code-background: true
+---
+
+```python
+import json
+import numpy as np
+import regex as re
+import dateparser
+import pandas as pd
+from umap import UMAP
+from sentence_transformers import SentenceTransformer
+import hdbscan
+```
+
+# Introduction
+
+Phyllis Diller (1917-2012) was an American actress and comedian of the mid-twentieth century. Her iconic comedic style was defined by her succinct, rapid one-liners that frequently challenged the inequities of her time, often through self-deprecation. Her career began in the 1960s and spanned four decades until her retirement in 2002. During this time, she did live stand-up, stared in movies, and did voice-over work (she was the Queen in *It's a Bug's Life*).
+
+In 2003, shortly after her retirement, Diller reached out to the Smithsonian about donating some of her personal belongings. Soon afterwards, Dwight Blocker Bowers met with Diller at her home in California where she presented him with her ["Gag File"](https://github.com/Smithsonian/dataset-cards/blob/main/NMAH-Phyllis-Diller-gag-file.md), a collection of approximately 52,000 3x5 index cards in which she prepared, modified, and recorded her jokes during her nearly 50-years long career. (For more information on this Gag File and Diller's career, see this [blog post](https://americanhistory.si.edu/blog/help-us-transcribe-phyllis-dillers-jokes).)
+
+<center><img src="https://ids.si.edu/ids/deliveryService?max=500&id=NMAH-ET2010-28667-000002"></center>
+
+
+After obtaining the index cards, it was Mike Wilkins and Sheila Duignan who supported their digitization. At this point, the Smithsonian Transcription Center began crowd-sourcing their transcription. Today, the transcriptions are complete and available to the public.
+
+In this blog post, we will examine these index cards through a lens of machine learning and natural language processing (NLP) to see what kind of insights we can glean. To do  this, we will leverage Python, a common programming language used in data science, machine learning, and NLP. We will also work with several libraries that support machine learning approaches to data, namely [Sentence Transformers](https://github.com/UKPLab/sentence-transformers). The steps covered in this blog have been modified and compiled into a custom Python library, [LeetTopic](https://github.com/wjbmattingly/LeetTopic).
+
+This blog post will serve two functions at once. First, it hopefully raises awareness about this rather unique dataset. Second, it will serve as a model for how to clean an existing dataset, give it new dimensionality, and glean new insights from it via machine learning.
+
+To facilitate this, we will be able to view all the Python code used to clean, structure, and analyze the original dataset. This entire blog is written in a Jupyter Notebook which means anyone can access this notebook via [GitHub](https://github.com/wjbmattingly/si-diller-blog/blob/main/phyllis-diller-blogpost.ipynb) and reproduce the steps performed here.
+
+## The Problem
+
+All good research questions begin with a problem. In the case of the Diller dataset, our problem is twofold. First, how can we realistically analyze approximately 52,000 index cards? Second, what, if anything, can we learn about the data if we read it from a distance? These questions shall frame our quest.
+
+## Exploring the Data
+
+The Diller dataset is available as a JSON file, a common method of transmitting data via the web. We can examine the data as a truncated spreadsheet below with [Pandas](https://pandas.pydata.org/), a common library in Python used for viewing and manipulating tabular data.
+
+### **WARNING**
+Before moving forward, I would like to issue a word of caution. The Diller dataset contains some jokes that are culturally insensitive. Having read several thousand of these jokes, I have noticed that some are specifically homophobic, sexist, and racist. To understand how and why these jokes were kept in their original form, we can consult the [Smithsonian Dataset Card](https://github.com/Smithsonian/dataset-cards/blob/main/NMAH-Phyllis-Diller-gag-file.md). As we will learn throughout this blog, the methods we use can be leveraged to identify and isolate these culturally insensitive jokes.
+
+# Working with Unclean Data
+
+To begin, let's load up and analyze the Diller Dataset. We can do so with the code below which opens up the JSON file in Python and transforms it into a Pandas DataFrame. This will allow us to view the data more easily.
+
+
+```python
+with open("data/pd.json", "r") as f:
+    data = json.load(f)
+unclean_df = pd.DataFrame(data)
+unclean_df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>url</th>
+      <th>content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>trl-1488576309868-1488576322718-5</td>
+      <td>transasset:9000:NMAH-AHB2016q108500</td>
+      <td>MOVIE STARS: Phyllis Diller\r\nPhyllis Diller\...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>trl-1488907532569-1488907580088-4</td>
+      <td>transasset:9120:NMAH-AHB2016q120798</td>
+      <td>FAMOUS PEOPLE: Phyllis Diller\r\nPhyllis Dille...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>trl-1490027110884-1490027127889-12</td>
+      <td>transasset:9374:NMAH-AHB2016q145481</td>
+      <td>LOSER GAG\r\nPhyllis Diller\r\n10/MAR/1978\r\n...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>trl-1489523118765-1489523129036-17</td>
+      <td>transasset:9287:NMAH-AHB2016q135760</td>
+      <td>PHYLLIS DILLER: COOKING\r\nPhyllis Diller Gag\...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>trl-1489595133716-1489595169321-5</td>
+      <td>transasset:9299:NMAH-AHB2016q137367</td>
+      <td>PHYLLIS: HAIR\r\nPHYLLIS DILLER GAGS\r\nJUL/19...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>52201</th>
+      <td>trl-1488734717316-1488734731044-5</td>
+      <td>transasset:9051:NMAH-AHB2016q114811</td>
+      <td>Unknown\r\nBill Daley\r\n17/MAR/1967\r\nHello,...</td>
+    </tr>
+    <tr>
+      <th>52202</th>
+      <td>trl-1488763510416-1488763520708-10</td>
+      <td>transasset:9060:NMAH-AHB2016q115715-01</td>
+      <td>Unknown\r\nJoe Lucas\r\n27/DEC/1963\r\nReporte...</td>
+    </tr>
+    <tr>
+      <th>52203</th>
+      <td>trl-1488792310527-1488792322189-0</td>
+      <td>transasset:9075:NMAH-AHB2016q116828-01</td>
+      <td>Unknown\r\nR. L. Parker\r\n25/MAR/1966\r\nAunt...</td>
+    </tr>
+    <tr>
+      <th>52204</th>
+      <td>trl-1488921928068-1488921967987-7</td>
+      <td>transasset:9123:NMAH-AHB2016q121288</td>
+      <td>Unknown\r\nBarrie Payne\r\n14/OCT/1969\r\nIF A...</td>
+    </tr>
+    <tr>
+      <th>52205</th>
+      <td>trl-1489094722980-1489094749205-4</td>
+      <td>transasset:9212:NMAH-AHB2016q125674</td>
+      <td>Unknown\r\nBill Daley\r\n17/MAR/1967\r\nHello,...</td>
+    </tr>
+  </tbody>
+</table>
+<p>52206 rows × 3 columns</p>
+</div>
+
+
+
+In the above spreadsheet (in the bottom-left corner) we can see that we have 52,206 index cards each with three different pieces of metadata:
+
+| field   | description                      |
+|---------|----------------------------------|
+| id      | the unique id for the index card |
+| url     | the url for the index card       |
+| content | the raw text of the card         |
+
+Each of these approximate 52,000 rows corresponds to a specific index card. For example, the first index card in this collection is the following:
+
+<center><img src="https://ids.si.edu/ids/viewTile/node1/A/085/08516721655da26a128cf280264e0701/512/9/0_0.jpg"></center>
+
+Since we are primarily concerned with reading these index cards, we will be specifically focusing on the content category, or the main text area of the card. To get a better sense of these cards, let's explore the raw text of the above image's content.
+
+
+```python
+print(unclean_df.iloc[0].content)
+```
+
+    MOVIE STARS: Phyllis Diller
+    Phyllis Diller
+    10/MAR/1978
+    The place where Phyllis Dillers' star is on Hollywood Blvd went out of business.
+    
+
+Each line of this data is a different piece of metadata. The data on these cards usually consists of four sections:
+
+| line                   | description                                                                                |
+|------------------------|--------------------------------------------------------------------------------------------|
+| category (subcategory) | These are the categories that Diller used. Occasionally, we see a subcategory given.       |
+| author                 | This is the attribution of the joke.                                                       |
+| date                   | This is the data recorded on the card which is when the joke was first put in the Gag File |
+| content                | This is the joke itself. Sometimes these are multiple lines.                               |
+
+Unfortunately, the original JSON file dataset does not separate out these important pieces of metadata, meaning in its current form, we cannot, for example, map the way in which Diller developed her style or the types of subjects that were discussed.
+
+When working in fields like data science, this is a common occurrence. Most of the time spent in data analysis is spent cleaning the data.
+
+Through Python, we can automate the conversion of the original dataset into a new one whose content section is broken down into four new structured pieces of metadata for each entry.
+
+# Cleaning and Structuring the Transcribed Data
+
+We can clean the data from the `content` field using Python, Pandas, and Regular Expressions (RegEx). The rules below correctly formats all but 21 of the index cards. For our purposes, we will treat these as rare exceptions.
+
+First, let's grab all the jokes in the entire dataset. We will call this object `jokes`.
+
+
+```python
+jokes = [item["content"] for item in data]
+```
+
+Our goal will be to create a new structured dataset of the original. For this reason, we will create a separate list called `structured_data` to which we can append a new, structured representation of the original raw text with each line separated out as a unique piece of metadata.
+
+As we iterate over each joke, we first need to gather the individual lines. Let's examine what this process looks like with the first index card. Remember, Python is a 0-Index language, meaning the first item in an index is item 0, not 1. As we can see below, there are four distinct lines, each of which contains a unique piece of data: category of the joke, author, date, and then the content of the joke.
+
+
+```python
+for joke in jokes[:1]:
+    joke = joke.split("\n")
+    for i, line in enumerate(joke):
+        print(i, line)
+```
+
+    0 MOVIE STARS: Phyllis Diller
+    1 Phyllis Diller
+    2 10/MAR/1978
+    3 The place where Phyllis Dillers' star is on Hollywood Blvd went out of business.
+    
+
+Since we know that each piece of metadata will be on each of these lines (except for 21 index cards),  we can write rules to automate the process of assigning each line index to its appropriate metadata category. Let's see what this would look like in practice.
+
+
+```python
+for joke in jokes[:1]:
+    joke = joke.split("\n")
+    if len(joke) > 3:
+        header = joke[0].replace("\r", "").strip()
+        author = joke[1].strip()
+        date = joke[2]
+        text = " ".join(joke[3:])
+        
+        print(f"Category: {header}")
+        print(f"Author: {author}")
+        print(f"Date: {date}")
+        print(f"Content: {text}")
+```
+
+    Category: MOVIE STARS: Phyllis Diller
+    Author: Phyllis Diller
+    Date: 10/MAR/1978
+    Content: The place where Phyllis Dillers' star is on Hollywood Blvd went out of business.
+    
+
+As we can see in the above example, we were able to correctly parse each line in the index card purely through Python. However, we have an issue with our date category. While we, as humans, can easily interpret the raw text `10/MAR/1978` as a specific date, there is nothing about this string of text that lets a computer know that this is a date. In other words, a valuable piece of information is entirely missing. In its current state, it would be impossible, therefore, to map all of Diller's index cards over time. We can fix this, however, via the `dateparser` library in Python, specifically through the `parse` class which takes in a string (text) that contains a date and transforms that into consistent, structured Time Series data. While `dateparser` is a great first step, manual validation is essential. Some of the data may be formatted in a way that prevents `dateparser` from accurately formatting.
+
+
+```python
+for joke in jokes[:1]:
+    joke = joke.split("\n")
+    if len(joke) > 3:
+        header = joke[0].replace("\r", "").strip()
+        author = joke[1].strip()
+        date = joke[2]
+        text = " ".join(joke[3:])
+        
+        #conversion to Time Series data
+        date = dateparser.parse(date)
+        
+        print(f"Category: {header}")
+        print(f"Author: {author}")
+        print(f"Date: {date}")
+        print(f"Content: {text}")
+```
+
+    Category: MOVIE STARS: Phyllis Diller
+    Author: Phyllis Diller
+    Date: 1978-03-10 00:00:00
+    Content: The place where Phyllis Dillers' star is on Hollywood Blvd went out of business.
+    
+
+Notice the difference in the above output, specifically in the date section. Our date is no longer raw text, rather a proper representation of a date in a format that we can parse with a computer. We can combine this method with some basic text cleaning RegEx, or Regular Expressions, that format our data. Again, the RegEx formulas below are not perfect. Errors may (likely) remain and, again, manual validation is an essential step. For our purposes, however, we will work with the data in its current state.
+
+
+```python
+structured_data = []
+for joke in jokes:
+    joke = joke.split("\n")
+    if len(joke) > 3:
+        header = joke[0].replace("\r", "").strip()
+        author = joke[1].strip()
+        date = joke[2]
+        date = dateparser.parse(date)
+        text = " ".join(joke[3:])
+        text = text.replace("(RE: PD)", "").replace("RE: PD", "")
+        text = re.sub(r'No\. \d{1,3}', '', text)
+        text = text.replace("\r", " ").strip()
+        structured_data.append({"header": header, "date": date, "author": author, "text": text})
+    else:
+        structured_data.append({"header": "UNKNOWN", "date": "UNKNOWN", "author": "UNKNOWN", "text": "UNKNOWN"})
+print(len(structured_data))
+```
+
+    52206
+    
+
+As we can see, our new spreadsheet has the metadata correctly aligned to four new categories:
+
+- header
+- date
+- author
+- text
+
+
+```python
+structured_df = pd.DataFrame(structured_data)
+structured_df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>header</th>
+      <th>date</th>
+      <th>author</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MOVIE STARS: Phyllis Diller</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FAMOUS PEOPLE: Phyllis Diller</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>LOSER GAG</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PHYLLIS DILLER: COOKING</td>
+      <td>1982-07-26 00:00:00</td>
+      <td>Phyllis Diller Gag</td>
+      <td>The kids call my gravy boat the Titanic.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>PHYLLIS: HAIR</td>
+      <td>1984-07-26 00:00:00</td>
+      <td>PHYLLIS DILLER GAGS</td>
+      <td>(Phyllis' hair and appearance) MY FALL FELL!!!</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>52201</th>
+      <td>Unknown</td>
+      <td>1967-03-17 00:00:00</td>
+      <td>Bill Daley</td>
+      <td>Hello, Sweetheart.  Yes, Mother's in New York....</td>
+    </tr>
+    <tr>
+      <th>52202</th>
+      <td>Unknown</td>
+      <td>1963-12-27 00:00:00</td>
+      <td>Joe Lucas</td>
+      <td>Reporter: What do you think qualifies you to b...</td>
+    </tr>
+    <tr>
+      <th>52203</th>
+      <td>Unknown</td>
+      <td>1966-03-25 00:00:00</td>
+      <td>R. L. Parker</td>
+      <td>Aunt Frank...  She's one of my favorite uncle'...</td>
+    </tr>
+    <tr>
+      <th>52204</th>
+      <td>Unknown</td>
+      <td>1969-10-14 00:00:00</td>
+      <td>Barrie Payne</td>
+      <td>IF ABE'S WIFE HAD BEEN ONE OF THOSE  Dialog be...</td>
+    </tr>
+    <tr>
+      <th>52205</th>
+      <td>Unknown</td>
+      <td>1967-03-17 00:00:00</td>
+      <td>Bill Daley</td>
+      <td>Hello, Sweetheart. Yes, Mother's in New York! ...</td>
+    </tr>
+  </tbody>
+</table>
+<p>52206 rows × 4 columns</p>
+</div>
+
+
+
+We can now merge this new spreadsheet with the original data to have a new, structured dataset.
+
+
+```python
+final_df = unclean_df.join(structured_df)
+final_df
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>url</th>
+      <th>content</th>
+      <th>header</th>
+      <th>date</th>
+      <th>author</th>
+      <th>text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>trl-1488576309868-1488576322718-5</td>
+      <td>transasset:9000:NMAH-AHB2016q108500</td>
+      <td>MOVIE STARS: Phyllis Diller\r\nPhyllis Diller\...</td>
+      <td>MOVIE STARS: Phyllis Diller</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>trl-1488907532569-1488907580088-4</td>
+      <td>transasset:9120:NMAH-AHB2016q120798</td>
+      <td>FAMOUS PEOPLE: Phyllis Diller\r\nPhyllis Dille...</td>
+      <td>FAMOUS PEOPLE: Phyllis Diller</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>trl-1490027110884-1490027127889-12</td>
+      <td>transasset:9374:NMAH-AHB2016q145481</td>
+      <td>LOSER GAG\r\nPhyllis Diller\r\n10/MAR/1978\r\n...</td>
+      <td>LOSER GAG</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>trl-1489523118765-1489523129036-17</td>
+      <td>transasset:9287:NMAH-AHB2016q135760</td>
+      <td>PHYLLIS DILLER: COOKING\r\nPhyllis Diller Gag\...</td>
+      <td>PHYLLIS DILLER: COOKING</td>
+      <td>1982-07-26 00:00:00</td>
+      <td>Phyllis Diller Gag</td>
+      <td>The kids call my gravy boat the Titanic.</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>trl-1489595133716-1489595169321-5</td>
+      <td>transasset:9299:NMAH-AHB2016q137367</td>
+      <td>PHYLLIS: HAIR\r\nPHYLLIS DILLER GAGS\r\nJUL/19...</td>
+      <td>PHYLLIS: HAIR</td>
+      <td>1984-07-26 00:00:00</td>
+      <td>PHYLLIS DILLER GAGS</td>
+      <td>(Phyllis' hair and appearance) MY FALL FELL!!!</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>52201</th>
+      <td>trl-1488734717316-1488734731044-5</td>
+      <td>transasset:9051:NMAH-AHB2016q114811</td>
+      <td>Unknown\r\nBill Daley\r\n17/MAR/1967\r\nHello,...</td>
+      <td>Unknown</td>
+      <td>1967-03-17 00:00:00</td>
+      <td>Bill Daley</td>
+      <td>Hello, Sweetheart.  Yes, Mother's in New York....</td>
+    </tr>
+    <tr>
+      <th>52202</th>
+      <td>trl-1488763510416-1488763520708-10</td>
+      <td>transasset:9060:NMAH-AHB2016q115715-01</td>
+      <td>Unknown\r\nJoe Lucas\r\n27/DEC/1963\r\nReporte...</td>
+      <td>Unknown</td>
+      <td>1963-12-27 00:00:00</td>
+      <td>Joe Lucas</td>
+      <td>Reporter: What do you think qualifies you to b...</td>
+    </tr>
+    <tr>
+      <th>52203</th>
+      <td>trl-1488792310527-1488792322189-0</td>
+      <td>transasset:9075:NMAH-AHB2016q116828-01</td>
+      <td>Unknown\r\nR. L. Parker\r\n25/MAR/1966\r\nAunt...</td>
+      <td>Unknown</td>
+      <td>1966-03-25 00:00:00</td>
+      <td>R. L. Parker</td>
+      <td>Aunt Frank...  She's one of my favorite uncle'...</td>
+    </tr>
+    <tr>
+      <th>52204</th>
+      <td>trl-1488921928068-1488921967987-7</td>
+      <td>transasset:9123:NMAH-AHB2016q121288</td>
+      <td>Unknown\r\nBarrie Payne\r\n14/OCT/1969\r\nIF A...</td>
+      <td>Unknown</td>
+      <td>1969-10-14 00:00:00</td>
+      <td>Barrie Payne</td>
+      <td>IF ABE'S WIFE HAD BEEN ONE OF THOSE  Dialog be...</td>
+    </tr>
+    <tr>
+      <th>52205</th>
+      <td>trl-1489094722980-1489094749205-4</td>
+      <td>transasset:9212:NMAH-AHB2016q125674</td>
+      <td>Unknown\r\nBill Daley\r\n17/MAR/1967\r\nHello,...</td>
+      <td>Unknown</td>
+      <td>1967-03-17 00:00:00</td>
+      <td>Bill Daley</td>
+      <td>Hello, Sweetheart. Yes, Mother's in New York! ...</td>
+    </tr>
+  </tbody>
+</table>
+<p>52206 rows × 7 columns</p>
+</div>
+
+
+
+
+```python
+final_df.to_csv("data/pd_final.csv", index=False)
+```
+
+# Converting Texts into Vectors
+
+Once textual data is cleaned, it is often good to get a quick sense of that data by viewing it collectively. It is important to remember that studying text in a computer system introduces certain limitations. Computers cannot parse language. They require texts to be represented numerically. This is true for all non-numeric data. With images, for example, we represent data not as a large picture, rather as a numerical value for each individual pixel of that image.
+
+Language, however, presents certain challenges not found in image-based problems. Firstly, language is vastly more complex than an image. Language is built upon words and how those words function semantically (in context) can depend on word order and context. This means that if we want to represent text numerically and retain that semantic meaning, we must make sure that the numbers we choose to represent that text retain that semantic information. This is where natural language processing and machine learning come into focus.
+
+Researchers have been exploring how to represent text numerically for decades. Nascent methods center around capturing a word's meaning in a given context and representing that word as a `vector`. Vectors are numerical representations of text which make it possible for a computer to parse words while also retaining information about syntax.
+
+There are many approaches for converting text to vectors. I have opted to do this via transformer-based models, the current state-of-the-art language models that can parse and understand some of the more challenging aspects of language, such as typographical errors, misspellings, and idiomatic expressions. I will specifically be using the `all-MiniLM-L6-v2` model which is available from [HuggingFace](https://huggingface.co/), the main Python framework for working with transformer models.
+
+We can use language models, therefore, to create complex representations of our texts. We can then use machine learning algorithms to discover patterns, or clusters (topics) among those documents. To do this, we first need to load up our language model.
+
+
+```python
+model = SentenceTransformer('all-MiniLM-L6-v2')
+```
+
+Once the model is loaded, we can use it to convert all of our texts into vectors.
+
+
+```python
+doc_embeddings =  model.encode(final_df["text"])
+```
+
+Let's take a look at the first text in the Diller dataset.
+
+
+```python
+final_df["text"][0]
+```
+
+
+
+
+    "The place where Phyllis Dillers' star is on Hollywood Blvd went out of business."
+
+
+
+The `all-MiniLM-L6-v2` model produces vectors with 768 dimensions. Let's take a look at the first 10 dimensions of the first document to see what a vector looks like.
+
+
+```python
+print(doc_embeddings[0][:10])
+```
+
+    [-0.01073157 -0.08762725 -0.00820523 -0.00447153 -0.02199032 -0.01154062
+     -0.04357602  0.03907308  0.06891748 -0.01843095]
+    
+
+Believe it or not, this is the precise same thing as the text above, just represented numerically. As we can see, this is not exactly easy to understand for humans, but for a computer this sequence of positive and negative numbers equates to the semantic meaning of a string of text.
+
+Once we have converted all our texts into vectors, we can then begin to explore them in a graph. Before we can do that, however, we must first make these vectors readable to humans. At this stage, our vectors are high-dimensional representations of our texts (imagine hundreds of graphs that must be read simultaneously). In order to make these texts more readable, we must reduce the dimensionality of these vectors into two dimensions. There are many ways to do this today, but I am opting for <a href="https://umap-learn.readthedocs.io/en/latest/">UMAP (Uniform Manifold Approximation and Projection)</a>, an algorithm developed in 2018.
+
+
+```python
+umap_proj = UMAP(n_neighbors=10,
+                          min_dist=0.01,
+                          metric='correlation').fit_transform(doc_embeddings)
+```
+
+With the UMAP dimensionality reduction complete, can send this output to HDBScan which is an algorithm designed to find patterns amongst our data. It will automatically cluster and allocate all documents into numerical topics or assign them as outliers (-1).
+
+
+```python
+hdbscan_labels = hdbscan.HDBSCAN(min_samples=15, min_cluster_size=15).fit_predict(umap_proj)
+print(len(set(hdbscan_labels)))
+```
+
+    553
+    
+
+With these two pieces of data, we can load them into our original DataFrame and print off the results.
+
+
+```python
+# Apply coordinates
+final_df["x"] = umap_proj[:, 0]
+final_df["y"] = umap_proj[:, 1]
+final_df["topic"] = hdbscan_labels
+final_df.head(1)
+```
+
+
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>url</th>
+      <th>content</th>
+      <th>header</th>
+      <th>date</th>
+      <th>author</th>
+      <th>text</th>
+      <th>x</th>
+      <th>y</th>
+      <th>topic</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>trl-1488576309868-1488576322718-5</td>
+      <td>transasset:9000:NMAH-AHB2016q108500</td>
+      <td>MOVIE STARS: Phyllis Diller\r\nPhyllis Diller\...</td>
+      <td>MOVIE STARS: Phyllis Diller</td>
+      <td>1978-03-10 00:00:00</td>
+      <td>Phyllis Diller</td>
+      <td>The place where Phyllis Dillers' star is on Ho...</td>
+      <td>9.916232</td>
+      <td>9.252374</td>
+      <td>219</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+Notice that our first document has a topic of 50. This means that it has been assigned to a specific topic alongside other documents.
+
+The above steps are frequently used to perform transformer-based topic modeling. Topic modeling is a technique in NLP where we try to find patterns across a collection of documents to find latent, or hidden, topics. In other words, topic modeling allows us to place our texts into specific categories automatically. Visualizing these results is, however, quite challenging.
+
+# Analyzing Clusters
+
+We can use the result to analyze clusters of our data, also known as topics. Let's take a look at one cluster, 10. As we can see from the output below, cluster 10 deals exclusively with Tarzan, the jungle, and monkeys. This is an interesting category.
+
+
+```python
+res_texts = set()
+res_topics = set()
+times = []
+for idx, row in final_df.loc[final_df["topic"] == 10].iterrows():
+    res_texts.add(row.text)
+    res_topics.add(row.header)
+    times.append(row.date)
+```
+
+
+```python
+for res_text in res_texts:
+    print(res_text)
+```
+
+    To make Tarzan feel at home, the pageant officials gave him a microphone shaped like a banana...He kept eating it....
+    Last New Years Eve I was at a party with Dean, Ed Mc Mahon and Foster Brooks and it was disastrous. They all exhaled at once and dissolved Tarzana.
+    Tarzan and Jane bit -- they are 100 years old -- It's a shame when your pet chimpanzee has to support you.
+    What the mighty lord of the jungle killed with his bare hands, field mouse stew.  (Tarzan)
+    The Miserable Person: One who would truly love to but can't fart at all.  The Sensitive Person: One who farts and then starts crying.
+    Originally I was scheduled to take off with a monkey... but he wanted to run the whole show... high I.Q. or not I can't stand a pushy monkey.
+    Last New Year's Eve I was at a party with Dean, Ed Mc Mahon and Foster Brooks and it was disastrous. They all exhaled at once and dissolved Tarzana.
+    The Unfortunate Person: One who tries awful hard to fart but shits instead.  The Nervous Person: One who stops in the middle of a fart.  The Honest Person: One who admits he farted but offers a good medical reason therefore.  The Dishonest Person: One who farts and then blames the dog.
+    Tarzan, as you know, is the son of a British lord and lady, but he was raised by apes. The English really do have a labor shortage, don't they?
+    In this version, Tarzan lis a literate, softspoken, everyday sort of fella who talks to animals. I know a lot of people who talk to animals, but Tarzan waits for an answer.
+    You remember Tarzan. The fella who's always running around in the leather jockey shorts? ....Why do you think he has that awful yell? (GIVE TARZAN CALL) They are two sizes too small!
+    You remember Tarzan. The fella who's always running around in the leather jockey shorts? .......Why do you think he has that awful yell? (GIVE TARZAN CALL) They are too sizes too small!.....
+    I think Tarzan has got to make it. It's the only show on television where the star runs around topless!
+    The Sadistic Person: One who farts in bed and then fluffs the covers over his bedmate.  The Intellectual Person: One who can determine from the smell of his neighbor's fart precisely the latest food items consumed.  The Athletic Person: One who farts at the slightest exertion.
+    Wouldn't it be funny if what we thought was Tiny Tim's talent turned out to be undersized jockey shorts.
+    For the first time in his life Tarzan will dress fromal loincloth and cummerbund
+    Remember the early Tarzan pictures when he only knew six words? "Me Tarzan, you Jane, where Boy?" It sounded a little like one of L.B.J.'s speeches.
+    Tarzan outscored Bo Derek in an I.Q. test -- so did the monkey.
+    (Tarzan and Jane) - Strange name for an 80 year old, - BOY
+    (Tarzan and Jane) - strange name for an 80 year old, - BOY
+    I was always a little suspicious of Tarzan's span of concentration. Like, in one picture he said: "Me Tarzan. You Jane." And she said: "You Tarzan?" And he said: "Who?"
+    In this version, Tarzan is a literate, soft-spoken, everyday sort of fella who talks to animals. I know a lot of people talk to animals, but Tarzan waits for an answer.
+    How about Ron Ely, the old Tarzan, being named to replace Bert Parks? Tarzan can't sing. So this year the Miss America theme will be hummed by Cheetah..
+    I've known Tiny Tim ever since he was the Wicked Witch of the North.
+    Originally I was scheduled to take off with a monkey...but he wanted to run the whole show...high I.Q. or not I can't stand a pushy monkey.
+    Tarzan has been guzzling so much jungle juice -- I made him join Apes Annonymous.
+    Tarzan is so old--he was wears a support loin cloth.
+    Every matinee, all the dropouts would go to see the latest Tarzan picture. It was good for their morale. Next to him they all felt like William Buckley!
+    The Proud Person: One who thinks his farts are exceptionally fine.  The Shy Person: One who releases silent farts and then blushes.  The Impudent Person: One who boldly farts out loud and then laughs.  The Scientific Person: One who farts regularly but is truly concerned about pollution.
+    Did I get a shock on Thursday night. I turned to the wrong channel, got Tarzan -- and thought Batman had gone nudist!
+    Hollywood just named their 14th Tarzan. One of the losers was a muscular friend of Fang's. His sister. She would have had the part too, except for one bad break. Alligators. They were afraid of her.
+    But, now, Tarzan is a lot more sophisticated than he used to be. For instance, if he has to go someplace, he does it with style. He turns to the monkey and says: "Cheetah, call me a vine!"
+    I am always a little suspicious of Tarzan's span of concentration. Like, in one picture he said: "Me Tarzan. You Jane." And she said: "You Tarzan?" And he said: "Who?"
+    But, now, Tarzan is a lot more sophisticated than he used to be.  For instance, if he has to go someplace, he does it with style.  He turns to the monkey and says:  "Cheetah, call me a vine!"
+    Tarzan has been guzzling so much jungle juice -- I made him join Apes Anonymous.
+    Tarzan with water wings.
+    What the mighty lord of the jungle killed with his bare hands, field mouse stew.   (Tarzan)
+    The Foolish Person: One who suppresses a fart for hours & hours.  The Thrifty Person: One who always has several good farts in reserve.  The Anti-Social Person: One who excuses himself and farts in complete privacy.  The Strategic Person: One who conceals his farts with loud coughing.
+    
+
+What is particularly interesting is that Tarzan is not a topic identified by Diller herself. Instead, it is a topic that naturally developed over the course of her career. These Tarzan texts align across several different categories in the Diller collection.
+
+
+```python
+res_topics
+```
+
+
+
+
+    {'ANIMALS',
+     'CAPT. BLI',
+     'CELEBRITIES',
+     'CELEBRITIES: Dean Martin, Ed Mc Mahon, Foster Brooks',
+     'DIRTY JOKES',
+     'DRINKING',
+     'Drinking',
+     'EATING',
+     'Famous People',
+     'Foundations',
+     'Funny Names',
+     'INSULTS',
+     'Movie Stars',
+     'Movies',
+     'PD: Career',
+     'PD: SMART',
+     'SEX SYMBOLS',
+     'SHOW BIZ',
+     'Show Biz',
+     'TELEVISION SHOWS',
+     'TV SHOWS',
+     'Topless',
+     'Travel',
+     'Unknown'}
+
+
+
+Because we also have our date category, we can see when these jokes emerged in her career.
+
+```python
+import plotly.graph_objects as go
+
+tarzan_df = final_df.loc[final_df["topic"] == 10].dropna()
+tarzan_df['date'] = pd.to_datetime(tarzan_df['date']).dt.year
+
+# Group by date and collect all corresponding headers and texts for each date
+grouped_df = tarzan_df.groupby('date').agg({'header': list, 'text': list}).reset_index()
+
+# Define hover text
+hover_text = []
+for index, row in grouped_df.iterrows():
+    hover_text.append('Date: {date}<br>'.format(date=row['date']) +
+                      '<br>'.join('Header: {header}<br>Text: {text}'.format(header=h, text=t) 
+                                  for h, t in zip(row['header'][:5], row['text'][:5])) + 
+                      ('<br>...and more' if len(row['header']) > 5 else ''))
+
+# Define trace
+trace = go.Bar(x=grouped_df['date'], 
+               y=grouped_df['header'].apply(len),  
+               text=hover_text, 
+               hoverinfo='text',
+               marker=dict(color='rgb(158,202,225)', line=dict(color='rgb(8,48,107)', width=1.5),),
+               opacity=0.6)
+
+# Define layout
+layout = go.Layout(title='Timeline Plot', xaxis=dict(title='Date'), yaxis=dict(title='Header Count'))
+
+# Define figure and add trace
+fig=go.Figure(data=[trace], layout=layout)
+
+# Show figure
+fig.show()
+
+```
+
+```{=html}
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>                <div id="a8e15a29-a898-4e6b-9d32-fa21637e69f6" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a8e15a29-a898-4e6b-9d32-fa21637e69f6")) {                    Plotly.newPlot(                        "a8e15a29-a898-4e6b-9d32-fa21637e69f6",                        [{"hoverinfo":"text","marker":{"color":"rgb(158,202,225)","line":{"color":"rgb(8,48,107)","width":1.5}},"opacity":0.6,"text":["Date: 1963<br>Header: Funny Names<br>Text: (Tarzan and Jane) - Strange name for an 80 year old, - BOY<br>Header: ANIMALS<br>Text: Tarzan and Jane bit -- they are 100 years old -- It's a shame when your pet chimpanzee has to support you.<br>Header: Movies<br>Text: (Tarzan and Jane) - strange name for an 80 year old, - BOY<br>Header: Drinking<br>Text: Tarzan has been guzzling so much jungle juice -- I made him join Apes Anonymous.<br>Header: EATING<br>Text: What the mighty lord of the jungle killed with his bare hands, field mouse stew.  (Tarzan)<br>...and more","Date: 1964<br>Header: PD: SMART<br>Text: Originally I was scheduled to take off with a monkey... but he wanted to run the whole show... high I.Q. or not I can't stand a pushy monkey.<br>Header: PD: Career<br>Text: Originally I was scheduled to take off with a monkey... but he wanted to run the whole show... high I.Q. or not I can't stand a pushy monkey.<br>Header: ANIMALS<br>Text: Originally I was scheduled to take off with a monkey...but he wanted to run the whole show...high I.Q. or not I can't stand a pushy monkey.<br>Header: Travel<br>Text: Originally I was scheduled to take off with a monkey... but he wanted to run the whole show... high I.Q. or not I can't stand a pushy monkey.","Date: 1965<br>Header: Unknown<br>Text: Tarzan with water wings.<br>Header: CAPT. BLI<br>Text: Hollywood just named their 14th Tarzan. One of the losers was a muscular friend of Fang's. His sister. She would have had the part too, except for one bad break. Alligators. They were afraid of her.<br>Header: Show Biz<br>Text: Hollywood just named their 14th Tarzan. One of the losers was a muscular friend of Fang's. His sister. She would have had the part too, except for one bad break. Alligators. They were afraid of her.","Date: 1968<br>Header: Unknown<br>Text: I think Tarzan has got to make it. It's the only show on television where the star runs around topless!<br>Header: Unknown<br>Text: Did I get a shock on Thursday night. I turned to the wrong channel, got Tarzan -- and thought Batman had gone nudist!<br>Header: Unknown<br>Text: Tarzan, as you know, is the son of a British lord and lady, but he was raised by apes. The English really do have a labor shortage, don't they?<br>Header: Topless<br>Text: I think Tarzan has got to make it. It's the only show on television where the star runs around topless!<br>Header: Unknown<br>Text: In this version, Tarzan is a literate, soft-spoken, everyday sort of fella who talks to animals. I know a lot of people talk to animals, but Tarzan waits for an answer.<br>...and more","Date: 1977<br>Header: CELEBRITIES: Dean Martin, Ed Mc Mahon, Foster Brooks<br>Text: Last New Years Eve I was at a party with Dean, Ed Mc Mahon and Foster Brooks and it was disastrous. They all exhaled at once and dissolved Tarzana.<br>Header: DRINKING<br>Text: Last New Year's Eve I was at a party with Dean, Ed Mc Mahon and Foster Brooks and it was disastrous. They all exhaled at once and dissolved Tarzana.","Date: 1979<br>Header: Famous People<br>Text: Tarzan is so old--he was wears a support loin cloth.","Date: 1980<br>Header: TV SHOWS<br>Text: To make Tarzan feel at home, the pageant officials gave him a microphone shaped like a banana...He kept eating it....<br>Header: TV SHOWS<br>Text: For the first time in his life Tarzan will dress fromal loincloth and cummerbund<br>Header: TELEVISION SHOWS<br>Text: How about Ron Ely, the old Tarzan, being named to replace Bert Parks? Tarzan can't sing. So this year the Miss America theme will be hummed by Cheetah..","Date: 1982<br>Header: INSULTS<br>Text: Tarzan outscored Bo Derek in an I.Q. test -- so did the monkey.<br>Header: CELEBRITIES<br>Text: Tarzan outscored Bo Derek in an I.Q. test -- so did the monkey.<br>Header: SEX SYMBOLS<br>Text: Tarzan outscored Bo Derek in an I.Q. test -- so did the monkey.<br>Header: SHOW BIZ<br>Text: Tarzan outscored Bo Derek in an I.Q. test -- so did the monkey.<br>Header: DIRTY JOKES<br>Text: The Sadistic Person: One who farts in bed and then fluffs the covers over his bedmate.  The Intellectual Person: One who can determine from the smell of his neighbor's fart precisely the latest food items consumed.  The Athletic Person: One who farts at the slightest exertion.<br>...and more"],"x":[1963,1964,1965,1968,1977,1979,1980,1982],"y":[8,4,3,17,2,1,3,9],"type":"bar"}],                        {"title":{"text":"Timeline Plot"},"xaxis":{"title":{"text":"Date"}},"yaxis":{"title":{"text":"Header Count"}},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true}                    )                };                            </script>        </div>
+```
+We can see from the graph above, that Diller has only three periods in which she makes the majority of her Tarzan category jokes: 1963-1965; 1968; and 1982. The 1977 spike is a false positive that references Tarzana, likely a reference to the Los Angeles suburb. Each of these spikes correspond to Tarzan either in cinemas or on TV. In 1963-1965, there were three Tarzan movies. In 1966-1968, the Tarzan TV Show ran; and in 1981, a new Tarzan movie hit the theaters. This data allows us to draw a connection between the timing of a joke and the cultural relevance of that joke.
+
+## Exploring the Data through Semantic Search
+
+We can explore these same data and document embeddings through a vector database via semantic search. Semantic searching is about understanding the meaning or context of a search query instead of simply matching keywords. Imagine you're searching for a "animals." In a traditional search engine, it might just look for webpages that contain the word "animal" or "animals." But what if you wanted to find results that talked about various animals, not just the pages where the word "animal" was used. Semantic search goes a step further and tries to understand the context of a query and the data that is being queried. Semantic search uses things like synonyms, context, and natural language processing to understand the searcher's intent and provide more relevant results.
+
+This is achieved via vector databases, sometimes called vector search engines. These are tools designed to store and retrieve data in a specific form called vectors. A vector is another word for embedding, such as the document embeddings that we have already seen above.
+
+In a vector database, we don't simply retrieve results that have matching keywords, like a traditional database, instead we find vectors that are close to the vector of a query. When you combine semantic search and vector databases, you get a powerful tool for understanding and retrieving information. You can search in a way that understands your intent and context, and get results that are deeply related to what you're looking for, not just superficially matching keywords. It is important to note that semantic search does not replace traditional searching. Instead, it gives researchers a different way to retrieve relevant data.
+
+We can achieve this in Python with the library [Annoy](https://github.com/spotify/annoy), from Spotify. "Annoy" stands for Approximate Nearest Neighbors Oh Yeah, and it's a C++ library with Python bindings to search for points in space that are close to a given query point. It's used to handle high-dimensional data, like the document embeddings we have already created.
+
+To work with Annoy in Python, we can load the `AnnoyIndex` class.
+
+
+```python
+from annoy import AnnoyIndex
+```
+
+Once we have the class loaded, we can use it by creating an Annoy Index. This will be where our document embeddings, or vectors, sit. This will also be the index that we query from a user's input. The `AnnoyIndex` class takes two arguments, a size (the shape dimensions of the vector) and the metric (the way in which distance is calculated).
+
+
+```python
+t = AnnoyIndex(384, 'angular')
+```
+
+Once we have the index created, we can populate it with our embeddings. We can do this by iterating over our embeddings and adding each one into the index. Note, that we also need to assign a unique numerical id to each item in the index. Here, we will begin at 0 and count up by 1 until we reach the end of our embeddings. We can do this in python with `enumerate`.
+
+
+```python
+for i, doc_embedding in enumerate(doc_embeddings):
+    t.add_item(i, doc_embedding)
+```
+
+With our index now populated with our embeddings, it's time to build it. The `Annoy Index` class has a method called `build` which  takes one argument, the number of trees that you wish to use when building the index. The higher the number, in theory, the better your index will be; this is not always the case, however. The larger the number, the larger the index. At some point there are diminishing returns, but determining when precisely will depend on the data. A good rule of thumb is to begin with 10 and modify as necessary.
+
+
+```python
+t.build(10) # 10 trees
+```
+
+
+
+
+    True
+
+
+
+Once the index is built, it can be queried. To query this index, we will take an input string. Here, we can simply describe something that we want to find in the data. In our case, I'm curious about finding jokes that dealt with animals, so I will simply search `something about animals`. When I query the index, I must convert this text into a vector with precisely the same methods and model used when creating the index. I also must specify how many results I wish to return. Here, I am only interested in returning the top-10 results. This is a very important thing to consider. The number of results you populate will alter the algorithm and yield different results. In theory, the higher the number of results you wish to view, the more semantically similar the top results will be. Again, this will vary.
+
+
+```python
+query = "something about animals"
+query_embedding = model.encode(query)
+result = t.get_nns_by_vector(query_embedding, 10, include_distances=False)
+result
+```
+
+
+
+
+    [9956, 425, 21840, 182, 313, 10273, 16414, 25498, 14634, 17126]
+
+
+
+The `AnnoyIndex` class returns a list of numbers. These correspond directly to the unique ids for each embedding in the index. This also directly connects to our dataframe above. This means that to see the results, we can grab the specific location of each card in the dataframe. We can even populate the images of the original cards with the function below.
+
+
+```python
+from IPython.display import display, HTML
+def get_image_html(url):
+    trans, number, html = url.split(":")
+    url = f"<img src='https://ids.si.edu/ids/deliveryService?max_w=500&id={html}'>"
+    return url
+```
+  
+
+```python
+for r in result[:3]:
+    image = final_df.iloc[r].url
+    url = get_image_html(image)
+    display(HTML(url))
+    print("----------------------------------------------------")
+```
+
+
+<img src='https://ids.si.edu/ids/deliveryService?max_w=500&id=NMAH-AHB2016q111034'>
+
+
+    
+
+
+<img src='https://ids.si.edu/ids/deliveryService?max_w=500&id=NMAH-AHB2016q113310'>
+
+
+    
+
+
+<img src='https://ids.si.edu/ids/deliveryService?max_w=500&id=NMAH-AHB2016q130342'>
+
+
+    
+
+Above are the first three results. Notice that in our first result, the word animal is not used specifically. Instead, we get results that deal generally with animals. This is the benefit of a semantic search. Without this approach, I would have to query for each type of animal that comes to mind. Semantic search lets me query the data semantically and get results that may or may not have the keywords used in a query; the results, however, will be semantically similar to that query. This is a new way of searching the same data and is a powerful tool in the belt of the researcher.
+
+# Conclusion
+
+The above methods are two ways that we can analyze a large collection of documents with machine learning to glean new insights. Clustering our texts allows us to understand the larger trends within a dataset, such as the example with Tarzan. Through semantic search engines, we can return more relevant results beyond keywords. Both of these approaches also benefit from two things: first, they both work at scale. Once the data has been processed via machine learning, retrieving the results or performing analysis on the vectors is computationally inexpensive. Second, both approaches are reproducible. These precise methods will work (with potentially minor changes) to other datasets at other institutions.
+
+Returning to our initial prompt at the start of the blog, how do we make sense of large quantities of textual data? One potential answer is via machine learning which can provide new ways to interrogate documents, discover new patterns, and make a collection more discoverable.
